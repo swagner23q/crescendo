@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="158" y="133" name="users">
+</datatypes><table x="42" y="11" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -90,7 +90,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="609" y="228" name="orders">
+<table x="286" y="233" name="orders">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -102,11 +102,14 @@
 <datatype>INT</datatype>
 <default>NULL</default><relation table="shipping_types" row="id" />
 </row>
+<row name="date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="296" y="271" name="shipping_types">
+<table x="24" y="447" name="shipping_types">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -117,12 +120,9 @@
 <part>id</part>
 </key>
 </table>
-<table x="554" y="409" name="products">
+<table x="281" y="396" name="products">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="sku" null="1" autoincrement="0">
-<datatype>VARCHAR(255)</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
@@ -134,7 +134,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="838" y="401" name="order_details">
+<table x="497" y="210" name="order_details">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
