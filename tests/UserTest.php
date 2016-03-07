@@ -269,7 +269,7 @@
 			$test_user->deleteUser();
 
 			//Assert
-			$this->assertEquals($test_user2, User::getAll());
+			$this->assertEquals([$test_user2], User::getAll());
 		}
 
 	}

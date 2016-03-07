@@ -318,6 +318,11 @@
 			$this->setBillState($new_bill_state);
 			$this->setBillPostal($new_bill_postal);
 		}
+
+		function deleteUser()
+        {
+            $GLOBALS['DB']->exec("DELETE FROM users WHERE id = {$this->getId()};");
+        }
 	}
 
  ?>
