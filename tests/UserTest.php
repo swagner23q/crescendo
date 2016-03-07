@@ -299,12 +299,24 @@
 			$line_items = NULL;
 			$test_order = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order->save();
-			
+
+			$user_id = $test_user->getId();
+			$ship_type = 3;
+			$date = "2016-03-06";
+			$line_items = NULL;
+			$test_order2 = new Order($user_id, $ship_type, $date, $line_items);
+			$test_order2->save();
+
 			//Act
 			$result = $test_user->getOrderHistory();
 			//Assert
-			$this->assertEquals([$test_order], $result);
+			$this->assertEquals([$test_order, $test_order2], $result);
 		}
+
+		// function test_passwordVerify($email, $password)
+		// {
+		//
+		// }
 
 	}
 

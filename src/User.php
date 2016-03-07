@@ -256,7 +256,7 @@
  					$bill_state = $user['bill_state'];
  					$bill_postal = $user['bill_postal'];
 					$id = $user['id'];
-					$new_user = new User($f_name, $l_nam$email, $phone, $password, $ship_stre$ship_apt, $ship_city, $ship_stat$ship_postal, $bill_street, $bill_ap$bill_city, $bill_state, $bill_postal, $id);
+					$new_user = new User($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal, $id);
 				 	array_push($users, $new_user);
 				}
 			return $users;
