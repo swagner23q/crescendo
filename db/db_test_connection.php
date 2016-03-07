@@ -5,7 +5,6 @@ try {
     $DB = new PDO('mysql:host=localhost;dbname=crescendo_test', 'root', 'root');
     $DB->exec("SET NAMES 'utf8'");
     $DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo ("It works!");
 } catch(Exception $e){
     echo 'Sorry, there seems to be a problem connecting to the database.';
     echo $e->getMessage();
