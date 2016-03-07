@@ -53,17 +53,36 @@
 
 		function save()
 		{
-
+			$GLOBALS['DB']->exec(
+	 	   	 "INSERT INTO orders
+	 	   	 (user_id, ship_type, date)
+	 	   	 VALUES
+		 	   	 ('{$this->getUserId()}',
+				 '{$this->getShipType()}',
+				 '{$this->getDate()}'
+			 	)"
+	 	    );
+	 	   	$this->id = $GLOBALS['DB']->lastInsertId();
 		}
 
 		static function getAll()
 		{
-
+			$returned_orders = $GLOBALS['DB']->query("SELECT * FROM orders;");
+	 	   $orders = array();
+	 	   foreach($returned_orders as $order) {
+	 	       $user_id = $order['user_id'];
+	 	       $ship_type = $order['ship_type'];
+	 	       $date = $order['date'];
+	 	       $id = $order['id'];
+			   $new_order = new Order($user_id, $ship_type, $date, $id);
+	 	       array_push($orders, $new_order);
+	 	   }
+	 	   return $orders;
 		}
 
 		static function deleteAll()
 		{
-
+			 $GLOBALS['DB']->exec("DELETE FROM orders;");
 		}
 	}
 

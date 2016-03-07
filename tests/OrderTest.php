@@ -80,7 +80,7 @@
 			$ship_type = 2;
 			$date = "2016-03-06";
 			$test_order2 = new Order($user_id, $ship_type, $date);
-			$test_order->save();
+			$test_order2->save();
 
 			//Act
 			$result = Order::getAll();
@@ -120,7 +120,7 @@
 			$ship_type = 2;
 			$date = "2016-03-06";
 			$test_order2 = new Order($user_id, $ship_type, $date);
-			$test_order->save();
+			$test_order2->save();
 
 			//Act
 			Order::deleteAll();
