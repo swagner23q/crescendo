@@ -1,28 +1,70 @@
 <?php
+
 	 class Order
 		{
-		private $line_item;
+
+		private $user_id;
+		private $ship_type;
+		private $date;
 		private $id;
 
-		function __construct($line_item, $id = NULL)
+		function __construct($user_id, $ship_type, $date, $id = NULL)
 		{
-			$this->line_item = $line_item;
+			$this->user_id = $user_id;
+			$this->ship_type = $ship_type;
+			$this->date = $date;
 			$this->id = $id;
 		}
 
-		function getLineItem()
+		function getUserId()
 		{
-			return $this->line_item;
+			return $this->user_id;
 		}
 
-		function setLineItem($line_item)
+		function setUserId($user_id)
 		{
-			$this->line_item = $line_item;
+			$this->user_id = $user_id;
+		}
+
+		function getShipType()
+		{
+			return $this->ship_type;
+		}
+
+		function setShipType($ship_type)
+		{
+			$this->ship_type = $ship_type;
+		}
+
+		function getDate()
+		{
+			return $this->getDate;
+		}
+
+		function setDate($date)
+		{
+			$this->date = $date;
 		}
 
 		function getid()
 		{
 			return $this->id;
 		}
+
+		function save()
+		{
+
+		}
+
+		function getAll()
+		{
+
+		}
+
+		function deleteAll()
+		{
+
+		}
 	}
+
  ?>
