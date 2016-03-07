@@ -6,13 +6,15 @@
 		private $user_id;
 		private $ship_type;
 		private $date;
+		private $line_items;
 		private $id;
 
-		function __construct($user_id, $ship_type, $date, $id = NULL)
+		function __construct($user_id, $ship_type, $date, $line_items = NULL, $id = NULL)
 		{
 			$this->user_id = $user_id;
 			$this->ship_type = $ship_type;
 			$this->date = $date;
+			$this->line_items = $line_items;
 			$this->id = $id;
 		}
 
@@ -46,6 +48,16 @@
 			$this->date = $date;
 		}
 
+		function getLineItem()
+		{
+			return $this->line_items;
+		}
+
+		function setLineItems($line_items)
+		{
+			$this->line_items = $line_items;
+		}
+
 		function getid()
 		{
 			return $this->id;
@@ -58,7 +70,7 @@
 	 	   	 (user_id, ship_type, date)
 	 	   	 VALUES
 		 	   	 ('{$this->getUserId()}',
-				 '{$this->getShipType()}',
+				 {$this->getShipType()},
 				 '{$this->getDate()}'
 			 	)"
 	 	    );
@@ -74,7 +86,7 @@
 	 	       $ship_type = $order['ship_type'];
 	 	       $date = $order['date'];
 	 	       $id = $order['id'];
-			   $new_order = new Order($user_id, $ship_type, $date, $id);
+			   $new_order = new Order($user_id, $ship_type, $date, $line_items = NULL, $id);
 	 	       array_push($orders, $new_order);
 	 	   }
 	 	   return $orders;
