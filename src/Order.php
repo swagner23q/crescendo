@@ -99,15 +99,15 @@
 
 		static function find($search_id)
 		{
-			// $found_order = null;
-			// $orders = Order::getAll();
-			// foreach($orders as $order){
-			// 	$order_id = $order->getId();
-			// 	if ($order_id == $search_id)
-			// 	{
-			// 		$found_order = $order;
-			// 	}
-			// } return $found_order;
+			$found_order = null;
+			$orders = Order::getAll();
+			foreach($orders as $order){
+				$order_id = $order->getId();
+				if ($order_id == $search_id)
+				{
+					$found_order = $order;
+				}
+			} return $found_order;
 		}
 
 	}
