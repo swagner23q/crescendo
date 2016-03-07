@@ -10,5 +10,4 @@
     include ("routes/product.php");
     include ("routes/products.php");
     include ("routes/results.php");
-
-?>
+    include ("routes/register.php");
