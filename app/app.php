@@ -4,7 +4,7 @@
 
 	include ("../db/db_connection.php");
 
-	include ("silex_services.php");
+	include ("config.php");
 
 	include ("routes.php");
 
