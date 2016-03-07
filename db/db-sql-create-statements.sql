@@ -103,7 +103,7 @@ CREATE TABLE `product_types` (
   `type` VARCHAR(255)
 );
 
-INSERT INTO `product_types` (type) VALUES ("shirt"), ("pants"), ("jacket"), ("shoes"), ("beanie");
+INSERT INTO `product_types` (type) VALUES ("shirt"), ("pants"), ("jacket"), ("shoes"), ("beanies");
 
 /*
 
