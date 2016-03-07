@@ -299,8 +299,8 @@
 			$line_items = NULL;
 			$test_order = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order->save();
+			
 			//Act
-			// $test_book->addAuthor($test_author->getId());
 			$result = $test_user->getOrderHistory();
 			//Assert
 			$this->assertEquals([$test_order], $result);

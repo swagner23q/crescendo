@@ -323,6 +323,29 @@
         {
             $GLOBALS['DB']->exec("DELETE FROM users WHERE id = {$this->getId()};");
         }
-	}
 
+
+		function getOrderHistory()
+		{
+			$query = $GLOBALS['DB']->query(
+				"SELECT orders.*
+				FROM users
+				JOIN orders ON (users.id = orders.user_id)
+				WHERE user_id = {$this->getId()}
+				ORDER BY date"
+			);
+			$orders = [];
+			foreach($query as $order)
+			{
+				$user_id = $order['user_id'];
+				$ship_type = $order['ship_type'];
+				$date = $order['date'];
+				// $line_items = NULL;
+				$id = $order['id'];
+				$new_order = new Order($user_id, $ship_type, $date,	$line_items = NULL, $id);
+				$orders[] = $new_order;
+			}
+			return $orders;
+		}
+	}
  ?>
