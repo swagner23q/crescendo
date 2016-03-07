@@ -5,6 +5,8 @@
 	* @backupStaticAttributes disabled
 	*/
 
+	include ("db/db_test_connection.php");
+
 	class UserTest extends PHPUnit_Framework_TestCase
 	{
 		protected function tearDown()
