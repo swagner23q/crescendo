@@ -179,7 +179,7 @@
 			$result = User::find($test_user->getId());
 
 			//Assert
-			$this->assertEquals($test_client, $result);
+			$this->assertEquals($test_user, $result);
 		}
 
 	}
