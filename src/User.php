@@ -1,24 +1,24 @@
 <?php
 
-	 class User
-		{
+	class User
+	{
 
-			private $f_name;
-			private $l_name;
-			private $email;
-			private $phone;
-			private $password;
-			private $ship_street;
-			private $ship_apt;
-			private $ship_city;
-			private $ship_state;
-			private $ship_postal;
-			private $bill_street;
-			private $bill_apt;
-			private $bill_city;
-			private $bill_state;
-			private $bill_postal;
-			private $id;
+		private $f_name;
+		private $l_name;
+		private $email;
+		private $phone;
+		private $password;
+		private $ship_street;
+		private $ship_apt;
+		private $ship_city;
+		private $ship_state;
+		private $ship_postal;
+		private $bill_street;
+		private $bill_apt;
+		private $bill_city;
+		private $bill_state;
+		private $bill_postal;
+		private $id;
 
 		function __construct($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal, $id = NULL)
 		{
@@ -199,38 +199,38 @@
 		function save()
 		{
 			$GLOBALS['DB']->exec(
-		 	   	 "INSERT INTO users
-				 (f_name,
-				 l_name,
-				 email,
-				 phone,
-				 password,
-				 ship_street,
-				 ship_apt,
-				 ship_city,
-				 ship_state,
-				 ship_postal,
-				 bill_street,
-				 bill_apt,
-				 bill_city,
-				 bill_state,
-				 bill_postal)
-		 	   	 VALUES
-		 	   	 ('{$this->getFirstName()}',
-				 '{$this->getLastName()}',
-				 '{$this->getEmail()}',
-				 '{$this->getPhone()}',
-				 '{$this->getPassword()}',
-				 '{$this->getShipStreet()}',
-				 '{$this->getShipApt()}',
-				 '{$this->getShipCity()}',
-				 '{$this->getShipState()}',
-				 '{$this->getShipPostal()}',
-				 '{$this->getBillStreet()}',
-				 '{$this->getBillApt()}',
-				 '{$this->getBillCity()}',
-				 '{$this->getBillState()}',
-				 '{$this->getBillPostal()}')"
+		 	"INSERT INTO users
+				(f_name,
+				l_name,
+				email,
+				phone,
+				password,
+				ship_street,
+				ship_apt,
+				ship_city,
+				ship_state,
+				ship_postal,
+				bill_street,
+				bill_apt,
+				bill_city,
+				bill_state,
+				bill_postal)
+		 	VALUES
+				('{$this->getFirstName()}',
+				'{$this->getLastName()}',
+				'{$this->getEmail()}',
+				'{$this->getPhone()}',
+				'{$this->getPassword()}',
+				'{$this->getShipStreet()}',
+				'{$this->getShipApt()}',
+				'{$this->getShipCity()}',
+				'{$this->getShipState()}',
+				'{$this->getShipPostal()}',
+				'{$this->getBillStreet()}',
+				'{$this->getBillApt()}',
+				'{$this->getBillCity()}',
+				'{$this->getBillState()}',
+				'{$this->getBillPostal()}')"
 	 	    );
 			$this->id = $GLOBALS['DB']->lastInsertId();
 		}
@@ -238,33 +238,33 @@
 		static function getAll()
 		{
 			$returned_users = $GLOBALS['DB']->query("SELECT * FROM users;");
-				 	   $users = array();
-				 	   foreach($returned_users as $user) {
-						  $f_name = $user['f_name'];
- 						  $l_name = $user['l_name'];
- 						  $email = $user['email'];
- 						  $phone = $user['phone'];
- 						  $password = $user['password'];
- 						  $ship_street = $user['ship_street'];
- 						  $ship_apt = $user['ship_apt'];
- 						  $ship_city = $user['ship_city'];
- 						  $ship_state = $user['ship_state'];
- 						  $ship_postal = $user['ship_postal'];
- 						  $bill_street = $user['bill_street'];
- 						  $bill_apt = $user['bill_apt'];
- 						  $bill_city = $user['bill_city'];
- 						  $bill_state = $user['bill_state'];
- 						  $bill_postal = $user['bill_postal'];
-						  $id = $user['id'];
-						  $new_user = new User($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal, $id);
-				 	      array_push($users, $new_user);
-				 	   }
-				 	   return $users;
+				$users = array();
+				foreach($returned_users as $user) {
+					$f_name = $user['f_name'];
+ 					$l_name = $user['l_name'];
+ 					$email = $user['email'];
+ 					$phone = $user['phone'];
+ 					$password = $user['password'];
+ 					$ship_street = $user['ship_street'];
+ 					$ship_apt = $user['ship_apt'];
+ 					$ship_city = $user['ship_city'];
+ 					$ship_state = $user['ship_state'];
+ 					$ship_postal = $user['ship_postal'];
+ 					$bill_street = $user['bill_street'];
+ 					$bill_apt = $user['bill_apt'];
+ 					$bill_city = $user['bill_city'];
+ 					$bill_state = $user['bill_state'];
+ 					$bill_postal = $user['bill_postal'];
+					$id = $user['id'];
+					$new_user = new User($f_name, $l_nam$email, $phone, $password, $ship_stre$ship_apt, $ship_city, $ship_stat$ship_postal, $bill_street, $bill_ap$bill_city, $bill_state, $bill_postal, $id);
+				 	array_push($users, $new_user);
+				}
+			return $users;
 		}
 
 		static function deleteAll()
 		{
-				 	   $GLOBALS['DB']->exec("DELETE FROM users;");
+			$GLOBALS['DB']->exec("DELETE FROM users;");
 		}
 
 		static function find($search_id)
