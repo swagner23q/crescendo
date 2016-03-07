@@ -191,7 +191,7 @@
 		}
 
 
-		function getid()
+		function getId()
 		{
 			return $this->id;
 		}
