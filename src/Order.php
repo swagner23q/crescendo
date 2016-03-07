@@ -38,7 +38,7 @@
 
 		function getDate()
 		{
-			return $this->getDate;
+			return $this->date;
 		}
 
 		function setDate($date)
