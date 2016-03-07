@@ -10,5 +10,19 @@
 			$this->id = $id;
 		}
 
+		function getLineItem()
+		{
+			return $this->line_item;
+		}
+
+		function setLineItem($line_item)
+		{
+			$this->line_item = $line_item;
+		}
+
+		function getid()
+		{
+			return $this->id;
+		}
 	}
  ?>
