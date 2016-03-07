@@ -279,6 +279,45 @@
             }
             return $found_user;
         }
+
+		function update($new_f_name, $new_l_name, $new_email, $new_phone, $new_password, $new_ship_street, $new_ship_apt, $new_ship_city, $new_ship_state, $new_ship_postal, $new_bill_street, $new_bill_apt, $new_bill_city, $new_bill_state, $new_bill_postal)
+		{
+			$GLOBALS['DB']->exec(
+			"UPDATE users
+			SET
+			f_name = '{$new_f_name}',
+			l_name = '{$new_l_name}',
+			email = '{$new_email}',
+			phone = '{$new_phone}',
+			password = '{$new_password}',
+			ship_street = '{$new_ship_street}',
+			ship_apt = '{$new_ship_apt}',
+			ship_city = '{$new_ship_city}',
+			ship_state = '{$new_ship_state}',
+			ship_postal = '{$new_ship_postal}',
+			bill_street = '{$new_bill_street}',
+			bill_apt = '{$new_bill_apt}',
+			bill_city = '{$new_bill_city}',
+			bill_state = '{$new_bill_state}',
+			bill_postal = '{$new_bill_postal}'
+
+			WHERE id = {$this->getId()};");
+			$this->setFirstName($new_f_name);
+			$this->setLastName($new_l_name);
+			$this->setEmail($new_email);
+			$this->setPhone($new_phone);
+			$this->setPassword($new_password);
+			$this->setShipStreet($new_ship_street);
+			$this->setShipApt($new_ship_apt);
+			$this->setShipCity($new_ship_city);
+			$this->setShipState($new_ship_state);
+			$this->setShipPostal($new_ship_postal);
+			$this->setBillStreet($new_bill_street);
+			$this->setBillApt($new_bill_apt);
+			$this->setBillCity($new_bill_city);
+			$this->setBillState($new_bill_state);
+			$this->setBillPostal($new_bill_postal);
+		}
 	}
 
  ?>
