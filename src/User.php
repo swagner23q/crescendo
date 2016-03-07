@@ -201,12 +201,12 @@
 
 		}
 
-		function getAll()
+		static function getAll()
 		{
 
 		}
 
-		function deleteAll()
+		static function deleteAll()
 		{
 
 		}
