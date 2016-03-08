@@ -11,53 +11,107 @@
 	{
 		protected function tearDown()
 		{
-			// Order::deleteAll();
-			// User::deleteAll();
+			Order::deleteAll();
+			User::deleteAll();
       		Product::deleteAll();
+		}
+
+		function test_save()
+		{
+			//Arrange
+			$gender = "M";
+			$type_id = 1;
+			$name = "Polo Button Down";
+			$description = "Light Blue button down shirt";
+      		$img_path = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $img_path);
+			$test_product->save();
+
+			//Act
+			$result = Product::getAll();
+
+			//Assert
+			$this->assertEquals([$test_product], $result);
 		}
 
 		function test_getAll()
 		{
 			//Arrange
+			$gender = "M";
+			$type_id = 1;
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
-			$type_id = 2;
-			$gender = "m";
-      		$img_path = "image1";
-			$test_product = new Product($name, $description, $type_id = NULL, $gender, $img_path);
+      		$img_path = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $img_path);
 			$test_product->save();
 
-      		$name2= "Dockers Preated Khackis";
-			$description2 = "Lame ass khaki pants with pleats";
-			$type_id2 = 3;
-			$gender2 = "f";
-      		$img_path2 = "image1";
-			$test_product2 = new Product($name2, $description2, $type_id2 = NULL, $gender2, $img_path2);
+			$gender = "F";
+			$type_id = 2;
+      		$name= "Dockers Preated Khackis";
+			$description = "Lame ass khaki pants with pleats";
+      		$img_path = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $img_path);
 			$test_product2->save();
 
 			//Act
 			$result = Product::getAll();
 
 			//Assert
-			$this->assertEquals([$test_order, $test_order2], $result);
+			$this->assertEquals([$test_product, $test_product2], $result);
 		}
 
-	    function testFind()
-	    {
-	        //Arrange
+		function test_deleteAll()
+		{
+			//Arrange
+			$gender = "M";
+			$type_id = 1;
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
+      		$img_path = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $img_path);
+			$test_product->save();
+
+			$gender = "F";
 			$type_id = 2;
-			$gender = "m";
-      		$img_path = "image1";
-			$id = 1;
-	        $test_product = new Product($name, $description, $type_id = NULL, $gender, $img_path, $id = NULL);
-	        $test_product->save();
-	        //Act
-	        $result = Product::find($test_product->getId());
-	        //Arrange
-	        $this->assertEquals($test_product, $result);
-     	}
-	}
+      		$name= "Dockers Preated Khackis";
+			$description = "Lame ass khaki pants with pleats";
+      		$img_path = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $img_path);
+			$test_product2->save();
+
+			//Act
+			Product::deleteAll();
+			$result = Product::getAll();
+
+			//Assert
+			$this->assertEquals([], $result);
+		}
+
+	    // function testFind()
+	    // {
+	    //     //Arrange
+		// 	$gender = "M";
+		// 	$type_id = 1;
+		// 	$name = "Polo Button Down";
+		// 	$description = "Light Blue button down shirt";
+     //  		$img_path = "/fake/path/image1.jpg";
+		// 	$test_product = new Product($gender, $type_id, $name, $description, $img_path);
+		// 	$test_product->save();
+		//
+		// 	$gender2 = "F";
+		// 	$type_id2 = 2;
+     //  		$name2= "Dockers Preated Khackis";
+		// 	$description2 = "Lame ass khaki pants with pleats";
+     //  		$img_path2 = "/fake/path/image2.jpg";
+		// 	$test_product2 = new Product($gender, $type_id, $name, $description, $img_path);
+		// 	$test_product2->save();
+		//
+	    //     //Act
+	    //     $result = Product::find($test_product->getId());
+		//
+	    //     //Arrange
+	    //     $this->assertEquals($test_product, $result);
+     // 	}
+ 	}
 
 ?>
