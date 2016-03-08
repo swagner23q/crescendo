@@ -122,7 +122,7 @@ header {
   padding: 5%;
   display: flex;
   margin-top: 0;
-  height: 75vh;
+  max-height: 600px;
   width: 100%; }
   .styles img {
     height: auto;
@@ -162,6 +162,29 @@ header {
     color: white;
     width: 32%;
     height: 24%; }
+
+.shippingNinjaContainer {
+  padding: 5%;
+  display: flex;
+  text-align: center; }
+  .shippingNinjaContainer h3 {
+    font-family: "Raleway";
+    font-size: 1.5em;
+    font-weight: bold; }
+  .shippingNinjaContainer .shipping {
+    align-self: center;
+    width: 50%; }
+  .shippingNinjaContainer .ninja {
+    align-self: center;
+    width: 50%; }
+    .shippingNinjaContainer .ninja h3 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      font-weight: bold; }
+    .shippingNinjaContainer .ninja p {
+      font-size: 1em !important; }
+  .shippingNinjaContainer .verticalLine {
+    border-left: 1px solid black; }
 
 footer {
   font-family: "Raleway";

@@ -24,7 +24,7 @@ header {
   padding: 5%;
   display: flex;
   margin-top: 0;
-  height: 75vh;
+  max-height: 600px;
   width: 100%;
 
   img {
@@ -68,6 +68,35 @@ header {
     width: 32%;
     height: 24%;
 
+  }
+}
+
+.shippingNinjaContainer {
+  padding: 5%;
+  display: flex;
+  text-align: center;
+  h3 {
+    @include fontBasics("Raleway", $font-size: 1.5em);
+    font-weight: bold;
+  }
+  .shipping {
+    align-self: center;
+    width: 50%;
+
+  }
+  .ninja {
+    align-self: center;
+    width: 50%;
+    h3 {
+      @include fontBasics("Raleway", $font-size: 1.5em);
+      font-weight: bold;
+    }
+    p {
+      font-size: 1em!important;
+    }
+  }
+  .verticalLine {
+    border-left: 1px solid $black;
   }
 }
 
