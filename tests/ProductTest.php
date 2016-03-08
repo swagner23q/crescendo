@@ -117,8 +117,8 @@
 		 function testFindByTypeAndGender()
 		 {
 		 	 //Arrange
-			 $gender = "M";
-		 	 $type_id = 1;
+			 $gender = "L";
+		 	 $type_id = 5;
 		 	 $name = "Polo Button Down";
 		 	 $description = "Light Blue button down shirt";
 	   		 $img = "/fake/path/image1.jpg";
@@ -130,14 +130,16 @@
 	   		 $name2= "Dockers Pleated Khackis";
 		 	 $description2 = "Lame ass khaki pants with pleats";
 	   		 $img2 = "/fake/path/image2.jpg";
-		 	 $test_product2 = new Product($gender, $type_id, $name, $description, $img);
+		 	 $test_product2 = new Product($gender2, $type_id2, $name2, $description2, $img2);
 		 	 $test_product2->save();
 
+
 			 //Act
-	         $result = Product::find($test_product->getTypeId(),$test_product->getGender());
+
+	         $result = Product::findByTypeAndGender($test_product->getTypeId(), $test_product->getGender());
 
 	         //Arrange
-	         $this->assertEquals($test_product, $result);
+	         $this->assertEquals([$test_product], $result);
 
 	 	}
 

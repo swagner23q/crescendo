@@ -7,7 +7,8 @@
 		private $type_id;
 		private $name;
 		private $description;
-    private $img;
+        private $img;
+
 		private $id;
 
 	    function __construct($gender, $type_id, $name, $description, $img, $id = NULL)
@@ -65,12 +66,12 @@
 	      $this->gender = $gender;
 	    }
 //////////img
-	    function getImgPath()
+	    function getImg()
 	    {
 	      return $this->img;
 	    }
 
-	    function setImgPath($img)
+	    function setImg($img)
 	    {
 	      $this->img = $img;
 	    }
@@ -85,7 +86,7 @@
 				{$this->getTypeId()},
 				'{$this->getName()}',
 				'{$this->getDescription()}',
-				'{$this->getImgPath()}'
+				'{$this->getImg()}'
 				)"
 			);
 	 	   	$this->id = $GLOBALS['DB']->lastInsertId();
@@ -115,7 +116,7 @@
 
 		 static function find($search_id)
          {
-             $found_product = null;
+             $found_product = NULL;
              $all_products = Product::getAll();
              foreach($all_products as $product) {
                  if ($search_id == $product->getId()){
@@ -123,6 +124,19 @@
                  }
              }
              return $found_product;
+         }
+
+		 static function findByTypeAndGender($search_TypeId, $search_Gender)
+         {
+             $found_products = array();
+             $all_products = Product::getAll();
+             foreach($all_products as $product) {
+                 if ($search_TypeId == $product->getTypeId() && $search_Gender == $product->getGender()){
+					 array_push($found_products, $product);
+                 }
+             }
+			 var_dump($found_products);
+             return $found_products;
          }
 	}
 
