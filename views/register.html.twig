@@ -5,6 +5,10 @@
     </head>
     <body>
         {% include '/includes/navbar.html.twig' %}
+        {% if registered %}
+            <h3>Thank you for registering, {{ user.getName }}!</h3>
+            <p>An email has been sent to {{user.getEmail}} with additional information.</p>
+        {% else %}
         <form class="" action="/register" method="post">
             <h3>Personal Information</h3>
             <label for="f_name">First Name:</label>
@@ -44,5 +48,6 @@
 
             <button class="" type="submit">Submit</button>
         </form>
+        {% endif %}
     </body>
 </html>
