@@ -13,6 +13,7 @@
 		{
 			Order::deleteAll();
 			User::deleteAll();
+			Product::deleteAll();
 		}
 
 		function test_save()
