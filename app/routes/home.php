@@ -8,9 +8,18 @@
         $email = $_GET['email'];
         $password = $_GET['password'];
         $user_id = User::passwordVerify($email, $password);
-        $SESSION['user'] = $user_id;
-        $user = User::find($user_id);
-        return $app['twig']->render('home.html.twig', array('name' => $user->getFirstName()));
+        if($user_id){
+            $SESSION['user'] = $user_id;
+            $user = User::find($user_id);
+            $page_to_render = "home.html.twig";
+            $name = $user->getFirstName();
+        } else {
+            $SESSION['user'] = NULL;
+            $page_to_render = "login.html.twig";
+            $error_message = "Sorry, try again!";
+            $name = FALSE;
+        }
+        return $app['twig']->render($page_to_render, array('name' => $name, 'error_message' => $error_message));
     });
 
     $app->get('/logged_out', function() use ($app) {
