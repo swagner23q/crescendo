@@ -96,6 +96,52 @@
 		{
 			 $GLOBALS['DB']->exec("DELETE FROM orders;");
 		}
+
+		static function find($search_id)
+		{
+			$found_order = null;
+			$orders = Order::getAll();
+			foreach($orders as $order){
+				$order_id = $order->getId();
+				if ($order_id == $search_id)
+				{
+					$found_order = $order;
+				}
+			} return $found_order;
+		}
+
+		function checkout()
+		{
+			foreach($this->line_items as list($product_id, $qty))
+			{
+				$GLOBALS['DB']->exec(
+				"INSERT INTO order_details
+				(order_id, product_id, qty)
+				VALUES
+					({$this->getId()},
+					{$product_id},
+					{$qty})"
+				);
+			}
+		}
+
+		function getOrderDetails()
+		{
+			$order_details = [];
+			$line_items = $GLOBALS['DB']->query(
+				"SELECT od.product_id, od.qty, p.name
+				FROM order_details od
+				JOIN products p ON od.product_id = p.id
+				WHERE od.order_id = {$this->getId()}"
+			);
+			foreach($line_items as list($product_id, $qty, $name))
+			{
+				$line = ['product_id' => $product_id, 'qty' => $qty, 'name' => $name];
+				$order_details[] = $line;
+			}
+			return $order_details;
+		}
+
 	}
 
  ?>
