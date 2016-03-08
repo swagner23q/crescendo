@@ -23,5 +23,5 @@
             unset($_SESSION['user']);
         }
 
-        return $app['twig']->render('login.html.twig', $message => "Login to begin a session.")
-    })
+        return $app['twig']->render('login.html.twig', $message => "Login to begin a session.");
+    });

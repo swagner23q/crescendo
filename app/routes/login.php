@@ -4,5 +4,5 @@
 
     $app->get('/login', function() use ($app)
     {
-        return 'Hello, World!';}
-    );
+        return $app['twig']->render('home.html.twig');
+    });

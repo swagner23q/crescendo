@@ -5,6 +5,9 @@
         $_SESSION['user']=null;
     }
 
+    if (empty($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
     $app = new Silex\Application();
 
 
