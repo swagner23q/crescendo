@@ -110,6 +110,15 @@
 			} return $found_order;
 		}
 
+		function checkout()
+		{
+			
+		}
+		// function getOrderDetails()
+		// {
+		//
+		// }
+
 	}
 
  ?>
