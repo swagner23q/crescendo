@@ -112,7 +112,7 @@
 
 		function checkout()
 		{
-			foreach($this->line_items as list($produt_id, $qty))
+			foreach($this->line_items as list($product_id, $qty))
 			{
 				$GLOBALS['DB']->exec(
 				"INSERT INTO order_details
@@ -132,8 +132,14 @@
 				"SELECT od.product_id, od.qty, p.name
 				FROM order_details od
 				JOIN products p ON od.product_id = p.id
-				WHERE od.order_id = {$this->getId}"
+				WHERE od.order_id = {$this->getId()}"
 			);
+			foreach($line_items as list($product_id, $qty, $name))
+			{
+				$line = ['product_id' => $product_id, 'qty' => $qty, 'name' => $name];
+				$order_details[] = $line;
+			}
+			return $order_details;
 		}
 
 	}
