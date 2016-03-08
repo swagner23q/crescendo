@@ -23,7 +23,7 @@
             $_POST['bill_city'],
             $_POST['bill_state'],
             $_POST['bill_postal']
-        )
+        );
         $user->save();
         return $app['twig']->render('register_confirm.html.twig', array('user' => $user));
     });
