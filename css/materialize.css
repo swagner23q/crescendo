@@ -7312,7 +7312,7 @@ select {
   height: -moz-calc(100%);
   padding-bottom: 60px;
   padding-top: 2%;
-  background-color: #fff;
+  background-color: #909b99 !important;
   z-index: 999;
   overflow-y: auto;
   will-change: left; }
@@ -7324,14 +7324,23 @@ select {
     margin: 0; }
   .side-nav li {
     float: none;
-    padding: 1% 15px 0 15px; }
+    padding: 1% 15px 0 15px;
+    color: #608A89 !important; }
     .side-nav li:first-child {
       font-size: 1.25em; }
   .side-nav a {
     color: #4d4d4d;
-    padding: 0 15px; }
+    display: block;
+    padding: 0 15px;
+    z-index: 999; }
     .side-nav a:hover {
       color: white; }
+  .side-nav .exitSideNav {
+    position: absolute;
+    top: 0;
+    right: 5px; }
+    .side-nav .exitSideNav:hover {
+      cursor: pointer; }
 
 .drag-target {
   height: 100%;
@@ -7372,7 +7381,7 @@ select {
   right: 0;
   height: 120vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 997;
+  z-index: 999;
   will-change: opacity; }
 
 /*

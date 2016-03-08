@@ -37,9 +37,6 @@ header h1, header p {
     position: relative;
     top: 7px;
     left: 20px; }
-  .nav .side-nav {
-    background-color: #909b99;
-    color: #CCDADA; }
   .nav .navBarContent {
     width: 100%;
     display: flex;

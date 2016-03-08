@@ -6,7 +6,6 @@
   opacity: .93;
   box-shadow: 1px 1px 3px $black;
   z-index: 990;
-  // flex-wrap: wrap;
   justify-content: flex-end;
   background-color: $white !important;
   width: 100%;
@@ -19,13 +18,7 @@
     left: 20px;
   }
 
-  .side-nav {
-    background-color: lighten($nav-grey, 5%);
-    color: #CCDADA;
-  }
-
   .navBarContent {
-
     width: 100%;
     display: flex;
     justify-content: center;
