@@ -5,18 +5,24 @@
     <body>
         {% include '/includes/navbar.html.twig' %}
         <form action="/logged_in" method="get">
-            <label for="email_address">Email Adress</label>
-            <input type="text" name="email_address" value="">
+            <label for="email">Email Adress</label>
+            <input type="text" name="email" value="">
 
             <label for="password">Password</label>
-            <input type="text" name="password" value="">
+            <input type="password" name="password" value="">
 
+            <button type="submit" name="button">Sign in</button>
+        </form>
+        {% if error_message %}
+            <p>{{error_message}}</p>
+        {% endif %}
+        <form class="" action="/register" >
+            <button type="submit" name="button">Not yet a member? Register!</button>
         </form>
 
-        <form action="/logged_out" method="post">
-            <label for="logout">Log Out</label>
-            <input type="button" name="logout" value="">
-
+        <form class="" action="/" >
+            <button type="submit" name="button">Start Shopping!</button>
         </form>
+
     </body>
 </html>

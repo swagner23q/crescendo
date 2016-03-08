@@ -6,7 +6,7 @@
     <body>
         {% include '/includes/navbar.html.twig' %}
         {% if registered %}
-            <h3>Thank you for registering, {{ user.getName }}!</h3>
+            <h3>Thank you for registering, {{ user.getFirstName }}!</h3>
             <p>An email has been sent to {{user.getEmail}} with additional information.</p>
         {% else %}
         <form class="" action="/register" method="post">
@@ -20,7 +20,7 @@
             <label for="phone">Phone #:</label>
             <input id="phone" name="phone" type="text"><br><br>
             <label for="password">Password:</label>
-            <input id="password" name="password" type="text"><br><br>
+            <input id="password" name="password" type="password"><br><br>
 
             <h3>Shipping Information</h3>
             <label for="ship_street">Street:</label>

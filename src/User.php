@@ -356,11 +356,12 @@
 		       $user_email = $user->getEmail();
 		       $user_password= $user->getPassword();
 		       if ($user_email == $email && $user_password == $password) {
-		        //  $found_user_id = $user->getId();
 		         $found_user_id = $user;
-		       }
+				 return $found_user_id->getId();
+			 } else {
+				 return FALSE;
+			 }
 		   }
-		   return $found_user_id->getId();
 		}
 	}
  ?>
