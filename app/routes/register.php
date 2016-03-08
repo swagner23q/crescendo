@@ -35,5 +35,5 @@
     	$app['mailer']->send($message);
 
 
-        return $app['twig']->render('register_confirm.html.twig', array('user' => $user));
+        return $app['twig']->render('register.html.twig', array('user' => $user, 'registered' => TRUE));
     });
