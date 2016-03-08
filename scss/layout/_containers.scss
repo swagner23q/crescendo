@@ -1,9 +1,9 @@
 header {
-  margin: zero;
+  margin: 0;
   position: relative;
   background-color: lighten($charcoal, 25%);
   video {
-    z-index: 980;
+    // z-index: 980;
     margin-top: 3.3em;
     opacity: .3;
     width: 100%;
@@ -17,5 +17,15 @@ header {
     @include fontBasics("AlexBrush", $color:white, $font-size: 2.6em);
     @include position(absolute, $width: 100%, $bottom: 25%);
     @extend %textCenter;
+  }
+}
+.styles {
+  margin-top: 0;
+  height: 50vh;
+  display: flex;
+
+  img {
+    height: 50vh;
+    width: auto;
   }
 }

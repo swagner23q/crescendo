@@ -28,7 +28,7 @@ header h1, header p {
   position: fixed;
   opacity: .93;
   box-shadow: 1px 1px 3px black;
-  z-index: 990;
+  z-index: 997;
   justify-content: flex-end;
   background-color: white !important;
   width: 100%; }
@@ -64,11 +64,10 @@ header h1, header p {
         color: #A8CECF; }
 
 header {
-  margin: zero;
+  margin: 0;
   position: relative;
   background-color: #737373; }
   header video {
-    z-index: 980;
     margin-top: 3.3em;
     opacity: .3;
     width: 100%; }
@@ -86,5 +85,13 @@ header {
     position: absolute;
     width: 100%;
     bottom: 25%; }
+
+.styles {
+  margin-top: 0;
+  height: 50vh;
+  display: flex; }
+  .styles img {
+    height: 50vh;
+    width: auto; }
 
 /*# sourceMappingURL=styles.css.map */
