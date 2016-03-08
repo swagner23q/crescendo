@@ -35,7 +35,7 @@ footer {
   background-color: $charcoal;
   width: 100%;
   display: flex;
-  padding: 2%;
+  padding: 0 2% 2% 2%;
 
   img {
     height: 10vh;
@@ -75,7 +75,6 @@ footer {
     }
   }
   .footerLinks {
-
     float: left;
     width: 50%;
     line-height: 2;
@@ -88,6 +87,7 @@ footer {
     width: 49%;
   }
   .footerBeFirst {
+    margin-top: 11%;
     width: 40%;
     display: flex;
     align-content: center;

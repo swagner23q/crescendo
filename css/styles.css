@@ -107,7 +107,7 @@ footer {
   background-color: #333333;
   width: 100%;
   display: flex;
-  padding: 2%; }
+  padding: 0 2% 2% 2%; }
   footer img {
     height: 10vh;
     align-self: center;
@@ -144,6 +144,7 @@ footer {
     line-height: 2;
     width: 49%; }
   footer .footerBeFirst {
+    margin-top: 11%;
     width: 40%;
     display: flex;
     align-content: center;
