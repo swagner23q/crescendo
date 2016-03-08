@@ -11,13 +11,14 @@
 
 		private $id;
 
-	    function __construct($gender, $type_id, $name, $description, $img, $id = NULL)
+	    function __construct($gender, $type_id, $name, $description, $img, $price, $id = NULL)
 	    {
 			$this->gender = $gender;
 			$this->type_id = $type_id;
 			$this->name = $name;
 			$this->description = $description;
       		$this->img = $img;
+			$this->price = $price;
 			$this->id = $id;
 	    }
 	//////////id
@@ -65,6 +66,16 @@
 	    {
 	      $this->gender = $gender;
 	    }
+////////////price
+	    function getPrice()
+	    {
+	      return $this->price;
+	    }
+
+	    function setPrice($price)
+	    {
+	      $this->price = $price;
+	    }
 //////////img
 	    function getImg()
 	    {
@@ -102,8 +113,9 @@
 	 	       $name = $product['name'];
 	 	       $description = $product['description'];
 	           $img = $product['img'];
+			   $price = $product['price'];
 			   $id = $product['id'];
-			   $new_product = new Product($gender, $type_id, $name, $description, $img, $id);
+			   $new_product = new Product($gender, $type_id, $name, $description, $img, $price, $id);
 	 	       array_push($products, $new_product);
 	 	   }
 	 	   return $products;
