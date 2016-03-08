@@ -1,6 +1,8 @@
 <?php
 
-    $app->get('/login', function()
+
+
+    $app->get('/login', function() use ($app)
     {
         return 'Hello, World!';}
     );
