@@ -28,10 +28,29 @@ footer .sevenL h3, footer .footerBeFirst h3 {
   margin: 0; }
 
 .stylesButton {
-  height: 30%;
-  width: 45%;
+  font-family: "Raleway";
+  color: white;
   background-color: #333333;
-  color: white; }
+  height: 30%;
+  width: 55%;
+  padding: 1%;
+  margin-top: 6%;
+  text-transform: uppercase;
+  float: right; }
+  .stylesButton:hover {
+    cursor: pointer; }
+
+.bottomStylesButton {
+  font-family: "Raleway";
+  color: white;
+  background-color: #333333;
+  width: 25%;
+  padding: 1%;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .bottomStylesButton:hover {
+    cursor: pointer; }
 
 .nav {
   font-family: "Raleway";
@@ -81,6 +100,7 @@ header {
   background-color: #737373; }
   header video {
     margin-top: 3.3em;
+    margin-bottom: -6px;
     opacity: .3;
     width: 100%; }
   header h1 {
@@ -89,7 +109,7 @@ header {
     font-size: 10em;
     position: absolute;
     width: 100%;
-    bottom: 30%; }
+    bottom: 25%; }
   header p {
     font-family: "AlexBrush";
     color: white;
@@ -100,29 +120,48 @@ header {
 
 .styles {
   padding: 5%;
-  border: 1px solid red;
   display: flex;
-  justify-content: center;
   margin-top: 0;
+  height: 75vh;
   width: 100%; }
-  .styles h1 {
-    font-family: "AlexBrush";
-    font-size: 2.6em;
-    height: 20%; }
-  .styles p {
-    height: 20%;
-    align-self: flex-end; }
   .styles img {
-    height: 50vh;
-    width: auto; }
+    height: auto;
+    width: 40vw;
+    align-self: center; }
+  .styles div {
+    width: 100%;
+    text-align: right;
+    padding-left: 10%;
+    align-self: center; }
+    .styles div h1 {
+      font-family: "AlexBrush";
+      font-size: 3em;
+      height: 30%; }
+    .styles div p {
+      font-family: "Raleway";
+      height: 20%; }
 
 .bottomStyles {
-  background-image: url("../img/steampunk.jpg");
+  background-image: url("../img/hipster.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 75vh;
-  width: auto; }
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5%; }
+  .bottomStyles h1 {
+    font-family: "AlexBrush";
+    color: white;
+    font-size: 2.6em;
+    height: 10% !important; }
+  .bottomStyles p {
+    font-family: "Raleway";
+    color: white;
+    width: 32%;
+    height: 24%; }
 
 footer {
   font-family: "Raleway";
@@ -173,6 +212,8 @@ footer {
     display: flex;
     align-content: center;
     flex-direction: column; }
+    footer .footerBeFirst .inputColor {
+      color: white !important; }
     footer .footerBeFirst .fa {
       color: #98b8b7;
       font-size: 2em;

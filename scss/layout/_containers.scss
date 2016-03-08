@@ -2,15 +2,16 @@ header {
   margin: 0;
   position: relative;
   background-color: lighten($charcoal, 25%);
+
   video {
-    // z-index: 980;
     margin-top: 3.3em;
+    margin-bottom: -6px;
     opacity: .3;
     width: 100%;
   }
   h1 {
     @include fontBasics("AlexBrush", $color:white, $font-size: 10em);
-    @include position(absolute, $width: 100%, $bottom: 30%);
+    @include position(absolute, $width: 100%, $bottom: 25%);
     @extend %textCenter;
   }
   p {
@@ -21,32 +22,53 @@ header {
 }
 .styles {
   padding: 5%;
-  border: 1px solid red;
   display: flex;
-  justify-content: center;
   margin-top: 0;
+  height: 75vh;
   width: 100%;
-  h1 {
-    @include fontBasics("AlexBrush", $font-size: 2.6em);
-    height: 20%;
-  }
-  p {
-    height: 20%;
-    align-self: flex-end;
-  }
 
   img {
-    height: 50vh;
-    width: auto;
+    height: auto;
+    width: 40vw;
+    align-self: center;
+  }
+  div {
+    width: 100%;
+    text-align: right;
+    padding-left: 10%;
+    align-self: center;
+    h1 {
+      @include fontBasics("AlexBrush", $font-size: 3em);
+      height: 30%;
+    }
+    p {
+      @include fontBasics("Raleway");
+      height: 20%;
+
+    }
   }
 }
 .bottomStyles {
-  background-image: url("../img/steampunk.jpg");
+  background-image: url("../img/hipster.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 75vh;
-  width: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5%;
+  h1 {
+    @include fontBasics("AlexBrush", $color: $white, $font-size: 2.6em);
+    height: 10% !important;
+  }
+  p {
+    @include fontBasics("Raleway", $color: $white);
+    width: 32%;
+    height: 24%;
+
+  }
 }
 
 footer {
@@ -111,6 +133,9 @@ footer {
     display: flex;
     align-content: center;
     flex-direction: column;
+    .inputColor {
+      color: $white !important;
+    }
     h3 {
       @extend %h3;
     }
