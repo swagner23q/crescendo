@@ -4,6 +4,7 @@
         {% include '/includes/head.html.twig' %}
     </head>
     <body>
+        {% include '/includes/navbar.html.twig' %}
         <h3>Thank you for registering, {{ user.getName }}!</h3>
         <p>An email has been sent to {{user.getEmail}} with additional information.</p>
 
