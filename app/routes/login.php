@@ -1,8 +1,6 @@
 <?php
 
-
-
-    $app->get('/login', function() use ($app)
+    $app->get('/log_in', function() use ($app)
     {
-        return $app['twig']->render('home.html.twig');
+        return $app['twig']->render('login.html.twig');
     });
