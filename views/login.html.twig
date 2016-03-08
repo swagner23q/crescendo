@@ -9,11 +9,13 @@
             <input type="text" name="email" value="">
 
             <label for="password">Password</label>
-            <input type="text" name="password" value="">
+            <input type="password" name="password" value="">
 
             <button type="submit" name="button">Sign in</button>
         </form>
-
+        {% if error_message %}
+            <p>{{error_message}}</p>
+        {% endif %}
         <form class="" action="/register" >
             <button type="submit" name="button">Not yet a member? Register!</button>
         </form>
