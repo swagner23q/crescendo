@@ -199,10 +199,21 @@
 			$test_user = new User($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal);
 			$test_user->save();
 
+			$gender = "M";
+			$type_id = 1;
+			$name = "Polo Button Down";
+			$description = "Light Blue button down shirt";
+			$price = 9.99;
+			$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product->save();
+			$product_id = $test_product->getId();
+
+
 			$user_id = $test_user->getId();
 			$ship_type = 1;
 			$date = "2016-03-06";
-			$line_items = [[1,1]];
+			$line_items = [[$product_id,1]];
 			$test_order = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order->save();
 
@@ -210,8 +221,9 @@
 			$test_order->checkout();
 			$result = $test_order->getOrderDetails();
 
+
 			//Assert
-			$this->assertEquals([['product_id' => 1, 'qty' => 1, 'name' => 'Blue Shirt' ]], $result);
+			$this->assertEquals([['product_id' => $product_id, 'qty' => 1, 'name' => 'Polo Button Down' ]], $result);
 		}
 
 		function test_getOrderDetails()
@@ -236,17 +248,37 @@
 			$test_user = new User($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal);
 			$test_user->save();
 
+			$gender = "M";
+			$type_id = 1;
+			$name = "Polo Button Down";
+			$description = "Light Blue button down shirt";
+			$price = 9.99;
+			$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product->save();
+			$product_id = $test_product->getId();
+
+			$gender = "F";
+			$type_id = 2;
+			$name= "Dockers Preated Khackis";
+			$description = "Lame ass khaki pants with pleats";
+			$price = 9.99;
+			$img = "/fake/path/image1.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product2->save();
+			$product_id2 = $test_product2->getId();
+
 			$user_id = $test_user->getId();
 			$ship_type = 1;
 			$date = "2016-03-06";
-			$line_items = [[1,1]];
+			$line_items = [[$product_id,1]];
 			$test_order = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order->save();
 
 			$user_id = $test_user->getId();
 			$ship_type = 1;
 			$date = "2016-03-06";
-			$line_items = [[1,1],[2,3]];
+			$line_items = [[$product_id,1],[$product_id2,3]];
 			$test_order2 = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order2->save();
 
@@ -256,7 +288,7 @@
 			$result = $test_order2->getOrderDetails();
 
 			//Assert
-			$this->assertEquals([['product_id' => 1, 'qty' => 1, 'name' => 'Blue Shirt' ],['product_id' => 2, 'qty' => 3, 'name' => 'Blue Jeans']], $result);
+			$this->assertEquals([['product_id' => $product_id, 'qty' => 1, 'name' => 'Polo Button Down' ],['product_id' => $product_id2, 'qty' => 3, 'name' => 'Dockers Preated Khackis']], $result);
 
 		}
 
