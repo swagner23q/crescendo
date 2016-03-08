@@ -4,10 +4,5 @@
     {
         return 'Hello, World!';}
 
-        <img src="img/mensredpants.jpg">
-
-
-
-
-
+    
     );
