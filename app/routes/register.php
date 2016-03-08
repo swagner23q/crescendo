@@ -25,5 +25,15 @@
             $_POST['bill_postal']
         );
         $user->save();
+
+        $message = \Swift_Message::newInstance()
+        ->setSubject('Thanks for Registering!')
+        ->setFrom(array('crescendo.clothing.co@gmail.com' => 'Crescendo Clothing'))
+        ->setTo(array($_POST['email']))
+        ->setBody("Thanks for registering!");
+
+    	$app['mailer']->send($message);
+
+
         return $app['twig']->render('register_confirm.html.twig', array('user' => $user));
     });
