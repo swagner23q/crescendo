@@ -21,6 +21,12 @@ html, body {
 header h1, header p {
   text-align: center; }
 
+footer .sevenL h3, footer .footerBeFirst h3 {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0; }
+
 .nav {
   font-family: "Raleway";
   font-weight: bold;
@@ -115,11 +121,6 @@ footer {
       color: #7aa3a2; }
       footer .sevenL a:hover {
         color: #98b8b7; }
-    footer .sevenL h3 {
-      color: white;
-      font-size: 1.2em;
-      font-weight: bold;
-      margin: 0; }
   footer .footerContainer {
     display: flex;
     align-self: center;
@@ -142,5 +143,19 @@ footer {
     clear: both;
     line-height: 2;
     width: 49%; }
+  footer .footerBeFirst {
+    width: 40%;
+    display: flex;
+    align-content: center;
+    flex-direction: column; }
+    footer .footerBeFirst .fa {
+      color: #98b8b7;
+      font-size: 2em;
+      padding-right: 5%; }
+      footer .footerBeFirst .fa:hover {
+        color: white;
+        transition: all .2s ease-in-out;
+        transform: scale(1.3);
+        cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
