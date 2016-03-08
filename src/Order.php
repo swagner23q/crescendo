@@ -112,12 +112,13 @@
 
 		function checkout()
 		{
-			
+
 		}
-		// function getOrderDetails()
-		// {
-		//
-		// }
+		
+		function getOrderDetails()
+		{
+
+		}
 
 	}
 
