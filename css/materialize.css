@@ -7315,6 +7315,8 @@ select {
   background-color: #909b99 !important;
   z-index: 999;
   overflow-y: auto;
+  font-family: "Raleway";
+  font-weight: bold;
   will-change: left; }
   .side-nav.right-aligned {
     will-change: right;
@@ -7325,16 +7327,17 @@ select {
   .side-nav li {
     float: none;
     padding: 1% 15px 0 15px;
-    color: #608A89 !important; }
+    color: white !important; }
     .side-nav li:first-child {
-      font-size: 1.25em; }
+      font-size: 1.25em;
+      margin-bottom: 1%; }
   .side-nav a {
     color: #4d4d4d;
     display: block;
     padding: 0 15px;
     z-index: 999; }
     .side-nav a:hover {
-      color: white; }
+      color: #98b8b7; }
   .side-nav .exitSideNav {
     position: absolute;
     top: 0;

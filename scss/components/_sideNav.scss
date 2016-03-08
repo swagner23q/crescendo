@@ -12,6 +12,8 @@
   background-color: lighten(#838F8D, 5%) !important;
   z-index: 999;
   overflow-y: auto;
+  font-family: "Raleway";
+  font-weight: bold;
 
   @extend .z-depth-1;
   will-change: left;
@@ -31,9 +33,10 @@
   li {
     float: none;
     padding: 1% $sidenav-padding-right 0 $sidenav-padding-right;
-    color: #608A89 !important;
+    color: white !important;
     &:first-child {
       font-size: 1.25em;
+      margin-bottom: 1%;
     }
   }
 
@@ -43,7 +46,7 @@
     padding: 0 $sidenav-padding-right;
     z-index: 999;
     &:hover {
-      color: white;
+      color: lighten(#608A89, 20%);
     }
   }
   .exitSideNav {

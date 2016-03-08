@@ -94,4 +94,53 @@ header {
     height: 50vh;
     width: auto; }
 
+footer {
+  font-family: "Raleway";
+  color: #838F8D;
+  font-size: 0.9em;
+  background-color: #333333;
+  width: 100%;
+  display: flex;
+  padding: 2%; }
+  footer img {
+    height: 10vh;
+    align-self: center;
+    padding-right: 4%; }
+  footer .sevenL {
+    align-self: center;
+    width: 40%;
+    align-items: flex-start;
+    padding-right: 4%; }
+    footer .sevenL a {
+      color: #7aa3a2; }
+      footer .sevenL a:hover {
+        color: #98b8b7; }
+    footer .sevenL h3 {
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0; }
+  footer .footerContainer {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 20vh;
+    clear: both; }
+    footer .footerContainer a {
+      font-weight: bold;
+      color: #666666; }
+      footer .footerContainer a:hover {
+        color: #98b8b7; }
+  footer .footerLinks {
+    float: left;
+    width: 50%;
+    line-height: 2;
+    clear: both; }
+  footer .footerLinks2 {
+    float: right;
+    clear: both;
+    line-height: 2;
+    width: 49%; }
+
 /*# sourceMappingURL=styles.css.map */

@@ -29,3 +29,65 @@ header {
     width: auto;
   }
 }
+
+footer {
+  @include fontBasics("Raleway", $color: $nav-grey, $font-size: .90em);
+  background-color: $charcoal;
+  width: 100%;
+  display: flex;
+  padding: 2%;
+
+  img {
+    height: 10vh;
+    align-self: center;
+    padding-right: 4%;
+  }
+  .sevenL {
+    align-self: center;
+    width: 40%;
+    align-items: flex-start;
+    padding-right: 4%;
+
+    a {
+      color: lighten(#608A89, 10%);
+      &:hover {
+        color: lighten(#608A89, 20%);
+      }
+    }
+    h3 {
+      color: $white;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+  .footerContainer {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 20vh;
+    clear: both;
+
+    a {
+      font-weight: bold;
+      color: lighten(black, 40%);
+      &:hover {
+        color: lighten(#608A89, 20%);
+      }
+    }
+  }
+  .footerLinks {
+
+    float: left;
+    width: 50%;
+    line-height: 2;
+    clear: both;
+  }
+  .footerLinks2 {
+    float: right;
+    clear: both;
+    line-height: 2;
+    width: 49%;
+  }
+}
