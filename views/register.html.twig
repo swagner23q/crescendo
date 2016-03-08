@@ -6,7 +6,7 @@
     <body>
         {% include '/includes/navbar.html.twig' %}
         {% if registered %}
-            <h3>Thank you for registering, {{ user.getName }}!</h3>
+            <h3>Thank you for registering, {{ user.getFirstName }}!</h3>
             <p>An email has been sent to {{user.getEmail}} with additional information.</p>
         {% else %}
         <form class="" action="/register" method="post">
