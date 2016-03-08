@@ -14,3 +14,11 @@
   font-size: $font-size;
   background-color: $background-color;
 }
+
+@mixin position($position, $width: null, $top: null, $left: null, $bottom: null) {
+  position: $position;
+  width: $width;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+}

@@ -18,6 +18,9 @@ html, body {
   font-family: "Raleway";
   src: url("../font/Raleway.ttf");
   src: url("../font/Raleway.ttf") format("truetype"); }
+header h1, header p {
+  text-align: center; }
+
 .nav {
   font-family: "Raleway";
   font-weight: bold;
@@ -56,7 +59,7 @@ html, body {
       .nav .navBarContent li:nth-child(4) {
         font-size: 1.7em;
         position: absolute;
-        right: 10px;
+        right: 15px;
         top: 15px; }
     .nav .navBarContent a {
       color: black; }
@@ -73,12 +76,18 @@ header {
     opacity: .3;
     width: 100%; }
   header h1 {
-    position: absolute;
-    bottom: 30%;
-    width: 100%;
-    text-align: center;
     font-family: "AlexBrush";
+    color: white;
     font-size: 10em;
-    color: white; }
+    position: absolute;
+    width: 100%;
+    bottom: 30%; }
+  header p {
+    font-family: "AlexBrush";
+    color: white;
+    font-size: 2.6em;
+    position: absolute;
+    width: 100%;
+    bottom: 25%; }
 
 /*# sourceMappingURL=styles.css.map */
