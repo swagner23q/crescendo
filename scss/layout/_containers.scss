@@ -20,14 +20,33 @@ header {
   }
 }
 .styles {
-  margin-top: 0;
-  height: 50vh;
+  padding: 5%;
+  border: 1px solid red;
   display: flex;
+  justify-content: center;
+  margin-top: 0;
+  width: 100%;
+  h1 {
+    @include fontBasics("AlexBrush", $font-size: 2.6em);
+    height: 20%;
+  }
+  p {
+    height: 20%;
+    align-self: flex-end;
+  }
 
   img {
     height: 50vh;
     width: auto;
   }
+}
+.bottomStyles {
+  background-image: url("../img/steampunk.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  width: auto;
 }
 
 footer {

@@ -18,7 +18,7 @@ html, body {
   font-family: "Raleway";
   src: url("../font/Raleway.ttf");
   src: url("../font/Raleway.ttf") format("truetype"); }
-header h1, header p {
+.stylesButton, header h1, header p {
   text-align: center; }
 
 footer .sevenL h3, footer .footerBeFirst h3 {
@@ -26,6 +26,12 @@ footer .sevenL h3, footer .footerBeFirst h3 {
   font-size: 1.2em;
   font-weight: bold;
   margin: 0; }
+
+.stylesButton {
+  height: 30%;
+  width: 45%;
+  background-color: #333333;
+  color: white; }
 
 .nav {
   font-family: "Raleway";
@@ -93,12 +99,30 @@ header {
     bottom: 25%; }
 
 .styles {
+  padding: 5%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
   margin-top: 0;
-  height: 50vh;
-  display: flex; }
+  width: 100%; }
+  .styles h1 {
+    font-family: "AlexBrush";
+    font-size: 2.6em;
+    height: 20%; }
+  .styles p {
+    height: 20%;
+    align-self: flex-end; }
   .styles img {
     height: 50vh;
     width: auto; }
+
+.bottomStyles {
+  background-image: url("../img/steampunk.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  width: auto; }
 
 footer {
   font-family: "Raleway";
