@@ -201,7 +201,7 @@
 			$user_id = $test_user->getId();
 			$ship_type = 1;
 			$date = "2016-03-06";
-			$line_items = [['product_id' => 1, 'qty' => 1]];
+			$line_items = [[1,1]];
 			$test_order = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order->save();
 
@@ -238,14 +238,14 @@
 			$user_id = $test_user->getId();
 			$ship_type = 1;
 			$date = "2016-03-06";
-			$line_items = [['product_id' => 1, 'qty' => 1]];
+			$line_items = [[1,1]];
 			$test_order = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order->save();
 
 			$user_id = $test_user->getId();
 			$ship_type = 1;
 			$date = "2016-03-06";
-			$line_items = [['product_id' => 1, 'qty' => 1],['product_id' => 2, 'qty' => 3]];
+			$line_items = [[1,1],[2,3]];
 			$test_order2 = new Order($user_id, $ship_type, $date, $line_items);
 			$test_order2->save();
 

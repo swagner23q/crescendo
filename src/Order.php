@@ -112,12 +112,28 @@
 
 		function checkout()
 		{
-
+			foreach($this->line_items as list($produt_id, $qty))
+			{
+				$GLOBALS['DB']->exec(
+				"INSERT INTO order_details
+				(order_id, product_id, qty)
+				VALUES
+					({$this->getId()},
+					{$product_id},
+					{$qty})"
+				);
+			}
 		}
-		
+
 		function getOrderDetails()
 		{
-
+			$order_details = [];
+			$line_items = $GLOBALS['DB']->query(
+				"SELECT od.product_id, od.qty, p.name
+				FROM order_details od
+				JOIN products p ON od.product_id = p.id
+				WHERE od.order_id = {$this->getId}"
+			);
 		}
 
 	}
