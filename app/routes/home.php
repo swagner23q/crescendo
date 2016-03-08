@@ -8,7 +8,7 @@
         $email = $_GET['email'];
         $password = $_GET['password'];
         $user_id = User::passwordVerify($email, $password);
-        if($user_id !== FALSE){
+        if($user_id){
             $SESSION['user'] = $user_id;
             $user = User::find($user_id);
             $page_to_render = "home.html.twig";
