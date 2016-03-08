@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        {% include '/includes/head.html.twig' %}
     </head>
     <body>
+        {% include '/includes/navbar.html.twig' %}
+        
         {% for product in products %}
             <img src='{{ product.getImg }}'>
             <p>{{ product.getName }}</p>
-            <p>{{ product.getPrice }}</p>        
+            <p>{{ product.getPrice }}</p>
         {% endfor %}
     </body>
 </html>
