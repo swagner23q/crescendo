@@ -1,5 +1,15 @@
 <?php
+    session_start();
+
+    if (empty($_SESSION['user'])) {
+        $_SESSION['user']=null;
+    }
+
+    if (empty($_SESSION['cart'])) {
+        $_SESSION['cart'] = array();
+    }
     $app = new Silex\Application();
+
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
 

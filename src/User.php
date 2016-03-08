@@ -266,6 +266,11 @@
 		{
 			$GLOBALS['DB']->exec("DELETE FROM users;");
 		}
+<<<<<<< HEAD
+
+	}
+=======
+>>>>>>> bdf794fd1653a35c6e1ed6717241c42a76b2aaa5
 
 		static function find($search_id)
         {
