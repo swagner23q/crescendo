@@ -7,18 +7,18 @@
 		private $type_id;
 		private $name;
 		private $description;
+		private $price;
         private $img;
-
 		private $id;
 
-	    function __construct($gender, $type_id, $name, $description, $img, $price, $id = NULL)
+	    function __construct($gender, $type_id, $name, $description, $price, $img, $id = NULL)
 	    {
 			$this->gender = $gender;
 			$this->type_id = $type_id;
 			$this->name = $name;
 			$this->description = $description;
-      		$this->img = $img;
 			$this->price = $price;
+      		$this->img = $img;
 			$this->id = $id;
 	    }
 	//////////id
@@ -91,12 +91,13 @@
 		{
 			$GLOBALS['DB']->exec(
 	 	   	 "INSERT INTO products
-	 	   	 (gender, type_id, name, description, img)
+	 	   	 (gender, type_id, name, description, price, img)
 	 	   	 VALUES
 				('{$this->getGender()}',
 				{$this->getTypeId()},
 				'{$this->getName()}',
 				'{$this->getDescription()}',
+				'{$this->getPrice()}',
 				'{$this->getImg()}'
 				)"
 			);
@@ -112,10 +113,10 @@
 			   $type_id = $product['type_id'];
 	 	       $name = $product['name'];
 	 	       $description = $product['description'];
-	           $img = $product['img'];
 			   $price = $product['price'];
+	           $img = $product['img'];
 			   $id = $product['id'];
-			   $new_product = new Product($gender, $type_id, $name, $description, $img, $price, $id);
+			   $new_product = new Product($gender, $type_id, $name, $description, $price, $img, $id);
 	 	       array_push($products, $new_product);
 	 	   }
 	 	   return $products;
