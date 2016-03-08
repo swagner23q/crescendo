@@ -135,7 +135,7 @@
 					 array_push($found_products, $product);
                  }
              }
-			 var_dump($found_products);
+
              return $found_products;
          }
 	}
