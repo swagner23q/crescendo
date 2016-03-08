@@ -7,16 +7,16 @@
 		private $type_id;
 		private $name;
 		private $description;
-    	private $img_path;
+    private $img;
 		private $id;
 
-	    function __construct($gender, $type_id, $name, $description, $img_path, $id = NULL)
+	    function __construct($gender, $type_id, $name, $description, $img, $id = NULL)
 	    {
 			$this->gender = $gender;
 			$this->type_id = $type_id;
 			$this->name = $name;
 			$this->description = $description;
-      		$this->img_path = $img_path;
+      		$this->img = $img;
 			$this->id = $id;
 	    }
 	//////////id
@@ -64,15 +64,15 @@
 	    {
 	      $this->gender = $gender;
 	    }
-//////////img_path
+//////////img
 	    function getImgPath()
 	    {
-	      return $this->img_path;
+	      return $this->img;
 	    }
 
-	    function setImgPath($img_path)
+	    function setImgPath($img)
 	    {
-	      $this->img_path = $img_path;
+	      $this->img = $img;
 	    }
 
 		function save()
@@ -100,9 +100,9 @@
 			   $type_id = $product['type_id'];
 	 	       $name = $product['name'];
 	 	       $description = $product['description'];
-	           $img_path = $product['img'];
+	           $img = $product['img'];
 			   $id = $product['id'];
-			   $new_product = new Product($gender, $type_id, $name, $description, $img_path, $id);
+			   $new_product = new Product($gender, $type_id, $name, $description, $img, $id);
 	 	       array_push($products, $new_product);
 	 	   }
 	 	   return $products;
@@ -113,17 +113,17 @@
 			$GLOBALS['DB']->exec("DELETE FROM products;");
 		}
 
-		// static function find($search_id)
-        // {
-        //     $found_product = null;
-        //     $all_products = Product::getAll();
-        //     foreach($all_products as $product) {
-        //         if ($search_id == $product->getId()){
-        //             $found_product = $product;
-        //         }
-        //     }
-        //     return $found_product;
-        // }
+		 static function find($search_id)
+         {
+             $found_product = null;
+             $all_products = Product::getAll();
+             foreach($all_products as $product) {
+                 if ($search_id == $product->getId()){
+                     $found_product = $product;
+                 }
+             }
+             return $found_product;
+         }
 	}
 
 ?>

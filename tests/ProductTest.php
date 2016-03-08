@@ -13,7 +13,7 @@
 		{
 			Order::deleteAll();
 			User::deleteAll();
-      		Product::deleteAll();
+            Product::deleteAll();
 		}
 
 		function test_save()
@@ -23,8 +23,8 @@
 			$type_id = 1;
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
-      		$img_path = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $img_path);
+            $img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $img);
 			$test_product->save();
 
 			//Act
@@ -41,16 +41,16 @@
 			$type_id = 1;
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
-      		$img_path = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $img_path);
+	  		$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $img);
 			$test_product->save();
 
 			$gender = "F";
 			$type_id = 2;
       		$name= "Dockers Preated Khackis";
 			$description = "Lame ass khaki pants with pleats";
-      		$img_path = "/fake/path/image2.jpg";
-			$test_product2 = new Product($gender, $type_id, $name, $description, $img_path);
+      		$img = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $img);
 			$test_product2->save();
 
 			//Act
@@ -62,56 +62,87 @@
 
 		function test_deleteAll()
 		{
-			//Arrange
-			$gender = "M";
-			$type_id = 1;
-			$name = "Polo Button Down";
-			$description = "Light Blue button down shirt";
-      		$img_path = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $img_path);
-			$test_product->save();
+			 //Arrange
+			 $gender = "M";
+			 $type_id = 1;
+			 $name = "Polo Button Down";
+			 $description = "Light Blue button down shirt";
+	      	 $img = "/fake/path/image1.jpg";
+			 $test_product = new Product($gender, $type_id, $name, $description, $img);
+			 $test_product->save();
 
-			$gender = "F";
-			$type_id = 2;
-      		$name= "Dockers Preated Khackis";
-			$description = "Lame ass khaki pants with pleats";
-      		$img_path = "/fake/path/image2.jpg";
-			$test_product2 = new Product($gender, $type_id, $name, $description, $img_path);
-			$test_product2->save();
+			 $gender = "F";
+			 $type_id = 2;
+		     $name= "Dockers Preated Khackis";
+			 $description = "Lame ass khaki pants with pleats";
+	      	 $img = "/fake/path/image2.jpg";
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $img);
+			 $test_product2->save();
 
-			//Act
-			Product::deleteAll();
-			$result = Product::getAll();
+			 //Act
+			 Product::deleteAll();
+			 $result = Product::getAll();
 
-			//Assert
-			$this->assertEquals([], $result);
-		}
+			 //Assert
+			 $this->assertEquals([], $result);
+		 }
 
-	    // function testFind()
-	    // {
-	    //     //Arrange
-		// 	$gender = "M";
-		// 	$type_id = 1;
-		// 	$name = "Polo Button Down";
-		// 	$description = "Light Blue button down shirt";
-     //  		$img_path = "/fake/path/image1.jpg";
-		// 	$test_product = new Product($gender, $type_id, $name, $description, $img_path);
-		// 	$test_product->save();
-		//
-		// 	$gender2 = "F";
-		// 	$type_id2 = 2;
-     //  		$name2= "Dockers Preated Khackis";
-		// 	$description2 = "Lame ass khaki pants with pleats";
-     //  		$img_path2 = "/fake/path/image2.jpg";
-		// 	$test_product2 = new Product($gender, $type_id, $name, $description, $img_path);
-		// 	$test_product2->save();
-		//
-	    //     //Act
-	    //     $result = Product::find($test_product->getId());
-		//
-	    //     //Arrange
-	    //     $this->assertEquals($test_product, $result);
-     // 	}
- 	}
+	     function testFind()
+	     {
+	    	 //Arrange
+		 	 $gender = "M";
+		 	 $type_id = 1;
+		 	 $name = "Polo Button Down";
+		 	 $description = "Light Blue button down shirt";
+	   		 $img = "/fake/path/image1.jpg";
+		 	 $test_product = new Product($gender, $type_id, $name, $description, $img);
+		 	 $test_product->save();
+
+			 $gender2 = "F";
+		 	 $type_id2 = 2;
+	   		 $name2= "Dockers Pleated Khackis";
+		 	 $description2 = "Lame ass khaki pants with pleats";
+	   		 $img2 = "/fake/path/image2.jpg";
+		 	 $test_product2 = new Product($gender, $type_id, $name, $description, $img);
+		 	 $test_product2->save();
+
+	         //Act
+	         $result = Product::find($test_product->getId());
+
+	         //Arrange
+	         $this->assertEquals($test_product, $result);
+	  	 }
+
+
+		 function testFindByTypeAndGender()
+		 {
+		 	 //Arrange
+			 $gender = "M";
+		 	 $type_id = 1;
+		 	 $name = "Polo Button Down";
+		 	 $description = "Light Blue button down shirt";
+	   		 $img = "/fake/path/image1.jpg";
+		 	 $test_product = new Product($gender, $type_id, $name, $description, $img);
+		 	 $test_product->save();
+
+			 $gender2 = "F";
+		 	 $type_id2 = 2;
+	   		 $name2= "Dockers Pleated Khackis";
+		 	 $description2 = "Lame ass khaki pants with pleats";
+	   		 $img2 = "/fake/path/image2.jpg";
+		 	 $test_product2 = new Product($gender, $type_id, $name, $description, $img);
+		 	 $test_product2->save();
+
+			 //Act
+	         $result = Product::find($test_product->getTypeId(),$test_product->getGender());
+
+	         //Arrange
+	         $this->assertEquals($test_product, $result);
+
+	 	}
+
+
+
+	}
 
 ?>
