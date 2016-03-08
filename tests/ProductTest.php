@@ -24,7 +24,8 @@
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
             $img = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $img);
+			$price = 3.99;
+			$test_product = new Product($gender, $type_id, $name, $description, $img, $price);
 			$test_product->save();
 
 			//Act
@@ -42,7 +43,8 @@
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
 	  		$img = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $img);
+			$price = 3.99;
+			$test_product = new Product($gender, $type_id, $name, $description, $img, $price);
 			$test_product->save();
 
 			$gender = "F";
@@ -50,7 +52,8 @@
       		$name= "Dockers Preated Khackis";
 			$description = "Lame ass khaki pants with pleats";
       		$img = "/fake/path/image2.jpg";
-			$test_product2 = new Product($gender, $type_id, $name, $description, $img);
+			$price = 10.99;
+			$test_product2 = new Product($gender, $type_id, $name, $description, $img, $price);
 			$test_product2->save();
 
 			//Act
@@ -68,7 +71,8 @@
 			 $name = "Polo Button Down";
 			 $description = "Light Blue button down shirt";
 	      	 $img = "/fake/path/image1.jpg";
-			 $test_product = new Product($gender, $type_id, $name, $description, $img);
+			 $price = 3.99;
+			 $test_product = new Product($gender, $type_id, $name, $description, $img, $price);
 			 $test_product->save();
 
 			 $gender = "F";
@@ -76,7 +80,8 @@
 		     $name= "Dockers Preated Khackis";
 			 $description = "Lame ass khaki pants with pleats";
 	      	 $img = "/fake/path/image2.jpg";
-			 $test_product2 = new Product($gender, $type_id, $name, $description, $img);
+			 $price = 5.89;
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $img, $price);
 			 $test_product2->save();
 
 			 //Act
@@ -95,7 +100,8 @@
 		 	 $name = "Polo Button Down";
 		 	 $description = "Light Blue button down shirt";
 	   		 $img = "/fake/path/image1.jpg";
-		 	 $test_product = new Product($gender, $type_id, $name, $description, $img);
+			 $price = 10.99;
+		 	 $test_product = new Product($gender, $type_id, $name, $description, $img, $price);
 		 	 $test_product->save();
 
 			 $gender2 = "F";
@@ -103,7 +109,8 @@
 	   		 $name2= "Dockers Pleated Khackis";
 		 	 $description2 = "Lame ass khaki pants with pleats";
 	   		 $img2 = "/fake/path/image2.jpg";
-		 	 $test_product2 = new Product($gender, $type_id, $name, $description, $img);
+			 $price = 3.99;
+		 	 $test_product2 = new Product($gender, $type_id, $name, $description, $img, $price);
 		 	 $test_product2->save();
 
 	         //Act
@@ -122,7 +129,8 @@
 		 	 $name = "Polo Button Down";
 		 	 $description = "Light Blue button down shirt";
 	   		 $img = "/fake/path/image1.jpg";
-		 	 $test_product = new Product($gender, $type_id, $name, $description, $img);
+			 $price = 3.99;
+		 	 $test_product = new Product($gender, $type_id, $name, $description, $img, $price);
 		 	 $test_product->save();
 
 			 $gender2 = "F";
@@ -130,7 +138,8 @@
 	   		 $name2= "Dockers Pleated Khackis";
 		 	 $description2 = "Lame ass khaki pants with pleats";
 	   		 $img2 = "/fake/path/image2.jpg";
-		 	 $test_product2 = new Product($gender2, $type_id2, $name2, $description2, $img2);
+			 $price = 1.99;
+		 	 $test_product2 = new Product($gender2, $type_id2, $name2, $description2, $img2, $price);
 		 	 $test_product2->save();
 
 
