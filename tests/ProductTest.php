@@ -23,9 +23,9 @@
 			$type_id = 1;
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
-            $img = "/fake/path/image1.jpg";
 			$price = 3.99;
-			$test_product = new Product($gender, $type_id, $name, $description, $img, $price);
+            $img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 			$test_product->save();
 
 			//Act
@@ -42,18 +42,18 @@
 			$type_id = 1;
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
-	  		$img = "/fake/path/image1.jpg";
 			$price = 3.99;
-			$test_product = new Product($gender, $type_id, $name, $description, $img, $price);
+	  		$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 			$test_product->save();
 
 			$gender = "F";
 			$type_id = 2;
       		$name= "Dockers Preated Khackis";
 			$description = "Lame ass khaki pants with pleats";
-      		$img = "/fake/path/image2.jpg";
 			$price = 10.99;
-			$test_product2 = new Product($gender, $type_id, $name, $description, $img, $price);
+      		$img = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
 			$test_product2->save();
 
 			//Act
@@ -70,18 +70,18 @@
 			 $type_id = 1;
 			 $name = "Polo Button Down";
 			 $description = "Light Blue button down shirt";
-	      	 $img = "/fake/path/image1.jpg";
 			 $price = 3.99;
-			 $test_product = new Product($gender, $type_id, $name, $description, $img, $price);
+	      	 $img = "/fake/path/image1.jpg";
+			 $test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 			 $test_product->save();
 
 			 $gender = "F";
 			 $type_id = 2;
 		     $name= "Dockers Preated Khackis";
 			 $description = "Lame ass khaki pants with pleats";
-	      	 $img = "/fake/path/image2.jpg";
 			 $price = 5.89;
-			 $test_product2 = new Product($gender, $type_id, $name, $description, $img, $price);
+	      	 $img = "/fake/path/image2.jpg";
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
 			 $test_product2->save();
 
 			 //Act
@@ -99,18 +99,18 @@
 		 	 $type_id = 1;
 		 	 $name = "Polo Button Down";
 		 	 $description = "Light Blue button down shirt";
-	   		 $img = "/fake/path/image1.jpg";
 			 $price = 10.99;
-		 	 $test_product = new Product($gender, $type_id, $name, $description, $img, $price);
+	   		 $img = "/fake/path/image1.jpg";
+			 $test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 		 	 $test_product->save();
 
 			 $gender2 = "F";
 		 	 $type_id2 = 2;
 	   		 $name2= "Dockers Pleated Khackis";
 		 	 $description2 = "Lame ass khaki pants with pleats";
-	   		 $img2 = "/fake/path/image2.jpg";
 			 $price = 3.99;
-		 	 $test_product2 = new Product($gender, $type_id, $name, $description, $img, $price);
+	   		 $img2 = "/fake/path/image2.jpg";
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
 		 	 $test_product2->save();
 
 	         //Act
@@ -124,27 +124,26 @@
 		 function testFindByTypeAndGender()
 		 {
 		 	 //Arrange
-			 $gender = "L";
-		 	 $type_id = 5;
+			 $gender = "M";
+		 	 $type_id = 1;
 		 	 $name = "Polo Button Down";
 		 	 $description = "Light Blue button down shirt";
-	   		 $img = "/fake/path/image1.jpg";
 			 $price = 3.99;
-		 	 $test_product = new Product($gender, $type_id, $name, $description, $img, $price);
+	   		 $img = "/fake/path/image1.jpg";
+			 $test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 		 	 $test_product->save();
 
-			 $gender2 = "F";
-		 	 $type_id2 = 2;
-	   		 $name2= "Dockers Pleated Khackis";
-		 	 $description2 = "Lame ass khaki pants with pleats";
-	   		 $img2 = "/fake/path/image2.jpg";
+			 $gender = "F";
+		 	 $type_id = 2;
+	   		 $name = "Dockers Pleated Khackis";
+		 	 $description = "Lame ass khaki pants with pleats";
 			 $price = 1.99;
-		 	 $test_product2 = new Product($gender2, $type_id2, $name2, $description2, $img2, $price);
+	   		 $img = "/fake/path/image2.jpg";
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
 		 	 $test_product2->save();
 
 
 			 //Act
-
 	         $result = Product::findByTypeAndGender($test_product->getTypeId(), $test_product->getGender());
 
 	         //Arrange
