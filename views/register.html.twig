@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        {% include '/includes/head.html.twig' %}
     </head>
     <body>
-        <form class="/register" action="index.html" method="post">
+        {% include '/includes/navbar.html.twig' %}
+        {% if registered %}
+            <h3>Thank you for registering, {{ user.getName }}!</h3>
+            <p>An email has been sent to {{user.getEmail}} with additional information.</p>
+        {% else %}
+        <form class="" action="/register" method="post">
             <h3>Personal Information</h3>
             <label for="f_name">First Name:</label>
             <input id="f_name" name="f_name" type="text"><br><br>
@@ -44,5 +48,6 @@
 
             <button class="" type="submit">Submit</button>
         </form>
+        {% endif %}
     </body>
 </html>
