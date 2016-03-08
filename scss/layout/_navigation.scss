@@ -1,0 +1,61 @@
+.nav {
+  font-family: "Raleway";
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  opacity: .93;
+  box-shadow: 1px 1px 3px $black;
+  z-index: 990;
+  // flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: $white !important;
+  width: 100%;
+
+  // Hamburger Icon
+  .mdi-navigation-menu {
+    color: $black;
+    position: relative;
+    top: 7px;
+    left: 20px;
+  }
+
+  .side-nav {
+    background-color: lighten($nav-grey, 5%);
+    color: #CCDADA;
+  }
+
+  .navBarContent {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    li {
+      display: inline;
+      &:first-child {
+       position: absolute;
+       left: 70px;
+       top: 18px;
+      }
+      &:nth-child(2) {
+        font-size: 1.3em;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        top: 22px;
+        right: 50px;
+      }
+      &:nth-child(4) {
+        font-size: 1.7em;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+      }
+    }
+    a {
+      color: $black;
+      &:hover {
+        color: #A8CECF;
+      }
+    }
+  }
+}

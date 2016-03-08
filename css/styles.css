@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white; }
+
+@font-face {
+  font-family: "AlexBrush";
+  src: url("../font/AlexBrush.ttf");
+  src: url("../font/AlexBrush.ttf") format("truetype"); }
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway.ttf");
+  src: url("../font/Raleway.ttf") format("truetype"); }
+.nav {
+  font-family: "Raleway";
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  opacity: .93;
+  box-shadow: 1px 1px 3px black;
+  z-index: 990;
+  justify-content: flex-end;
+  background-color: white !important;
+  width: 100%; }
+  .nav .mdi-navigation-menu {
+    color: black;
+    position: relative;
+    top: 7px;
+    left: 20px; }
+  .nav .side-nav {
+    background-color: #909b99;
+    color: #CCDADA; }
+  .nav .navBarContent {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .nav .navBarContent li {
+      display: inline; }
+      .nav .navBarContent li:first-child {
+        position: absolute;
+        left: 70px;
+        top: 18px; }
+      .nav .navBarContent li:nth-child(2) {
+        font-size: 1.3em; }
+      .nav .navBarContent li:nth-child(3) {
+        position: absolute;
+        top: 22px;
+        right: 50px; }
+      .nav .navBarContent li:nth-child(4) {
+        font-size: 1.7em;
+        position: absolute;
+        right: 10px;
+        top: 15px; }
+    .nav .navBarContent a {
+      color: black; }
+      .nav .navBarContent a:hover {
+        color: #A8CECF; }
+
+header {
+  margin: zero;
+  position: relative;
+  background-color: #737373; }
+  header video {
+    z-index: 980;
+    margin-top: 3.3em;
+    opacity: .3;
+    width: 100%; }
+  header h1 {
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+    text-align: center;
+    font-family: "AlexBrush";
+    font-size: 10em;
+    color: white; }
+
+/*# sourceMappingURL=styles.css.map */

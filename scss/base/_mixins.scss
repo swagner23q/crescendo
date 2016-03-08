@@ -1,0 +1,16 @@
+@mixin fontFace($family, $file) {
+
+  @font-face {
+    font-family: $family;
+
+    src: url('#{$path-font}/#{$file}.ttf');
+    src: url('#{$path-font}/#{$file}.ttf') format('truetype');
+  }
+}
+
+@mixin fontBasics($font-family, $color: null, $font-size: null, $background-color:  null) {
+  font-family: $font-family;
+  color: $color;
+  font-size: $font-size;
+  background-color: $background-color;
+}
