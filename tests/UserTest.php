@@ -419,7 +419,7 @@
 			$result = $test_user->passwordVerify($email_to_verify, $password_to_verify);
 
 			//Assert
-			$this->assertEquals("Sorry, we don't recognize that email", $result);
+			$this->assertEquals("Sorry, we don't recognize that email.", $result);
 		}
 
 	}
