@@ -9,5 +9,6 @@
     include ("routes/order_complete.php");
     include ("routes/product.php");
     include ("routes/products.php");
+    include ("routes/profile.php");
     include ("routes/results.php");
     include ("routes/register.php");
