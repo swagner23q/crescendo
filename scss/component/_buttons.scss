@@ -1,0 +1,26 @@
+.stylesButton {
+  @extend %textCenter;
+  @include fontBasics("Raleway", $color: $white, $background-color: $charcoal);
+  height: 30%;
+  width: 55%;
+  padding: 1%;
+  margin-top: 6%;
+  text-transform: uppercase;
+  float: right;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.bottomStylesButton {
+  // @extend %textCenter;
+  @include fontBasics("Raleway", $color: $white, $background-color: $charcoal);
+  // height: 30%;
+  width: 25%;
+  padding: 1%;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+}
