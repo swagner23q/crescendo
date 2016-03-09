@@ -23,7 +23,7 @@ header {
   }
 }
 
-//Top Middle Content Main Page
+//Main Page Top Middle Content
 .styles {
   padding: 5%;
   display: flex;
@@ -53,7 +53,7 @@ header {
   }
 }
 
-//Bottom Middle Content Main Page
+//Main Page Bottom Middle Content
 .bottomStyles {
   background-image: url("../img/hipster.jpg");
   background-repeat: no-repeat;
@@ -76,7 +76,7 @@ header {
   }
 }
 
-// Shipping Section Main Page
+// Main Page Shipping Section
 .shippingNinjaContainer {
   padding: 5%;
   display: flex;
@@ -109,6 +109,16 @@ header {
   }
 }
 
+//Universal Header
+
+.universalHeader {
+  background-image: url("../img/mostlyMainHeader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+}
+
 //Product Page Middle Content
   //Header
 .hipsterPants {
@@ -118,35 +128,71 @@ header {
   height: 60vh;
   width: 100%;
 }
-  //Main Content Product Page
+  //Product Page Content
 .mainTitle {
   @include fontBasics("AlexBrush", $font-size: 6em);
   @extend %textCenter;
 }
-.mensPants {
-  display: flex;
-  justify-content: center;
+
+.articleClothing {
+  height: 100vh;
   width: 100%;
   aside {
-    width: 50%;
+    @extend %textCenter;
+    display: block;
+    float: left;
+    clear: both;
+    width: 50vw;
     border: 10px solid #F4F4F4;
-    margin-right: 5%;
+    margin: 0 2% 10px 5%;
     text-align: center;
     h1 {
       @include fontBasics("AlexBrush", $font-size: 3.7em);
     }
     p {
       @include fontBasics("Raleway", $color: $nav-grey, $font-size: 1.3em);
+      padding: 0 4%;
     }
     img {
+      display: block;
       height: auto;
       width: 100%;
+      margin-bottom: 0;
+    }
+    .available {
+      @include fontBasics("Raleway", $font-size: .85em);
+      font-weight: bolder;
     }
   }
-  .productBox {
-    flex-wrap: wrap;
-  }
+  .productBoxContainer {
+    display: block;
+    width: 100%;
 
+    .productBox {
+      margin: 0 2% 2% 0;
+      float: left;
+      width: 18%;
+      height: 50%;
+      text-align: center;
+      img {
+        width: 80%;
+        height: auto;
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+// Single Product Content
+.mainProductTitle {
+  background-image: url("../img/productFashionHeader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
 }
 
 
