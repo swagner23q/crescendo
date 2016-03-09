@@ -7,6 +7,29 @@
         {% include '/includes/navbar.html.twig' %}
         {% include '/includes/header.html.twig' %}
 
+
+        <h2>Your Current Information:</h2>
+        <h3>First Name:</h3><p>{{ user.getFirstName }}</p>
+        <h3>Last Name:</h3><p>{{ user.getLastName }}</p>
+        <h3>Email:</h3><p>{{ user.getEmail}}
+        <h3>Phone Number:</h3><p>{{ user.getPhone }}</p>
+        <br>
+        <h2>Your Current Shipping Information:</h2>
+        <h3>Street:</h3><p>{{ user.ShipStreet }}</p>
+        <h3>Apt:</h3><p>{{ user.ShipApt }}</p>
+        <h3>City:</h3><p>{{ user.ShipCity}}</p>
+        <h3>State:</h3><p>{{ user.ShipState}}</p>
+        <h3>Zip Code:</h3><p>{{ user.ShipPostal}}</p>
+        <br>
+        <h2>Your Current Billing Information:</h2>
+        <h3>Street:</h3><p>{{ user.BillStreet }}</p>
+        <h3>Apt:</h3><p>{{ user.BillApt }}</p>
+        <h3>City:</h3><p>{{ user.BillCity}}</p>
+        <h3>State:</h3><p>{{ user.BillState}}</p>
+        <h3>Zip Code:</h3><p>{{ user.BillPostal}}</p>
+        <br><br>
+
+
         <h2>Update your current Profile Information:</h2>
         <form class="" action="/register" method="post">
             <input type="hidden" name="_method" value="patch">
