@@ -123,17 +123,19 @@ header {
   @include fontBasics("AlexBrush", $font-size: 6em);
   @extend %textCenter;
 }
-.mensPants {
-  display: flex;
-  justify-content: center;
+
+.articleClothing {
+  height: 100vh;
   width: 100%;
   aside {
-    height: 50vh;
-    width: 50%;
+    @extend %textCenter;
+    display: block;
+    float: left;
+    clear: both;
+    width: 50vw;
     border: 10px solid #F4F4F4;
-    margin-right: 5%;
+    margin: 0 2% 10px 5%;
     text-align: center;
-    flex-direction: column;
     h1 {
       @include fontBasics("AlexBrush", $font-size: 3.7em);
     }
@@ -142,21 +144,26 @@ header {
       padding: 0 4%;
     }
     img {
+      display: block;
       height: auto;
       width: 100%;
       margin-bottom: 0;
     }
     .available {
-      @include fontBasics("Raleway");
+      @include fontBasics("Raleway", $font-size: .85em);
       font-weight: bolder;
     }
   }
   .productBoxContainer {
-    // flex-wrap: wrap;
+    display: block;
+    width: 100%;
+
     .productBox {
-      width: 70%;
+      margin: 0 2% 2% 0;
+      float: left;
+      width: 18%;
+      height: 50%;
       text-align: center;
-      border: 1px solid black;
       img {
         width: 80%;
         height: auto;

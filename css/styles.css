@@ -18,7 +18,7 @@ html, body {
   font-family: "Raleway";
   src: url("../font/Raleway.ttf");
   src: url("../font/Raleway.ttf") format("truetype"); }
-.stylesButton, header h1, header p, .mainTitle {
+.stylesButton, header h1, header p, .mainTitle, .articleClothing aside {
   text-align: center; }
 
 footer .sevenL h3, footer .footerBeFirst h3 {
@@ -198,42 +198,49 @@ header {
   font-family: "AlexBrush";
   font-size: 6em; }
 
-.mensPants {
-  display: flex;
-  justify-content: center;
+.articleClothing {
+  height: 100vh;
   width: 100%; }
-  .mensPants aside {
-    height: 50vh;
-    width: 50%;
+  .articleClothing aside {
+    display: block;
+    float: left;
+    clear: both;
+    width: 50vw;
     border: 10px solid #F4F4F4;
-    margin-right: 5%;
-    text-align: center;
-    flex-direction: column; }
-    .mensPants aside h1 {
+    margin: 0 2% 10px 5%;
+    text-align: center; }
+    .articleClothing aside h1 {
       font-family: "AlexBrush";
       font-size: 3.7em; }
-    .mensPants aside p {
+    .articleClothing aside p {
       font-family: "Raleway";
       color: #838F8D;
       font-size: 1.3em;
       padding: 0 4%; }
-    .mensPants aside img {
+    .articleClothing aside img {
+      display: block;
       height: auto;
       width: 100%;
       margin-bottom: 0; }
-    .mensPants aside .available {
+    .articleClothing aside .available {
       font-family: "Raleway";
+      font-size: 0.85em;
       font-weight: bolder; }
-  .mensPants .productBoxContainer .productBox {
-    width: 70%;
-    text-align: center;
-    border: 1px solid black; }
-    .mensPants .productBoxContainer .productBox img {
-      width: 80%;
-      height: auto; }
-    .mensPants .productBoxContainer .productBox h4 {
-      margin: 0;
-      padding: 0; }
+  .articleClothing .productBoxContainer {
+    display: block;
+    width: 100%; }
+    .articleClothing .productBoxContainer .productBox {
+      margin: 0 2% 2% 0;
+      float: left;
+      width: 18%;
+      height: 50%;
+      text-align: center; }
+      .articleClothing .productBoxContainer .productBox img {
+        width: 80%;
+        height: auto; }
+      .articleClothing .productBoxContainer .productBox h4 {
+        margin: 0;
+        padding: 0; }
 
 footer {
   font-family: "Raleway";
