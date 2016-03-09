@@ -36,15 +36,14 @@ CREATE TABLE `products` (
   `type_id` INTEGER,
   `name` VARCHAR(255),
   `description` VARCHAR(255),
+  `price` FLOAT,
   `img` VARCHAR(255)
 );
-
-INSERT INTO `products` (type_id, name, description, img) VALUES (1, "Blue Shirt", "This is a stylish shirt!", "~/crescendo/assets/img/blue_shirt.jpg"), (2, "Blue Pants", "These are some stylist pants!", "~/crescendo/assets/img/blue_pants.jpg"), (3, "Black Shoes", "These are some neat kicks!", "~/crescendo/assets/img/black_shoes.jpg"), (4, "Red Jacket", "This jacket is totes warm", "~/crescendo/assets/img/red_jacket.jpg");
+INSERT INTO `products` (type_id, name, description, price, img) VALUES (1, "Blue Shirt", "This is a stylish shirt!", 1.99, "~/crescendo/assets/img/blue_shirt.jpg"), (2, "Blue Jeans", "These jeans are awesome!", 2.99, "~/crescendo/assets/img/blue_pants.jpg"), (3, "Black Shoes", "These are some neat kicks!", 3.99, "~/crescendo/assets/img/black_shoes.jpg"), (4, "Red Jacket", "This jacket is totes warm", 4.99, "~/crescendo/assets/img/red_jacket.jpg"), (5, "Black Jacket", "Best. Beanie. Ever.", 5.99, "~/crescendo/assets/img/black_beanie.jpg");
 CREATE TABLE `product_types` (
   `id` SERIAL PRIMARY KEY,
   `type` VARCHAR(255)
 );
-
 INSERT INTO `product_types` (type) VALUES ("shirt"), ("pants"), ("jacket"), ("shoes"), ("beanie");
 CREATE TABLE `order_details` (
   `id` SERIAL PRIMARY KEY,

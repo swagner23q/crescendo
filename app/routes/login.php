@@ -1,6 +1,6 @@
 <?php
 
-    $app->get('/login', function()
+    $app->get('/log_in', function() use ($app)
     {
-        return 'Hello, World!';}
-    );
+        return $app['twig']->render('login.html.twig');
+    });
