@@ -5,6 +5,7 @@
     </head>
     <body>
         {% include '/includes/navbar.html.twig' %}
+        {% include '/includes/header.html.twig' %}
         {% if registered %}
             <h3>Thank you for registering, {{ user.getFirstName }}!</h3>
             <p>An email has been sent to {{user.getEmail}} with additional information.</p>
@@ -49,5 +50,6 @@
             <button class="" type="submit">Submit</button>
         </form>
         {% endif %}
+        {% include '/includes/footer.html.twig' %}
     </body>
 </html>

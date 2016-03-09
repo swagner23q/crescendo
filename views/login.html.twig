@@ -4,6 +4,7 @@
     </head>
     <body>
         {% include '/includes/navbar.html.twig' %}
+        {% include '/includes/header.html.twig' %}
         <form action="/logged_in" method="get">
             <label for="email">Email Adress</label>
             <input type="text" name="email" value="">
@@ -23,6 +24,6 @@
         <form class="" action="/" >
             <button type="submit" name="button">Start Shopping!</button>
         </form>
-
+        {% include '/includes/footer.html.twig' %}
     </body>
 </html>
