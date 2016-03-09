@@ -34,7 +34,13 @@
     <ul>
       <li><a href="#" data-activates="slide-out" class="button-collapse">SHOP</a></li>
       <li><a href="/">Crescendo</a></li>
+      
+      <!-- make sure that in route, user variable is set to user session $_SESSION['user']  -->
+      {if user}
+      <li>Welcome <a href='/profile'>{user.getFirstName}</a> |<a href="/logged_out"> Log out</a>&nbsp; | </li>
+      {else}
       <li><a href="/log_in">Sign In</a>&nbsp; | </li>
+      {endif}
       <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
     </ul>
     </span>
