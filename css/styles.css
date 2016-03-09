@@ -203,22 +203,37 @@ header {
   justify-content: center;
   width: 100%; }
   .mensPants aside {
+    height: 50vh;
     width: 50%;
     border: 10px solid #F4F4F4;
     margin-right: 5%;
-    text-align: center; }
+    text-align: center;
+    flex-direction: column; }
     .mensPants aside h1 {
       font-family: "AlexBrush";
       font-size: 3.7em; }
     .mensPants aside p {
       font-family: "Raleway";
       color: #838F8D;
-      font-size: 1.3em; }
+      font-size: 1.3em;
+      padding: 0 4%; }
     .mensPants aside img {
       height: auto;
-      width: 100%; }
-  .mensPants .productBox {
-    flex-wrap: wrap; }
+      width: 100%;
+      margin-bottom: 0; }
+    .mensPants aside .available {
+      font-family: "Raleway";
+      font-weight: bolder; }
+  .mensPants .productBoxContainer .productBox {
+    width: 70%;
+    text-align: center;
+    border: 1px solid black; }
+    .mensPants .productBoxContainer .productBox img {
+      width: 80%;
+      height: auto; }
+    .mensPants .productBoxContainer .productBox h4 {
+      margin: 0;
+      padding: 0; }
 
 footer {
   font-family: "Raleway";
