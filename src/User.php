@@ -380,18 +380,11 @@
 		// }
 		static function passwordVerify($email, $password)
 		{
-		// 	   $found_user_id = null;
-		// 	   $users = User::getAll();
-		// 	   foreach($users as $user) {
-		// 		   $user_email = $user->getEmail();
-		// 		   $user_password= $user->getPassword();
-		// 		   if ($user_email == $email && $user_password == $password) {
-		// 			 $found_user_id = $user;
-		// 			 return $found_user_id->getId();
-		// 		 } else {
-		// 			 return FALSE;
-		// 		 }
-		//    }
+			   $user = User::findByEmail($email);
+			   if($user->getPassword() == $password)
+			   {
+				   return $user->getId();
+			   }
 		}
 	}
  ?>
