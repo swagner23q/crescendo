@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {% include '/includes/head.html.twig' %}
+    </head>
+    <body>
+        {% include '/includes/navbar.html.twig' %}
+
+        <!-- use the the session cart variable, loop over that array and show the qty ordered, the product name, and the product price
+
+        
+
+        Also show a cart total
+
+        have a proceed to checkout button
+
+        have a continue shopping button (back to the last "products" page that you had visited)-----do this is modal happens
+
+        otherwise render homepage -->
+
+
+
+        {% if error_message %}
+            <p>{{error_message}}</p>
+        {% endif %}
+    </body>
+</html>
