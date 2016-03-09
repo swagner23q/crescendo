@@ -280,9 +280,17 @@
             return $found_user;
         }
 
-		static function findByEmail()
+		static function findByEmail($search_email)
 		{
-
+			$found_user = null;
+            $users = User::getAll();
+            foreach($users as $user) {
+                $user_email = $user->getEmail();
+                if ($user_email == $search_email) {
+                  $found_user = $user;
+                }
+            }
+            return $found_user;
 		}
 
 		function update($new_f_name, $new_l_name, $new_email, $new_phone, $new_password, $new_ship_street, $new_ship_apt, $new_ship_city, $new_ship_state, $new_ship_postal, $new_bill_street, $new_bill_apt, $new_bill_city, $new_bill_state, $new_bill_postal)

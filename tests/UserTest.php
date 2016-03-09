@@ -336,7 +336,7 @@
 
 			$f_name = "Brandi";
 			$l_name = "Dunkinsell";
-			$email = "jason.s.awbrey@gmail.com";
+			$email = "brandi@gmail.com";
 			$phone = "503-939-9407";
 			$password = "password";
 			$ship_street = "123 Test Street";
