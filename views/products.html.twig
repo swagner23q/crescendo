@@ -5,11 +5,12 @@
     </head>
     <body>
         {% include '/includes/navbar.html.twig' %}
-        
+
         {% for product in products %}
             <img src='{{ product.getImg }}'>
             <p>{{ product.getName }}</p>
             <p>{{ product.getPrice }}</p>
         {% endfor %}
+        {% include '/includes/footer.html.twig' %}
     </body>
 </html>
