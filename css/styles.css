@@ -118,6 +118,13 @@ header {
     width: 100%;
     bottom: 25%; }
 
+.hipsterPants {
+  background-image: url("../img/hipsterPants.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; }
+
 .styles {
   padding: 5%;
   display: flex;
@@ -231,7 +238,7 @@ footer {
     line-height: 2;
     width: 49%; }
   footer .footerBeFirst {
-    margin-top: 11%;
+    margin-top: 8%;
     width: 40%;
     display: flex;
     align-content: center;
