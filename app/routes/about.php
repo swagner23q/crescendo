@@ -1,6 +1,6 @@
 <?php
 
-    $app->get('/about', function()
+    $app->get('/about', function() use ($app)
     {
-        return 'Hello, World!';}
-    );
+        return $app['twig']->render('about.html.twig');
+    });
