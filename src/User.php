@@ -369,7 +369,10 @@
 				   if($user->getPassword() == $password)
 				   {
 					   return $user->getId();
-				   }
+				   } else
+					   {
+						   	return "Wrong password! Please try again.";
+					   }
 			   } else
 				   {
 					   return "Sorry, we don't recognize that email.";
