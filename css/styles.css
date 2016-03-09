@@ -242,6 +242,13 @@ header {
         margin: 0;
         padding: 0; }
 
+.mainProductTitle {
+  background-image: url("../img/productFashionHeader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; }
+
 footer {
   font-family: "Raleway";
   color: #838F8D;
