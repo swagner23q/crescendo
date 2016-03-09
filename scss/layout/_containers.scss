@@ -138,7 +138,7 @@ footer {
       @extend %h3;
     }
   }
-  .footerContainer {
+  .footerLinksContainer {
     display: flex;
     align-self: center;
     flex-wrap: wrap;
@@ -167,11 +167,11 @@ footer {
     width: 49%;
   }
   .footerBeFirst {
-    margin-top: 8%;
+    padding-top: 5%;
     width: 40%;
     display: flex;
-    align-content: center;
     flex-direction: column;
+    align-content: center!important;
     .inputColor {
       color: $white !important;
     }

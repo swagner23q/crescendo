@@ -215,17 +215,17 @@ footer {
       color: #7aa3a2; }
       footer .sevenL a:hover {
         color: #98b8b7; }
-  footer .footerContainer {
+  footer .footerLinksContainer {
     display: flex;
     align-self: center;
     flex-wrap: wrap;
     width: 50%;
     height: 20vh;
     clear: both; }
-    footer .footerContainer a {
+    footer .footerLinksContainer a {
       font-weight: bold;
       color: #666666; }
-      footer .footerContainer a:hover {
+      footer .footerLinksContainer a:hover {
         color: #98b8b7; }
   footer .footerLinks {
     float: left;
@@ -238,11 +238,11 @@ footer {
     line-height: 2;
     width: 49%; }
   footer .footerBeFirst {
-    margin-top: 8%;
+    padding-top: 5%;
     width: 40%;
     display: flex;
-    align-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+    align-content: center !important; }
     footer .footerBeFirst .inputColor {
       color: white !important; }
     footer .footerBeFirst .fa {
