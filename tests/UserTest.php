@@ -381,11 +381,45 @@
 			$test_user = new User($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal);
 			$test_user->save();
 
+			$email_to_verify = "jason.s.awbrey@gmail.com";
+			$password_to_verify = "password";
+
 			//Act
-			$result = $test_user->passwordVerify($email, $password);
+			$result = $test_user->passwordVerify($email_to_verify, $password_to_verify);
 
 			//Assert
 			$this->assertEquals($test_user->getId(), $result);
+		}
+
+		function test_passwordVerify_returnNoEmail()
+		{
+			//Arrange
+			$f_name = "Jason";
+			$l_name = "Awbrey";
+			$email = "jason.s.awbrey@gmail.com";
+			$phone = "503-939-9407";
+			$password = "password";
+			$ship_street = "123 Test Street";
+			$ship_apt = "APT 32";
+			$ship_city = "Portland";
+			$ship_state = "OR";
+			$ship_postal = "97212";
+			$bill_street = "123 Test Street";
+			$bill_apt = "APT 32";
+			$bill_city = "Portland";
+			$bill_state = "OR";
+			$bill_postal = "97212";
+			$test_user = new User($f_name, $l_name, $email, $phone, $password, $ship_street, $ship_apt, $ship_city, $ship_state, $ship_postal, $bill_street, $bill_apt, $bill_city, $bill_state, $bill_postal);
+			$test_user->save();
+
+			$email_to_verify = "not_real@real_not.com";
+			$password_to_verify = "password";
+
+			//Act
+			$result = $test_user->passwordVerify($email_to_verify, $password_to_verify);
+
+			//Assert
+			$this->assertEquals("Sorry, we don't recognize that email", $result);
 		}
 
 	}
