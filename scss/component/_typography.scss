@@ -1,2 +1,7 @@
 @include fontFace("AlexBrush", AlexBrush);
 @include fontFace("Raleway", Raleway);
+
+.universalFont {
+  @include fontBasics("Raleway");
+
+}

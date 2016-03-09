@@ -18,6 +18,9 @@ html, body {
   font-family: "Raleway";
   src: url("../font/Raleway.ttf");
   src: url("../font/Raleway.ttf") format("truetype"); }
+.universalFont {
+  font-family: "Raleway"; }
+
 .stylesButton, header h1, header p, .mainTitle, .articleClothing aside, .productInfoBox {
   text-align: center; }
 
@@ -265,6 +268,9 @@ header {
   height: 50%;
   border: 2px solid #008080;
   float: right; }
+
+.container {
+  margin-bottom: 5%; }
 
 footer {
   font-family: "Raleway";
