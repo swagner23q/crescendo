@@ -18,7 +18,7 @@ html, body {
   font-family: "Raleway";
   src: url("../font/Raleway.ttf");
   src: url("../font/Raleway.ttf") format("truetype"); }
-.stylesButton, header h1, header p {
+.stylesButton, header h1, header p, .mainTitle {
   text-align: center; }
 
 footer .sevenL h3, footer .footerBeFirst h3 {
@@ -118,13 +118,6 @@ header {
     width: 100%;
     bottom: 25%; }
 
-.hipsterPants {
-  background-image: url("../img/hipsterPants.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60vh;
-  width: 100%; }
-
 .styles {
   padding: 5%;
   display: flex;
@@ -193,6 +186,39 @@ header {
       font-size: 1em; }
   .shippingNinjaContainer .verticalLine {
     border-left: 1px solid black; }
+
+.hipsterPants {
+  background-image: url("../img/hipsterPants.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; }
+
+.mainTitle {
+  font-family: "AlexBrush";
+  font-size: 6em; }
+
+.mensPants {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  .mensPants aside {
+    width: 50%;
+    border: 10px solid #F4F4F4;
+    margin-right: 5%;
+    text-align: center; }
+    .mensPants aside h1 {
+      font-family: "AlexBrush";
+      font-size: 3.7em; }
+    .mensPants aside p {
+      font-family: "Raleway";
+      color: #838F8D;
+      font-size: 1.3em; }
+    .mensPants aside img {
+      height: auto;
+      width: 100%; }
+  .mensPants .productBox {
+    flex-wrap: wrap; }
 
 footer {
   font-family: "Raleway";

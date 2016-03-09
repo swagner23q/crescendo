@@ -117,11 +117,13 @@
 
 #sidenav-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 120vh;
-  background-color: rgba(0,0,0,.5);
-  z-index: 998;
-  will-change: opacity;
+  top: 0px;
+  left: 220px;
+  height: 23px;
+  width: 20px;
+  background-color: rgba(0,0,0,.2);
+  z-index: 999;
+  &:hover {
+    cursor: pointer;
+  }
 }

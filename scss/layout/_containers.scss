@@ -1,3 +1,5 @@
+
+// Main Page Header
 header {
   margin: 0;
   position: relative;
@@ -21,13 +23,7 @@ header {
   }
 }
 
-.hipsterPants {
-  background-image: url("../img/hipsterPants.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60vh;
-  width: 100%;
-}
+//Top Middle Content Main Page
 .styles {
   padding: 5%;
   display: flex;
@@ -56,6 +52,8 @@ header {
     }
   }
 }
+
+//Bottom Middle Content Main Page
 .bottomStyles {
   background-image: url("../img/hipster.jpg");
   background-repeat: no-repeat;
@@ -78,6 +76,7 @@ header {
   }
 }
 
+// Shipping Section Main Page
 .shippingNinjaContainer {
   padding: 5%;
   display: flex;
@@ -110,6 +109,49 @@ header {
   }
 }
 
+//Product Page Middle Content
+  //Header
+.hipsterPants {
+  background-image: url("../img/hipsterPants.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+}
+  //Main Content Product Page
+.mainTitle {
+  @include fontBasics("AlexBrush", $font-size: 6em);
+  @extend %textCenter;
+}
+.mensPants {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  aside {
+    width: 50%;
+    border: 10px solid #F4F4F4;
+    margin-right: 5%;
+    text-align: center;
+    h1 {
+      @include fontBasics("AlexBrush", $font-size: 3.7em);
+    }
+    p {
+      @include fontBasics("Raleway", $color: $nav-grey, $font-size: 1.3em);
+    }
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  .productBox {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
+// Footer
 footer {
   @include fontBasics("Raleway", $color: $nav-grey, $font-size: .90em);
   background-color: $charcoal;
