@@ -30,7 +30,7 @@
         ->setSubject('Thanks for Registering!')
         ->setFrom(array('crescendo.clothing.co@gmail.com' => 'Crescendo Clothing'))
         ->setTo(array($_POST['email']))
-        ->setBody("Thanks for registering!");
+        ->setBody("Thanks for registering with Cresendo Clothing, and welcome to the Crescendo family! Keep this email for future reference: Email: " . $_POST['email'] . ", Password: " . $_POST['password'] . ".");
 
     	$app['mailer']->send($message);
 
