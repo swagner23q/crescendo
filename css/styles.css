@@ -319,8 +319,7 @@ footer {
     padding-top: 5%;
     width: 40%;
     display: flex;
-    flex-direction: column;
-    align-content: center !important; }
+    flex-direction: column; }
     footer .footerBeFirst .inputColor {
       color: white !important; }
     footer .footerBeFirst .fa {
