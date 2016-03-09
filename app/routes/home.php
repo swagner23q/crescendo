@@ -1,7 +1,6 @@
 <?php
     $app->get('/', function() use ($app)
     {
-        var_dump($_SESSION['user']);
         return $app['twig']->render('home.html.twig');
     });
 
@@ -23,12 +22,10 @@
             $name = FALSE;
         }
 
-        var_dump($_SESSION['user']);
         return $app['twig']->render($page_to_render, array('name' => $name, 'error_message' => $error_message));
     });
 
     $app->get('/logged_out', function() use ($app) {
         $_SESSION['user'] = NULL;
-        var_dump($_SESSION['user']);
         return $app['twig']->render('home.html.twig');
     });
