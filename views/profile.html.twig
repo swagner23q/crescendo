@@ -1,47 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include '/includes/head.html.twig' %}
+    </head>
+    <body>
+        {% include '/includes/navbar.html.twig' %}
+        {% include '/includes/header.html.twig' %}
+
+        <h2>Update your current Profile Information:</h2>
+        <form class="" action="/register" method="post">
+            <input type="hidden" name="_method" value="patch">
+            <h3>Personal Information</h3>
+            <label for="f_name">First Name:</label>
+            <input id="f_name" name="f_name" type="text" value= '{{ user.getFirstName }}'><br><br>
+            <label for="l_name">Last Name:</label>
+            <input id="l_name" name="l_name" type="text" value= '{{ user.getLastName }}'><br><br>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" value= '{{ user.getEmail }}'><br><br>
+            <label for="phone">Phone #:</label>
+            <input id="phone" name="phone" type="text" value= '{{ user.getPhone }}'><br><br>
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password"><br><br>
+
+            <h3>Shipping Information</h3>
+            <label for="ship_street">Street:</label>
+            <input id="ship_street" name="ship_street" type="text" value= '{{ user.getShipStreet }}'><br><br>
+            <label for="ship_apt">Apartment Number:</label>
+            <input id="ship_apt" name="ship_apt" type="text" value= '{{ user.getShipApt }}'><br><br>
+            <label for="ship_city">City:</label>
+            <input id="ship_city" name="ship_city" type="text" value= '{{ user.getShipCity }}'><br><br>
+            <label for="ship_state">State:</label>
+            <input id="ship_state" name="ship_state" type="text" value= '{{ user.getShipState }}'><br><br>
+            <label for="ship_postal">Zip Code:</label>
+            <input id="ship_postal" name="ship_postal" type="text" value= '{{ user.getShipPostal }}'><br><br>
+
+            <h3>Billing Information</h3>
+            <label for="bill_street">Street:</label>
+            <input id="bill_street" name="bill_street" type="text" value= '{{ user.getBillStreet }}'><br><br>
+            <label for="bill_apt">Apartment Number:</label>
+            <input id="bill_apt" name="bill_apt" type="text" value= '{{ user.getBillApt }}'><br><br>
+            <label for="bill_city">City:</label>
+            <input id="bill_city" name="bill_city" type="text" value= '{{ user.getBillCity }}'><br><br>
+            <label for="bill_state">State:</label>
+            <input id="bill_state" name="bill_state" type="text" value= '{{ user.getBillState }}'><br><br>
+            <label for="bill_postal">Zip Code:</label>
+            <input id="bill_postal" name="bill_postal" type="text" value= '{{ user.getBillPostal }}'><br><br>
+
+            <button class="" type="submit">Submit</button>
+        </form>
 
 
-
-
-
-
-<h2>Update your current Profile Information:</h2>
-<form class="" action="/register" method="post">
-    <input type="hidden" name="_method" value="patch">
-    <h3>Personal Information</h3>
-    <label for="f_name">First Name:</label>
-    <input id="f_name" name="f_name" type="text" value= '{{ user.getFirstName }}'><br><br>
-    <label for="l_name">Last Name:</label>
-    <input id="l_name" name="l_name" type="text" value= '{{ user.getLastName }}'><br><br>
-    <label for="email">Email:</label>
-    <input id="email" name="email" type="text" value= '{{ user.getEmail }}'><br><br>
-    <label for="phone">Phone #:</label>
-    <input id="phone" name="phone" type="text" value= '{{ user.getPhone }}'><br><br>
-    <label for="password">Password:</label>
-    <input id="password" name="password" type="password"><br><br>
-
-    <h3>Shipping Information</h3>
-    <label for="ship_street">Street:</label>
-    <input id="ship_street" name="ship_street" type="text" value= '{{ user.getShipStreet }}'><br><br>
-    <label for="ship_apt">Apartment Number:</label>
-    <input id="ship_apt" name="ship_apt" type="text" value= '{{ user.getShipApt }}'><br><br>
-    <label for="ship_city">City:</label>
-    <input id="ship_city" name="ship_city" type="text" value= '{{ user.getShipCity }}'><br><br>
-    <label for="ship_state">State:</label>
-    <input id="ship_state" name="ship_state" type="text" value= '{{ user.getShipState }}'><br><br>
-    <label for="ship_postal">Zip Code:</label>
-    <input id="ship_postal" name="ship_postal" type="text" value= '{{ user.getShipPostal }}'><br><br>
-
-    <h3>Billing Information</h3>
-    <label for="bill_street">Street:</label>
-    <input id="bill_street" name="bill_street" type="text" value= '{{ user.getBillStreet }}'><br><br>
-    <label for="bill_apt">Apartment Number:</label>
-    <input id="bill_apt" name="bill_apt" type="text" value= '{{ user.getBillApt }}'><br><br>
-    <label for="bill_city">City:</label>
-    <input id="bill_city" name="bill_city" type="text" value= '{{ user.getBillCity }}'><br><br>
-    <label for="bill_state">State:</label>
-    <input id="bill_state" name="bill_state" type="text" value= '{{ user.getBillState }}'><br><br>
-    <label for="bill_postal">Zip Code:</label>
-    <input id="bill_postal" name="bill_postal" type="text" value= '{{ user.getBillPostal }}'><br><br>
-
-    <button class="" type="submit">Submit</button>
-</form>
+        {% include '/includes/footer.html.twig' %}
+    </body>
+</html>
