@@ -24,7 +24,7 @@ header {
   padding: 5%;
   display: flex;
   margin-top: 0;
-  max-height: 600px;
+  height: 75%;
   width: 100%;
 
   img {
@@ -50,7 +50,6 @@ header {
 }
 .bottomStyles {
   background-image: url("../img/hipster.jpg");
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -80,19 +79,22 @@ header {
     font-weight: bold;
   }
   .shipping {
+    padding: 5%;
     align-self: center;
     width: 50%;
+    p {
+      color: $grey;
+      font-size: 1em;
+    }
 
   }
   .ninja {
+    padding: 5%;
     align-self: center;
     width: 50%;
-    h3 {
-      @include fontBasics("Raleway", $font-size: 1.5em);
-      font-weight: bold;
-    }
     p {
-      font-size: 1em!important;
+      color: $grey;
+      font-size: 1em;
     }
   }
   .verticalLine {
