@@ -151,6 +151,38 @@
 
              return $found_products;
          }
+
+		function cartSave()
+		{
+			array_push($_SESSION['cart'], $this);
+		}
+
+		static function cartGetAll()
+		{
+			return $_SESSION['cart'];
+		}
+
+		static function calculateCartItemPrice()
+		{
+
+
+			$cart = $_SESSION['cart'];
+			$price = 0;
+		    foreach ($cart as $item)
+		    {
+		        $product_id = $item[0];
+		        $qty = $item[1];
+
+		        $product = Product::find($product_id);
+
+		        $item_price = $product->getPrice();
+
+		        $price = $item_price * $qty;
+		    }
+		    return $price;
+		}
+
+
 	}
 
 ?>
