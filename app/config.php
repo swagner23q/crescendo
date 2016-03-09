@@ -1,13 +1,14 @@
 <?php
     session_start();
 
-    if (empty($_SESSION['user'])) {
-        $_SESSION['user']=null;
+    if ( !isset($_SESSION['user']) ) {
+        $_SESSION['user']="no user";
     }
 
     if (empty($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
+
     $app = new Silex\Application();
 
 

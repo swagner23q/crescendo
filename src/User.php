@@ -280,6 +280,11 @@
             return $found_user;
         }
 
+		static function findByEmail()
+		{
+
+		}
+
 		function update($new_f_name, $new_l_name, $new_email, $new_phone, $new_password, $new_ship_street, $new_ship_apt, $new_ship_city, $new_ship_state, $new_ship_postal, $new_bill_street, $new_bill_apt, $new_bill_city, $new_bill_state, $new_bill_postal)
 		{
 			$GLOBALS['DB']->exec(
@@ -348,20 +353,37 @@
 			return $orders;
 		}
 
+
+		//broken, only checks the first user and returns FALSE!!! so no other users can be checked
 		static function passwordVerify($email, $password)
 		{
-		   $found_user_id = null;
-		   $users = User::getAll();
-		   foreach($users as $user) {
-		       $user_email = $user->getEmail();
-		       $user_password= $user->getPassword();
-		       if ($user_email == $email && $user_password == $password) {
-		         $found_user_id = $user;
-				 return $found_user_id->getId();
-			 } else {
-				 return FALSE;
-			 }
+			   $found_user_id = null;
+			   $users = User::getAll();
+			   foreach($users as $user) {
+			       $user_email = $user->getEmail();
+			       $user_password= $user->getPassword();
+			       if ($user_email == $email && $user_password == $password) {
+			         $found_user_id = $user;
+					 return $found_user_id->getId();
+				 } else {
+					 return FALSE;
+				 }
 		   }
 		}
+		// static function passwordVerify($email, $password)
+		// {
+		// 	   $found_user_id = null;
+		// 	   $users = User::getAll();
+		// 	   foreach($users as $user) {
+		// 		   $user_email = $user->getEmail();
+		// 		   $user_password= $user->getPassword();
+		// 		   if ($user_email == $email && $user_password == $password) {
+		// 			 $found_user_id = $user;
+		// 			 return $found_user_id->getId();
+		// 		 } else {
+		// 			 return FALSE;
+		// 		 }
+		//    }
+		// }
 	}
  ?>
