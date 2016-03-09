@@ -2,7 +2,7 @@
     session_start();
 
     if ( !isset($_SESSION['user']) ) {
-        $_SESSION['user']="no user";
+        $_SESSION['user']= NULL;
     }
 
     if (empty($_SESSION['cart'])) {

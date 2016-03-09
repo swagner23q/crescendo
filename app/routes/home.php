@@ -28,8 +28,7 @@
     });
 
     $app->get('/logged_out', function() use ($app) {
-        // unset($_SESSION['user']);
-        $_SESSION['user'] = "no user";
+        $_SESSION['user'] = NULL;
         var_dump($_SESSION['user']);
         return $app['twig']->render('home.html.twig');
     });
