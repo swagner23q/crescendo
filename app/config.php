@@ -1,17 +1,22 @@
 <?php
     session_start();
 
-    if (empty($_SESSION['user'])) {
-        $_SESSION['user']=null;
+    if ( !isset($_SESSION['user']) ) {
+        $_SESSION['user']= NULL;
     }
 
     if (empty($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
+
     $app = new Silex\Application();
 
-
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
+
+    $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
+        $twig->addGlobal('session', $_SESSION);
+        return $twig;
+    }));
 
     $app->register(new Silex\Provider\SwiftmailerServiceProvider());
     $app['swiftmailer.options'] = array(
