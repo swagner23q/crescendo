@@ -166,11 +166,48 @@
 			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 			$test_product->save();
 
+			$gender = "F";
+			$type_id = 2;
+			$name = "Dockers Pleated Khackis";
+			$description = "Lame ass khaki pants with pleats";
+			$price = 1.99;
+			$img = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product2->save();
+
 			$_SESSION['cart'] = array([$test_product->getId(),3]);
 
-			$result = Product::calculateCartItemPrice();
+			$result = Product::calculateTotalCartPrice();
 
 			$this->assertEquals(11.97, $result);
+		}
+
+		function testCalculateTotalCartPrice()
+
+		{
+			$gender = "M";
+			$type_id = 1;
+			$name = "Polo Button Down";
+			$description = "Light Blue button down shirt";
+			$price = 3.99;
+			$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product->save();
+
+			$gender = "F";
+			$type_id = 2;
+			$name = "Dockers Pleated Khackis";
+			$description = "Lame ass khaki pants with pleats";
+			$price = 1.99;
+			$img = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product2->save();
+
+			$_SESSION['cart'] = array([$test_product->getId(),3], [$test_product2->getId(), 2]);
+
+			$result = Product::calculateTotalCartPrice();
+
+			$this->assertEquals(15.95, $result);
 		}
 
 
