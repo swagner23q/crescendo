@@ -18,7 +18,7 @@ html, body {
   font-family: "Raleway";
   src: url("../font/Raleway.ttf");
   src: url("../font/Raleway.ttf") format("truetype"); }
-.stylesButton, header h1, header p, .mainTitle, .articleClothing aside {
+.stylesButton, header h1, header p, .mainTitle, .articleClothing aside, .productInfoBox {
   text-align: center; }
 
 footer .sevenL h3, footer .footerBeFirst h3 {
@@ -255,6 +255,16 @@ header {
   background-size: cover;
   height: 60vh;
   width: 100%; }
+
+.productInfoBox {
+  font-family: "Raleway";
+  padding: 5%;
+  margin-right: 2em;
+  margin-top: 3em;
+  width: 40%;
+  height: 50%;
+  border: 2px solid #008080;
+  float: right; }
 
 footer {
   font-family: "Raleway";

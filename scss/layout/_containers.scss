@@ -194,6 +194,17 @@ header {
   height: 60vh;
   width: 100%;
 }
+.productInfoBox {
+  @include fontBasics("Raleway");
+  @extend %textCenter;
+  padding: 5%;
+  margin-right: 2em;
+  margin-top: 3em;
+  width: 40%;
+  height: 50%;
+  border: 2px solid $teal;
+  float: right;
+}
 
 
 
