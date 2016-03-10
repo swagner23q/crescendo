@@ -43,16 +43,16 @@
 			$name = "Polo Button Down";
 			$description = "Light Blue button down shirt";
 			$price = 3.99;
-			$img = "/fake/path/image1.jpg";
+	  		$img = "/fake/path/image1.jpg";
 			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
 			$test_product->save();
 
 			$gender = "F";
 			$type_id = 2;
-			$name= "Dockers Preated Khackis";
+      		$name= "Dockers Preated Khackis";
 			$description = "Lame ass khaki pants with pleats";
 			$price = 10.99;
-			$img = "/fake/path/image2.jpg";
+      		$img = "/fake/path/image2.jpg";
 			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
 			$test_product2->save();
 
@@ -92,63 +92,64 @@
 			 $this->assertEquals([], $result);
 		 }
 
-		 function testFind()
-		{
-			//Arrange
-			$gender = "M";
-			$type_id = 1;
-			$name = "Polo Button Down";
-			$description = "Light Blue button down shirt";
-			$price = 10.99;
-			$img = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
-			$test_product->save();
+	     function testFind()
+	     {
+	    	 //Arrange
+		 	 $gender = "M";
+		 	 $type_id = 1;
+		 	 $name = "Polo Button Down";
+		 	 $description = "Light Blue button down shirt";
+			 $price = 10.99;
+	   		 $img = "/fake/path/image1.jpg";
+			 $test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+		 	 $test_product->save();
 
-			$gender2 = "F";
-			$type_id2 = 2;
-			$name2= "Dockers Pleated Khackis";
-			$description2 = "Lame ass khaki pants with pleats";
-			$price = 3.99;
-			$img2 = "/fake/path/image2.jpg";
-			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
-			$test_product2->save();
+			 $gender2 = "F";
+		 	 $type_id2 = 2;
+	   		 $name2= "Dockers Pleated Khackis";
+		 	 $description2 = "Lame ass khaki pants with pleats";
+			 $price = 3.99;
+	   		 $img2 = "/fake/path/image2.jpg";
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
+		 	 $test_product2->save();
 
-			//Act
-			$result = Product::find($test_product->getId());
+	         //Act
+	         $result = Product::find($test_product->getId());
 
-			//Arrange
-			$this->assertEquals($test_product, $result);
-		}
-
-		function testFindByTypeAndGender()
-		{
-			//Arrange
-			$gender = "M";
-			$type_id = 1;
-			$name = "Polo Button Down";
-			$description = "Light Blue button down shirt";
-			$price = 3.99;
-			$img = "/fake/path/image1.jpg";
-			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
-			$test_product->save();
-
-			$gender = "F";
-			$type_id = 2;
-			$name = "Dockers Pleated Khackis";
-			$description = "Lame ass khaki pants with pleats";
-			$price = 1.99;
-			$img = "/fake/path/image2.jpg";
-			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
-			$test_product2->save();
+	         //Arrange
+	         $this->assertEquals($test_product, $result);
+	  	 }
 
 
-			//Act
-			$result = Product::findByTypeAndGender($test_product->getTypeId(), $test_product->getGender());
+		 function testFindByTypeAndGender()
+		 {
+		 	 //Arrange
+			 $gender = "M";
+		 	 $type_id = 1;
+		 	 $name = "Polo Button Down";
+		 	 $description = "Light Blue button down shirt";
+			 $price = 3.99;
+	   		 $img = "/fake/path/image1.jpg";
+			 $test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+		 	 $test_product->save();
 
-			//Arrange
-			$this->assertEquals([$test_product], $result);
+			 $gender = "F";
+		 	 $type_id = 2;
+	   		 $name = "Dockers Pleated Khackis";
+		 	 $description = "Lame ass khaki pants with pleats";
+			 $price = 1.99;
+	   		 $img = "/fake/path/image2.jpg";
+			 $test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
+		 	 $test_product2->save();
 
-	   }
+
+			 //Act
+	         $result = Product::findByTypeAndGender($test_product->getTypeId(), $test_product->getGender());
+
+	         //Arrange
+	         $this->assertEquals([$test_product], $result);
+
+	 	}
 
 
 

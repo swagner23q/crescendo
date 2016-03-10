@@ -86,6 +86,7 @@
 	    {
 	      $this->img = $img;
 	    }
+
 		function save()
 		{
 			$GLOBALS['DB']->exec(
@@ -103,7 +104,7 @@
 	 	   	$this->id = $GLOBALS['DB']->lastInsertId();
 		}
 
-		static function getAll()
+	    static function getAll()
 		{
 			$returned_products = $GLOBALS['DB']->query("SELECT * FROM products;");
 	 	   $products = array();
@@ -126,29 +127,30 @@
 			$GLOBALS['DB']->exec("DELETE FROM products;");
 		}
 
-		static function find($search_id)
-		{
-			$found_product = NULL;
-			$all_products = Product::getAll();
-			foreach($all_products as $product) {
-				if ($search_id == $product->getId()){
-					$found_product = $product;
-				}
-			}
-			return $found_product;
+		 static function find($search_id)
+         {
+             $found_product = NULL;
+             $all_products = Product::getAll();
+             foreach($all_products as $product) {
+                 if ($search_id == $product->getId()){
+                     $found_product = $product;
+                 }
+             }
+             return $found_product;
+         }
 
-			static function findByTypeAndGender($search_TypeId, $search_Gender)
-            {
-                $found_products = array();
-                $all_products = Product::getAll();
-                foreach($all_products as $product) {
-                    if ($search_TypeId == $product->getTypeId() && $search_Gender == $product->getGender()){
-   					 array_push($found_products, $product);
-                    }
-                }
+		 static function findByTypeAndGender($search_TypeId, $search_Gender)
+         {
+             $found_products = array();
+             $all_products = Product::getAll();
+             foreach($all_products as $product) {
+                 if ($search_TypeId == $product->getTypeId() && $search_Gender == $product->getGender()){
+					 array_push($found_products, $product);
+                 }
+             }
 
-                return $found_products;
-            }
-   	}
+             return $found_products;
+         }
+	}
 
-   ?>
+?>
