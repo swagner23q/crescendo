@@ -162,7 +162,7 @@
 			return $_SESSION['cart'];
 		}
 
-		static function cartDelete()
+		static function cartDeleteAll()
 		{
 			$_SESSION['cart'] = array();
 		}
