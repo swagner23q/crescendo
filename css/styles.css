@@ -73,6 +73,9 @@ footer .sevenL h3, footer .footerBeFirst h3 {
   justify-content: flex-end;
   background-color: white !important;
   width: 100%; }
+  @media (max-width: 450px) {
+    .nav {
+      padding-bottom: 2%; } }
   .nav .mdi-navigation-menu {
     color: black;
     position: relative;
@@ -90,6 +93,9 @@ footer .sevenL h3, footer .footerBeFirst h3 {
         top: 18px; }
       .nav .navBarContent li:nth-child(2) {
         font-size: 1.3em; }
+        @media (max-width: 450px) {
+          .nav .navBarContent li:nth-child(2) {
+            display: none; } }
       .nav .navBarContent li:nth-child(3) {
         position: absolute;
         top: 19px;
@@ -119,7 +125,7 @@ footer {
     @media (max-width: 450px) {
       footer img {
         position: absolute;
-        height: 20%;
+        height: 20vh;
         padding-left: 12%;
         margin-top: 5%; } }
   footer .sevenL {
@@ -204,7 +210,7 @@ header {
     position: absolute;
     width: 100%;
     bottom: 25%; }
-    @media (max-width: 450px) {
+    @media (max-width: 650px) {
       header h1 {
         font-size: 3em; } }
   header p {
@@ -214,7 +220,7 @@ header {
     position: absolute;
     width: 100%;
     bottom: 25%; }
-    @media (max-width: 450px) {
+    @media (max-width: 650px) {
       header p {
         display: none; } }
 

@@ -9,6 +9,9 @@
   justify-content: flex-end;
   background-color: $white !important;
   width: 100%;
+  @media (max-width: 450px) {
+    padding-bottom: 2%;
+  }
 
   // Hamburger Icon
   .mdi-navigation-menu {
@@ -31,6 +34,9 @@
       }
       &:nth-child(2) {
         font-size: 1.3em;
+        @media (max-width: 450px) {
+          display: none;
+        }
       }
       &:nth-child(3) {
         position: absolute;
