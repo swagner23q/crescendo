@@ -1,0 +1,393 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white; }
+
+@font-face {
+  font-family: "AlexBrush";
+  src: url("../font/AlexBrush.ttf");
+  src: url("../font/AlexBrush.ttf") format("truetype"); }
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway.ttf");
+  src: url("../font/Raleway.ttf") format("truetype"); }
+.universalFont {
+  font-family: "Raleway"; }
+
+.stylesButton, header h1, header p, .mainTitle, .articleClothing aside, .productInfoBox {
+  text-align: center; }
+
+footer .sevenL h3, footer .footerBeFirst h3 {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0; }
+
+.stylesButton {
+  font-family: "Raleway";
+  color: white;
+  background-color: #333333;
+  height: 30%;
+  width: 55%;
+  padding: 1%;
+  margin-top: 6%;
+  text-transform: uppercase;
+  float: right; }
+  .stylesButton:hover {
+    cursor: pointer; }
+
+.bottomStylesButton {
+  font-family: "Raleway";
+  color: white;
+  background-color: #333333;
+  width: 25%;
+  padding: 1%;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .bottomStylesButton:hover {
+    cursor: pointer; }
+  @media (max-width: 450px) {
+    .bottomStylesButton {
+      display: none; } }
+
+.nav {
+  font-family: "Raleway";
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  opacity: .93;
+  box-shadow: 1px 1px 3px black;
+  z-index: 997;
+  justify-content: flex-end;
+  background-color: white !important;
+  width: 100%; }
+  .nav .mdi-navigation-menu {
+    color: black;
+    position: relative;
+    top: 7px;
+    left: 20px; }
+  .nav .navBarContent {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .nav .navBarContent li {
+      display: inline; }
+      .nav .navBarContent li:first-child {
+        position: absolute;
+        left: 70px;
+        top: 18px; }
+      .nav .navBarContent li:nth-child(2) {
+        font-size: 1.3em; }
+      .nav .navBarContent li:nth-child(3) {
+        position: absolute;
+        top: 19px;
+        right: 50px; }
+      .nav .navBarContent li:nth-child(4) {
+        font-size: 1.7em;
+        position: absolute;
+        right: 15px;
+        top: 10px; }
+    .nav .navBarContent a {
+      color: black; }
+      .nav .navBarContent a:hover {
+        color: #A8CECF; }
+
+footer {
+  font-family: "Raleway";
+  color: #838F8D;
+  font-size: 0.9em;
+  background-color: #333333;
+  width: 100%;
+  display: flex;
+  padding: 0 2% 2% 2%; }
+  footer img {
+    height: 10vh;
+    align-self: center;
+    padding-right: 4%; }
+    @media (max-width: 450px) {
+      footer img {
+        position: absolute;
+        height: 20%;
+        padding-left: 12%;
+        margin-top: 5%; } }
+  footer .sevenL {
+    width: 40%;
+    align-items: flex-start;
+    padding-right: 4%;
+    align-self: center; }
+    footer .sevenL a {
+      color: #7aa3a2; }
+      footer .sevenL a:hover {
+        color: #98b8b7; }
+    @media (max-width: 450px) {
+      footer .sevenL {
+        text-align: center;
+        align-self: flex-end; } }
+  footer .footerLinksContainer {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 20vh;
+    clear: both; }
+    footer .footerLinksContainer a {
+      font-weight: bold;
+      color: #666666; }
+      footer .footerLinksContainer a:hover {
+        color: #98b8b7; }
+    footer .footerLinksContainer .footerLinks {
+      float: left;
+      width: 50%;
+      line-height: 2;
+      clear: both; }
+    footer .footerLinksContainer .footerLinks2 {
+      float: right;
+      clear: both;
+      line-height: 2;
+      width: 49%; }
+    @media (max-width: 450px) {
+      footer .footerLinksContainer {
+        border-top: 1px solid #838F8D;
+        border-bottom: 1px solid #838F8D;
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+        height: 50%; } }
+  footer .footerBeFirst {
+    margin-top: 5em; }
+    footer .footerBeFirst .inputColor {
+      color: white !important; }
+    footer .footerBeFirst .fa {
+      color: #98b8b7;
+      font-size: 2em;
+      padding-right: 5%; }
+      footer .footerBeFirst .fa:hover {
+        color: white;
+        transition: all .2s ease-in-out;
+        transform: scale(1.3);
+        cursor: pointer; }
+    @media (max-width: 450px) {
+      footer .footerBeFirst {
+        margin-top: 3em;
+        margin-bottom: 3em; } }
+  @media (max-width: 450px) {
+    footer {
+      padding-top: 5%;
+      display: flex;
+      flex-direction: column; } }
+
+header {
+  margin: 0;
+  position: relative;
+  background-color: #737373; }
+  header video {
+    margin-top: 3.3em;
+    margin-bottom: -6px;
+    opacity: .3;
+    width: 100%; }
+  header h1 {
+    font-family: "AlexBrush";
+    color: white;
+    font-size: 10em;
+    position: absolute;
+    width: 100%;
+    bottom: 25%; }
+    @media (max-width: 450px) {
+      header h1 {
+        font-size: 3em; } }
+  header p {
+    font-family: "AlexBrush";
+    color: white;
+    font-size: 2.6em;
+    position: absolute;
+    width: 100%;
+    bottom: 25%; }
+    @media (max-width: 450px) {
+      header p {
+        display: none; } }
+
+.styles {
+  padding: 5%;
+  display: flex;
+  margin-top: 0;
+  height: 75%;
+  width: 100%; }
+  .styles img {
+    height: auto;
+    width: 40vw;
+    align-self: center; }
+  .styles div {
+    width: 100%;
+    text-align: right;
+    padding-left: 10%;
+    align-self: center; }
+    .styles div h1 {
+      font-family: "AlexBrush";
+      font-size: 3em;
+      height: 30%; }
+    .styles div p {
+      font-family: "Raleway";
+      height: 20%; }
+
+.bottomStyles {
+  background-image: url("../img/hipster.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 5%; }
+  .bottomStyles h1 {
+    font-family: "AlexBrush";
+    color: white;
+    font-size: 2.6em;
+    height: 10% !important; }
+  .bottomStyles p {
+    font-family: "Raleway";
+    color: white;
+    width: 32%;
+    height: 24%; }
+    @media (max-width: 450px) {
+      .bottomStyles p {
+        width: 50vw; } }
+  @media (max-width: 450px) {
+    .bottomStyles {
+      height: 55vh; } }
+
+.shippingNinjaContainer {
+  padding: 5%;
+  display: flex;
+  text-align: center; }
+  .shippingNinjaContainer h3 {
+    font-family: "Raleway";
+    font-size: 1.5em;
+    font-weight: bold; }
+  .shippingNinjaContainer .shipping {
+    padding: 5%;
+    align-self: center;
+    width: 50%; }
+    .shippingNinjaContainer .shipping p {
+      color: #838F8D;
+      font-size: 1em; }
+  .shippingNinjaContainer .ninja {
+    padding: 5%;
+    align-self: center;
+    width: 50%; }
+    .shippingNinjaContainer .ninja p {
+      color: #838F8D;
+      font-size: 1em; }
+  .shippingNinjaContainer .verticalLine {
+    border-left: 1px solid black; }
+
+.universalHeader {
+  background-image: url("../img/mostlyMainHeader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; }
+
+.container {
+  margin: 10%; }
+
+.hipsterPants {
+  background-image: url("../img/fashion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; }
+
+.mainTitle {
+  font-family: "AlexBrush";
+  font-size: 6em; }
+
+.articleClothing {
+  height: 100vh;
+  width: 100%; }
+  .articleClothing aside {
+    display: block;
+    float: left;
+    clear: both;
+    width: 50vw;
+    border: 10px solid #F4F4F4;
+    margin: 0 2% 10px 5%;
+    text-align: center; }
+    .articleClothing aside h1 {
+      font-family: "AlexBrush";
+      font-size: 3.7em; }
+    .articleClothing aside p {
+      font-family: "Raleway";
+      color: #838F8D;
+      font-size: 1.3em;
+      padding: 0 4%; }
+    .articleClothing aside img {
+      display: block;
+      height: auto;
+      width: 100%;
+      margin-bottom: 0; }
+    .articleClothing aside .available {
+      font-family: "Raleway";
+      font-size: 0.85em;
+      font-weight: bolder; }
+    @media (max-width: 450px) {
+      .articleClothing aside {
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%; } }
+  .articleClothing .productBoxContainer {
+    display: block;
+    width: 100%; }
+    .articleClothing .productBoxContainer .productBox {
+      margin: 0 2% 2% 0;
+      float: left;
+      width: 18%;
+      height: 50%;
+      text-align: center; }
+      .articleClothing .productBoxContainer .productBox img {
+        width: 80%;
+        height: auto; }
+      .articleClothing .productBoxContainer .productBox h4 {
+        margin: 0;
+        padding: 0; }
+      @media (max-width: 450px) {
+        .articleClothing .productBoxContainer .productBox {
+          height: 100%;
+          width: 75vw;
+          margin-top: 5%;
+          margin-right: 13%;
+          margin-left: 13%; } }
+
+.mainProductTitle {
+  background-image: url("../img/productFashionHeader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%; }
+
+.productInfoBox {
+  font-family: "Raleway";
+  padding: 5%;
+  margin-right: 2em;
+  margin-top: 3em;
+  width: 40%;
+  height: 50%;
+  border: 2px solid #008080;
+  float: right; }
+  @media (max-width: 450px) {
+    .productInfoBox {
+      width: 95%;
+      margin: 2%; } }
+
+.checkout {
+  text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */
