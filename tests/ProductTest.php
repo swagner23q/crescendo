@@ -9,6 +9,15 @@
 
 	class ProductTest extends PHPUnit_Framework_TestCase
 	{
+		protected function tearDown()
+		{
+			Order::deleteAll();
+			User::deleteAll();
+            Product::deleteAll();
+		}
+
+
+
 	}
 
 ?>
