@@ -6,7 +6,7 @@ $app->get('/profile', function() use ($app)
     return $app['twig']->render('profile.html.twig', array('user' => $user));
 });
 
-$app->patch("/profile", function($id) use ($app) {
+$app->patch("/profile", function() use ($app) {
     $new_f_name = $_POST['f_name'];
     $new_l_name = $_POST['l_name'];
     $new_email = $_POST['email'];
