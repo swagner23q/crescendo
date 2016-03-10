@@ -106,7 +106,7 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 
 ("M", 3, "Black Dress Shoes", "Stylin' shoes, dude.", 59.99, "/img/mensBlackDressShoes.jpg"),
 ("M", 3, "Brown Boots", "Stylin' shoes, dude.", 69.99, "/img/mensBrownBoots.jpg"),
-("M", 3, "Black Sneakers", "Stylin' shoes, dude.", 27.99, "/img/blackSneakers.jpg"),
+("M", 3, "Black Sneakers", "Stylin' shoes, dude.", 27.99, "/img/blackSneaker.jpg"),
 ("M", 3, "Blue Sneakers", "Stylin' shoes, dude.", 27.99, "/img/blueSneakers.jpg"),
 
 ("M", 4, "Bomber Jacket", "This is basically the coolest jacket there is. Throw on your Aviators and take to the sky.", 59.99, "/img/mensBomber.jpg"),
@@ -130,15 +130,15 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("F", 2, "Yoga Pants", "Comfy, stretchy yoga pants.", 49.99, "/img/womensYoga.jpg"),
 ("F", 2, "Beige Pants", "They're pants, they're beige, they're everything you've ever wanted.", 49.99, "/img/womensBeigePants.jpg"),
 
-("F", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
-("F", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/blue_shirt.jpg"),
-("F", 3, "Black Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
-("F", 3, "Blue Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
+("F", 3, "Wedges", "A striking wrapped wedge shoe.", 59.99, "/img/womensWedges.jpg"),
+("F", 3, "Leather Boots", "Every girl needs a pair of kick ass boots.", 69.99, "/img/womensBoots.jpg"),
+("F", 3, "Black Sneakers", "Sneaky sneakers!", 27.99, "/img/blackSneaker.jpg"),
+("F", 3, "Blue Sneakers", "Sneaky Sneakers!", 27.99, "/img/blueSneakers.jpg"),
 
-("F", 4, "Bomber Jacket", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
-("F", 4, "Jean Jacket", "This is a stylish shirt!", 38.99, "/img/blue_shirt.jpg"),
-("F", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
-("F", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
+("F", 4, "Fleece Jacket", "Cozy, stylin' sweater time!", 59.99, "/img/womensFleece.jpg"),
+("F", 4, "Jean Jacket", "Is it 2016? Is it 1994? Who cares! Buy this denim jacket.", 38.99, "/img/womensJeanJacket.jpg"),
+("F", 4, "Rain Jacket", "Keep the wind and rain out while looking good!", 83.99, "/img/womensRainJAcket.jpg"),
+("F", 4, "Insulated Jacket", "Puffy jackets are the best. It's like being gently hugged by the best sleeping bag in the world.", 99.99, "/img/womensPuffyJacket.jpg"),
 
 ("F", 5, "Black Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/blackbeanie.jpg"),
 ("F", 5, "Grey Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/greyBeanie.jpg"),
