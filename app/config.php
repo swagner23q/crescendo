@@ -9,13 +9,13 @@
         $_SESSION['cart'] = array();
     }
 
-
     $app = new Silex\Application();
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
 
     $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
         $twig->addGlobal('session', $_SESSION);
+        $twig->addFunction('findProduct', new Twig_Function_Function('Product::find'));
         return $twig;
     }));
 
@@ -30,5 +30,5 @@
     	);
 
 
-        use Symfony\Component\HttpFoundation\Request;
-        Request::enableHttpMethodParameterOverride();
+    use Symfony\Component\HttpFoundation\Request;
+    Request::enableHttpMethodParameterOverride();
