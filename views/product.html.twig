@@ -15,14 +15,13 @@
 
         <div class="articleClothing">
           <aside>
-            <a class="modal-trigger" href="#modal1"><img src="img/pantRed.jpg" alt="a pair of red pants" /></a>
+            <a class="modal-trigger" href="#modal1"><img src="{{ product.getImg }}" alt="a pair of red pants" /></a>
             <div id="modal1" class="modal">
               <div class="modal-content">
-                <img src="img/pantRed.jpg" alt="a pair of red pants" />
+                <img src='{{ product.getImg }}' alt="a pair of red pants" />
               </div>
             </div>
           </aside>
-
           <div class="productInfoContainer">
             <div class="productInfoBox">
                <h1>Product Information</h1>
@@ -43,12 +42,7 @@
             </form>
             </div>
           </div>
-
-
-
         </div>
-
-
     {% include '/includes/footer.html.twig' %}
     </body>
 </html>
