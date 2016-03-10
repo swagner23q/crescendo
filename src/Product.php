@@ -151,6 +151,68 @@
 
              return $found_products;
          }
+
+		function cartSave()
+		{
+			array_push($_SESSION['cart'], $this);
+		}
+
+		static function cartGetAll()
+		{
+			return $_SESSION['cart'];
+		}
+
+		static function cartDeleteAll()
+		{
+			$_SESSION['cart'] = array();
+		}
+
+		static function calculateCartItemPrice()
+		{
+
+
+			$cart = $_SESSION['cart'];
+			$price = 0;
+		    foreach ($cart as $item)
+		    {
+		        $product_id = $item[0];
+		        $qty = $item[1];
+
+		        $product = Product::find($product_id);
+
+		        $item_price = $product->getPrice();
+
+		        $full_item_price = $item_price * $qty;
+		    }
+		    return $full_item_price;
+		}
+
+		static function calculateTotalCartPrice()
+		{
+			$price = 0;
+			$all_item_prices = array();
+
+		    foreach ($_SESSION['cart'] as $item)
+		    {
+		        $product_id = $item[0];
+		        $qty = $item[1];
+
+		        $product = Product::find($product_id);
+
+		        $item_price = $product->getPrice();
+
+		        $full_item_price = $item_price * $qty;
+
+				array_push($all_item_prices, $full_item_price);
+
+			}
+
+			$total_price = array_sum($all_item_prices);
+			return $total_price;
+
+		}
+
+
 	}
 
 ?>
