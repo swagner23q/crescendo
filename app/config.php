@@ -17,6 +17,7 @@
 
     $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
         $twig->addGlobal('session', $_SESSION);
+        $twig->addFunction('findProduct', new Twig_Function_Function('Product::find'));
         return $twig;
     }));
 
@@ -29,6 +30,7 @@
     	    'encryption' => 'ssl',
     	    'auth_mode'  => 'login'
     	);
+
 
     use Symfony\Component\HttpFoundation\Request;
     Request::enableHttpMethodParameterOverride();
