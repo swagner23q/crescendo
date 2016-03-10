@@ -316,7 +316,7 @@ footer {
     line-height: 2;
     width: 49%; }
   footer .footerBeFirst {
-    margin: 1%; }
+    margin-top: 5em; }
     footer .footerBeFirst .inputColor {
       color: white !important; }
     footer .footerBeFirst .fa {
