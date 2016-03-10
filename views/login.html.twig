@@ -5,25 +5,31 @@
     <body>
         {% include '/includes/navbar.html.twig' %}
         {% include '/includes/header.html.twig' %}
-        <form action="/logged_in" method="get">
-            <label for="email">Email Adress</label>
-            <input type="text" name="email" value="">
+        <h1 class="mainTitle">Login</h1>
 
-            <label for="password">Password</label>
-            <input type="password" name="password" value="">
+        <div class="container">
+          <div class="universalFont">
+            <form action="/logged_in" method="get">
+                <label for="email">Email Adress</label>
+                <input type="text" name="email" value="">
 
-            <button type="submit" name="button">Sign in</button>
-        </form>
-        {% if error_message %}
-            <p>{{error_message}}</p>
-        {% endif %}
-        <form class="" action="/register" >
-            <button type="submit" name="button">Not yet a member? Register!</button>
-        </form>
+                <label for="password">Password</label>
+                <input type="password" name="password" value="">
 
-        <form class="" action="/" >
-            <button type="submit" name="button">Start Shopping!</button>
-        </form>
+                <button class="waves-effect waves-light btn" type="submit" name="button">Sign in</button>
+            </form>
+            {% if error_message %}
+                <p>{{error_message}}</p>
+            {% endif %}
+            <form class="" action="/register" >
+                <p><button class="waves-effect waves-light btn" type="submit" name="button">Not yet a member? Register!</button></p>
+            </form>
+
+            <form class="" action="/" >
+                <p><button class="waves-effect waves-light btn" type="submit" name="button">Start Shopping!</button></p>
+            </form>
+          </div>
+        </div>
         {% include '/includes/footer.html.twig' %}
     </body>
 </html>
