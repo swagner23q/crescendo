@@ -4,35 +4,39 @@
     <body>
         {% include '/includes/navbar.html.twig' %}
         {% include '/includes/header.html.twig' %}
-
-        {% if order_complete %}
-        <p>Thanks for your business! Check your email for order details.</p> <a href="/">Continue Shopping</a>
-        {%else%}
-            {% if logged_in %}
-                <p>Here is your cart:</p>
-                <ul>
-                {% for products in session.cart %}
-                    <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
-                    <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
-                    <li>Quantity: {{session.cart[loop.index0][1]}}</li>
-                {% endfor %}
-                <h2>Cart Total: ${{ cart_total }}</h2>
-                <form action="/checkout" method="post">
-                  <select class="browser-default" name="ship_type">
-                    <option value="1">Free Shipping</option>
-                    <option value="2">Ground</option>
-                    <option value="3">2 Day</option>
-                    <option value="4">Overnight</option>
-                  </select>
-                  <label for="card_name">Name on card:</label>
-                  <input type="text" name="card_name">
-                  <label for="card_number">Card Number:</label>
-                  <input type="text" name="card_number">
-                <button type="submit" name="button">Complete Order</button>
-              </form>
-              {% endif %}
-        </ul>
-        {%endif%}
+        <h1 class="mainTitle">Checkout</h1>
+        <div class="container">
+          <div class="universalFont">
+            {% if order_complete %}
+                <p>Thanks for your business! Check your email for order details.</p> <a class="waves-effect waves-light btn" href="/">Continue Shopping</a>
+                {%else%}
+                    {% if logged_in %}
+                        <p>Here is your cart:</p>
+                        <ul>
+                            {% for products in session.cart %}
+                                <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
+                                <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
+                                <li>Quantity: {{session.cart[loop.index0][1]}}</li>
+                            {% endfor %}
+                        </ul>
+                        <h2>Cart Total: ${{ cart_total }}</h2>
+                        <form action="/checkout" method="post">
+                          <select class="browser-default" name="ship_type">
+                            <option value="1">Free Shipping</option>
+                            <option value="2">Ground</option>
+                            <option value="3">2 Day</option>
+                            <option value="4">Overnight</option>
+                          </select>
+                          <label for="card_name">Name on card:</label>
+                          <input type="text" name="card_name">
+                          <label for="card_number">Card Number:</label>
+                          <input type="text" name="card_number">
+                        <button type="submit" name="button">Complete Order</button>
+                      </form>
+                  {% endif %}
+            {%endif%}
+            </div>
+        </div>
         {% include '/includes/footer.html.twig' %}
     </body>
 </html>
