@@ -4,5 +4,5 @@
     {
         $products = Product::findByTypeAndGender($type_id, $gender);
         // $current_type_id = $type_id
-        return $app['twig']->render('products.html.twig', array('products' => $products, 'type_id' => $type_id));
+        return $app['twig']->render('products.html.twig', array('products' => $products, 'gender' => $gender, 'type_id' => $type_id));
     });
