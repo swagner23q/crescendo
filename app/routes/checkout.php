@@ -1,6 +1,11 @@
 <?php
 
-    $app->get('/checkout', function()
+    $app->get('/checkout', function() use ($app)
     {
-        return 'Hello, World!';}
-    );
+        if ($_SESSION['user'] == NULL)
+        {
+            $variable_render = 'login.html.twig';
+        }
+
+        return $app['twig']->render($variable_render, array('checkout' => TRUE));
+    });
