@@ -94,15 +94,15 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 -- Mens
-("M", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
-("M", 1, "Blue Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
-("M", 1, "White Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
-("M", 1, "Red Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("M", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/mensBlackShirt.jpg"),
+("M", 1, "Blue Shirt", "This is a stylish shirt!", 19.99, "/img/mensBlueShirt.jpg"),
+("M", 1, "White Shirt", "This is a stylish shirt!", 19.99, "/img/mensWhiteShirt.jpg"),
+("M", 1, "Red Shirt", "This is a stylish shirt!", 19.99, "/img/mensRedShirt.jpg"),
 
-("M", 2, "Black Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
-("M", 2, "Blue Jeans", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
-("M", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
-("M", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("M", 2, "Black Pants", "This is a stylish shirt!", 49.99, "/img/blackPants.jpg"),
+("M", 2, "Beige Pants", "This is a stylish shirt!", 49.99, "/img/pantBeige.jpg"),
+("M", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/pantOffWhite.jpg"),
+("M", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/mensredpants.jpg"),
 
 ("M", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
 ("M", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/blue_shirt.jpg"),
@@ -114,10 +114,10 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("M", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
 ("M", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
 
-("M", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
-("M", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
-("M", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
-("M", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("M", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blackbeanie.jpg"),
+("M", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/greyBeanie.jpg"),
+("M", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/redBeanie.jpg"),
+("M", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/logoBeanie.jpg"),
 
 -- Womens
 ("F", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
@@ -140,10 +140,10 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("F", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
 ("F", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
 
-("F", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
-("F", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
-("F", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
-("F", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg");
+("F", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blackbeanie.jpg"),
+("F", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/greyBeanie.jpg"),
+("F", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/redBeanie.jpg"),
+("F", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/logoBeanie.jpg");
 
 /*
 
