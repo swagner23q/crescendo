@@ -22,3 +22,10 @@
   left: $left;
   bottom: $bottom;
 }
+
+@mixin backgroundImg($bckgrndImg, $backPos: null, $backRep: null, $backSize: null) {
+  background-image: url($bckgrndImg);
+  background-position: $backPos;
+  background-repeat: $backRep;
+  background-size: $backSize;
+}

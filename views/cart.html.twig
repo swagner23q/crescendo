@@ -9,7 +9,7 @@
         <p>Here is your cart:</p>
         <ul>
         {% for products in session.cart %}
-        {% set product = products[0] %}
+        {% set product =  %}
         {% set quantity = products[1] %}
             <li>{{ product.getName }}</li>
             <li>${{ product.getPrice }}</li>

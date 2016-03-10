@@ -55,9 +55,7 @@ header {
 
 //Main Page Bottom Middle Content
 .bottomStyles {
-  background-image: url("../img/hipster.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include backgroundImg("../img/hipster.jpg", $backRep: no-repeat, $backSize: cover);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -112,9 +110,7 @@ header {
 //Universal Header
 
 .universalHeader {
-  background-image: url("../img/mostlyMainHeader.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include backgroundImg("../img/mostlyMainHeader.jpg", $backRep: no-repeat, $backSize: cover);
   height: 60vh;
   width: 100%;
 }
@@ -122,9 +118,7 @@ header {
 //Product Page Middle Content
   //Header
 .hipsterPants {
-  background-image: url("../img/hipsterPants.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include backgroundImg("../img/hipsterPants.jpg", $backRep: no-repeat, $backSize: cover);
   height: 60vh;
   width: 100%;
 }
@@ -188,14 +182,26 @@ header {
 
 // Single Product Content
 .mainProductTitle {
-  background-image: url("../img/productFashionHeader.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include backgroundImg("../img/productFashionHeader.jpg", $backRep: no-repeat, $backSize: cover);
   height: 60vh;
   width: 100%;
 }
+.productInfoBox {
+  @include fontBasics("Raleway");
+  @extend %textCenter;
+  padding: 5%;
+  margin-right: 2em;
+  margin-top: 3em;
+  width: 40%;
+  height: 50%;
+  border: 2px solid $teal;
+  float: right;
+}
 
-
+//Universal Container
+.container {
+  margin-bottom: 5%;
+}
 
 // Footer
 footer {
@@ -259,7 +265,6 @@ footer {
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-content: center!important;
     .inputColor {
       color: $white !important;
     }
