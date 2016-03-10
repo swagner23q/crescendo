@@ -92,8 +92,58 @@ CREATE TABLE `products` (
   `img` VARCHAR(255)
 );
 
-INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES ("M", 1, "Blue Shirt", "This is a stylish shirt!", 1.99, "/img/blue_shirt.jpg"), ("F", 2, "Blue Jeans", "These jeans are awesome!", 2.99, "/img/blue_pants.jpg"), ("M", 4, "Black Shoes", "These are some neat kicks!", 3.99, "/img/black_shoes.jpg"), ("F", 3, "Red Jacket", "This jacket is totes warm", 4.99, "/img/red_jacket.jpg"), ("M", 6, "Black Beanie", "Best. Beanie. Ever.", 5.99, "/img/black_beanie.jpg");
+INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
+-- Mens
+("M", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("M", 1, "Blue Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("M", 1, "White Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("M", 1, "Red Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
 
+("M", 2, "Black Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("M", 2, "Blue Jeans", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("M", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("M", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+
+("M", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
+("M", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/blue_shirt.jpg"),
+("M", 3, "Black Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
+("M", 3, "Blue Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
+
+("M", 4, "Bomber Jacket", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
+("M", 4, "Jean Jacket", "This is a stylish shirt!", 38.99, "/img/blue_shirt.jpg"),
+("M", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
+("M", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
+
+("M", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("M", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("M", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("M", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+
+-- Womens
+("F", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("F", 1, "Blue Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("F", 1, "White Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("F", 1, "Red Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+
+("F", 2, "Black Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("F", 2, "Blue Jeans", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("F", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("F", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+
+("F", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
+("F", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/blue_shirt.jpg"),
+("F", 3, "Black Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
+("F", 3, "Blue Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
+
+("F", 4, "Bomber Jacket", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
+("F", 4, "Jean Jacket", "This is a stylish shirt!", 38.99, "/img/blue_shirt.jpg"),
+("F", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
+("F", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
+
+("F", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("F", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("F", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg"),
+("F", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/blue_shirt.jpg");
 
 /*
 
