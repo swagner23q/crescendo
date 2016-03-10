@@ -154,11 +154,13 @@ footer {
       footer .footerLinksContainer a:hover {
         color: #98b8b7; }
     footer .footerLinksContainer .footerLinks {
+      padding-top: 3%;
       float: left;
       width: 50%;
       line-height: 2;
       clear: both; }
     footer .footerLinksContainer .footerLinks2 {
+      padding-top: 3%;
       float: right;
       clear: both;
       line-height: 2;
