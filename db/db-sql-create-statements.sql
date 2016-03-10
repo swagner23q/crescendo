@@ -92,7 +92,7 @@ CREATE TABLE `products` (
   `img` VARCHAR(255)
 );
 
-INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES ("M", 1, "Blue Shirt", "This is a stylish shirt!", 1.99, "/img/blue_shirt.jpg"), ("F", 2, "Blue Jeans", "These jeans are awesome!", 2.99, "/img/blue_pants.jpg"), ("M", 3, "Black Shoes", "These are some neat kicks!", 3.99, "/img/black_shoes.jpg"), ("F", 4, "Red Jacket", "This jacket is totes warm", 4.99, "/img/red_jacket.jpg"), ("M", 6, "Black Jacket", "Best. Beanie. Ever.", 5.99, "/img/black_beanie.jpg");
+INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES ("M", 1, "Blue Shirt", "This is a stylish shirt!", 1.99, "/img/blue_shirt.jpg"), ("F", 2, "Blue Jeans", "These jeans are awesome!", 2.99, "/img/blue_pants.jpg"), ("M", 4, "Black Shoes", "These are some neat kicks!", 3.99, "/img/black_shoes.jpg"), ("F", 3, "Red Jacket", "This jacket is totes warm", 4.99, "/img/red_jacket.jpg"), ("M", 6, "Black Beanie", "Best. Beanie. Ever.", 5.99, "/img/black_beanie.jpg");
 
 
 /*
