@@ -14,8 +14,8 @@
             <li>Quantity: {{session.cart[loop.index0][1]}}</li>
         {% endfor %}
         <h2>Cart Total: ${{ cart_total }}</h2>
-        <form action="/complete_order" method="post">
-          <select class="browser-default" name="shipping_type">
+        <form action="/checkout" method="post">
+          <select class="browser-default" name="ship_type">
             <option value="1">Free Shipping</option>
             <option value="2">Ground</option>
             <option value="3">2 Day</option>
