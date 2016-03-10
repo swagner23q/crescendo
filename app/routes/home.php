@@ -22,6 +22,9 @@
             $name = FALSE;
         }
 
+        $_SESSION['cart'] = [];
+        $_SESSION['cart'][] = [1,2];
+        $_SESSION['cart'][] = [3,4];
         return $app['twig']->render($page_to_render, array('name' => $name, 'error_message' => $error_message));
     });
 

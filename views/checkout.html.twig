@@ -5,7 +5,25 @@
         {% include '/includes/navbar.html.twig' %}
         {% include '/includes/header.html.twig' %}
 
-        
+        {% if logged_in %}
+        <p>Here is your cart:</p>
+        <ul>
+        {% for products in session.cart %}
+            <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
+            <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
+            <li>Quantity: {{session.cart[loop.index0][1]}}</li>
+        {% endfor %}
+
+
+
+
+
+
+
+
+        {% endif %}
+        </ul>
+        <h2>Cart Total: ${{ total_price }}</h2>
 
         {% include '/includes/footer.html.twig' %}
     </body>
