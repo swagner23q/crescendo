@@ -125,3 +125,15 @@
 		{
 			$GLOBALS['DB']->exec("DELETE FROM products;");
 		}
+
+		static function find($search_id)
+		{
+			$found_product = NULL;
+			$all_products = Product::getAll();
+			foreach($all_products as $product) {
+				if ($search_id == $product->getId()){
+					$found_product = $product;
+				}
+			}
+			return $found_product;
+		
