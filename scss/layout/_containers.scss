@@ -118,7 +118,7 @@ header {
 //Product Page Middle Content
   //Header
 .hipsterPants {
-  @include backgroundImg("../img/hipsterPants.jpg", $backRep: no-repeat, $backSize: cover);
+  @include backgroundImg("../img/fashion.jpg", $backRep: no-repeat, $backSize: cover);
   height: 60vh;
   width: 100%;
 }
