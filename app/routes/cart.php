@@ -7,6 +7,5 @@
 
     $app->get('/cart/delete', function() use ($app) {
         Product::cartDeleteAll();
-
         return $app['twig']->render('cart.html.twig');
     });
