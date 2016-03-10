@@ -2,5 +2,5 @@
 
     $app->get('/log_in', function() use ($app)
     {
-        return $app['twig']->render('login.html.twig');
+        return $app['twig']->render('login.html.twig', array('checkout' => FALSE));
     });
