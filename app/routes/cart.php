@@ -18,13 +18,11 @@
     });
 
     $app->get('/cart', function() use ($app) {
-        array_push($_SESSION['cart'], [1,3]);
         $total_price = Product::calculateTotalCartPrice();
         return $app['twig']->render('cart.html.twig', array('total_price' => $total_price));
     });
 
     $app->get('/cart/delete', function() use ($app) {
         Product::cartDeleteAll();
-
         return $app['twig']->render('cart.html.twig');
     });

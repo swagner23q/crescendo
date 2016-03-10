@@ -3,7 +3,8 @@
         {% include '/includes/head.html.twig' %}
     </head>
     <body>
-
+        {% include '/includes/navbar.html.twig' %}
+        {% include '/includes/header.html.twig' %}
 
         {% if session.cart is not empty %}
         <p>Here is your cart:</p>
@@ -19,17 +20,16 @@
         <h3>No items! Get shopping!</h3>
         {% endif %}
         <p>
-          <a href="/keep_shopping">Keep Shopping</a>
+          <a href="/">Keep Shopping</a>
         </p>
         <p>
           <a href="/checkout">Go to Checkout</a>
         </p>
         <p>
-            <a href="/">Home</a>
         </p>
         <p>
             <a href="/cart/delete">Delete</a>
         </p>
-
+        {% include '/includes/footer.html.twig' %}
     </body>
 </html>
