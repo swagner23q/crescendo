@@ -1,7 +1,7 @@
 <?php
 
-    $app->get('/products', function() use ($app)
+    $app->get('/products/{gender}/{type_id}', function($gender, $type_id) use ($app)
     {
-        $products = Product::findByTypeAndGender($search_TypeId, $search_Gender);
+        $products = Product::findByTypeAndGender($type_id, $gender);
         return $app['twig']->render('products.html.twig', array('products' => $products));
     });

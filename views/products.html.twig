@@ -10,6 +10,7 @@
             <img src='{{ product.getImg }}'>
             <p>{{ product.getName }}</p>
             <p>{{ product.getPrice }}</p>
+            <img src="{{ product.getImg }}">
         {% endfor %}
         {% include '/includes/footer.html.twig' %}
     </body>
