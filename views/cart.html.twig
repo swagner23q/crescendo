@@ -9,19 +9,14 @@
         <p>Here is your cart:</p>
         <ul>
         {% for products in session.cart %}
-        {% set product =  %}
-        {% set quantity = products[1] %}
-            <li>{{ product.getName }}</li>
-            <li>${{ product.getPrice }}</li>
-            <li>Quantity: {{ quantity }}</li>
+            <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
+            <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
+            <li>Quantity: {{session.cart[loop.index0][1]}}</li>
         {% endfor %}
         </ul>
-
-            <ul>
-
-            </ul>
-
-        <h2>Your total price is ${{ total_price }}</h2>
+        <h2>Cart Total: ${{ total_price }}</h2>
+        {%else%}
+        <h3>No items! Get shopping!</h3>
         {% endif %}
         <p>
             <a href="/">Home</a>

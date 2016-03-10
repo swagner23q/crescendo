@@ -189,13 +189,10 @@
 
 		static function calculateTotalCartPrice()
 		{
-			$cart = $_SESSION['cart'];
 			$price = 0;
 			$all_item_prices = array();
-			$total_price = 0;
 
-
-		    foreach ($cart as $item)
+		    foreach ($_SESSION['cart'] as $item)
 		    {
 		        $product_id = $item[0];
 		        $qty = $item[1];
@@ -206,13 +203,11 @@
 
 		        $full_item_price = $item_price * $qty;
 
-
-
 				array_push($all_item_prices, $full_item_price);
 
-				$total_price = array_sum($all_item_prices);
 			}
 
+			$total_price = array_sum($all_item_prices);
 			return $total_price;
 
 		}

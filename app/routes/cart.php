@@ -19,29 +19,8 @@
     });
 
     $app->get('/cart', function() use ($app) {
-        array_push($_SESSION['cart'], [1,3]);
-        array_push($_SESSION['cart'], [2,2]);
-
         $total_price = Product::calculateTotalCartPrice();
-
-        $all_products = [];
-        $products = [];
-
-        foreach($_SESSION['cart'] as $line_item)
-        {
-
-            $product_id = $line_item[0];
-            $qty = $line_item[1];
-            $product = Product::find($product_id);
-            $products[] = $product;
-            $products[] = $qty;
-
-            $all_products[] = $products;
-        }
-        var_dump($all_products);
-        return $app['twig']->render('cart.html.twig', array(
-                'total_price' => $total_price,
-                'all_products' => $all_products));
+        return $app['twig']->render('cart.html.twig', array('total_price' => $total_price));
     });
 
 
