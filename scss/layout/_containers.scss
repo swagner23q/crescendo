@@ -15,11 +15,20 @@ header {
     @include fontBasics("AlexBrush", $color:white, $font-size: 10em);
     @include position(absolute, $width: 100%, $bottom: 25%);
     @extend %textCenter;
+    @media (max-width: 450px) {
+      font-size: 3em;
+    }
+
   }
   p {
     @include fontBasics("AlexBrush", $color:white, $font-size: 2.6em);
     @include position(absolute, $width: 100%, $bottom: 25%);
     @extend %textCenter;
+    @media (max-width: 450px) {
+      display: none;
+    }
+
+
   }
 }
 
@@ -71,7 +80,12 @@ header {
     width: 32%;
     height: 24%;
 
+    @media (max-width: 450px) {
+      width: 50vw;
+
+    }
   }
+
 }
 
 // Main Page Shipping Section

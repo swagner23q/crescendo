@@ -54,6 +54,9 @@ footer .sevenL h3, footer .footerBeFirst h3 {
   text-transform: uppercase; }
   .bottomStylesButton:hover {
     cursor: pointer; }
+  @media (max-width: 450px) {
+    .bottomStylesButton {
+      display: none; } }
 
 .nav {
   font-family: "Raleway";
@@ -85,13 +88,13 @@ footer .sevenL h3, footer .footerBeFirst h3 {
         font-size: 1.3em; }
       .nav .navBarContent li:nth-child(3) {
         position: absolute;
-        top: 22px;
+        top: 19px;
         right: 50px; }
       .nav .navBarContent li:nth-child(4) {
         font-size: 1.7em;
         position: absolute;
         right: 15px;
-        top: 15px; }
+        top: 10px; }
     .nav .navBarContent a {
       color: black; }
       .nav .navBarContent a:hover {
@@ -113,6 +116,9 @@ header {
     position: absolute;
     width: 100%;
     bottom: 25%; }
+    @media (max-width: 450px) {
+      header h1 {
+        font-size: 3em; } }
   header p {
     font-family: "AlexBrush";
     color: white;
@@ -120,6 +126,9 @@ header {
     position: absolute;
     width: 100%;
     bottom: 25%; }
+    @media (max-width: 450px) {
+      header p {
+        display: none; } }
 
 .styles {
   padding: 5%;
@@ -164,6 +173,9 @@ header {
     color: white;
     width: 32%;
     height: 24%; }
+    @media (max-width: 450px) {
+      .bottomStyles p {
+        width: 50vw; } }
 
 .shippingNinjaContainer {
   padding: 5%;

@@ -61,29 +61,38 @@
     <!-- End Header -->
 
     <!-- Middle Content -->
-    <h1 class="mainTitle">Login</h1>
+
+    <h1 class="mainTitle">Checkout</h1>
 
     <div class="container">
       <div class="universalFont">
-        <form action="/logged_in" method="get">
-            <label for="email">Email Adress</label>
-            <input type="text" name="email" value="">
-
-            <label for="password">Password</label>
-            <input type="password" name="password" value="">
-
-            <button class="waves-effect waves-light btn" type="submit" name="button">Sign in</button>
-        </form>
-        {% if error_message %}
-            <p>{{error_message}}</p>
-        {% endif %}
-        <form class="" action="/register" >
-            <p><button class="waves-effect waves-light btn" type="submit" name="button">Not yet a member? Register!</button></p>
-        </form>
-
-        <form class="" action="/" >
-            <p><button class="waves-effect waves-light btn" type="submit" name="button">Start Shopping!</button></p>
-        </form>
+        <div class="checkout">
+          {% if session.cart is not empty %}
+          <p>Here is your cart:</p>
+          <ul>
+          {% for products in session.cart %}
+              <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
+              <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
+              <li>Quantity: {{session.cart[loop.index0][1]}}</li>
+          {% endfor %}
+          </ul>
+          <h2>Cart Total: ${{ total_price }}</h2>
+          {%else%}
+          <h3>No items! Get shopping!</h3>
+          {% endif %}
+          <p>
+            <a class="waves-effect waves-light btn" href="/keep_shopping">Keep Shopping</a>
+          </p>
+          <p>
+            <a class="waves-effect waves-light btn" href="/checkout">Go to Checkout</a>
+          </p>
+          <p>
+              <a class="waves-effect waves-light btn" href="/">Home</a>
+          </p>
+          <p>
+              <a class="waves-effect waves-light btn" href="/cart/delete">Delete</a>
+          </p>
+        </div>
       </div>
     </div>
     <!-- End Middle Content -->
