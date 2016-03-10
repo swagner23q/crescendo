@@ -111,10 +111,10 @@
 	 	   foreach($returned_products as $product) {
 			   $gender = $product['gender'];
 			   $type_id = $product['type_id'];
-	 	       $name = $product['name'];
-	 	       $description = $product['description'];
+	 	     $name = $product['name'];
+	 	     $description = $product['description'];
 			   $price = $product['price'];
-	           $img = $product['img'];
+	       $img = $product['img'];
 			   $id = $product['id'];
 			   $new_product = new Product($gender, $type_id, $name, $description, $price, $img, $id);
 	 	       array_push($products, $new_product);
@@ -151,6 +151,17 @@
 
              return $found_products;
          }
+
+				 static function getTypeName($search_TypeId)
+							{
+								$type = $product['type'];
+								$GLOBALS['DB']->exec("SELECT type from product_types where id=$search_TypeId;");
+								return $type;
+							}
+
+
+
+
 
 		function cartSave()
 		{
