@@ -8,8 +8,7 @@
     <script src="js/jquery-1.12.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <meta name="viewport" content="width=device-width">
-    <title>Crescendo Clothing Co.</title>
+    <title>Crescendo Clothing Co</title>
   </head>
   <body>
 
@@ -56,49 +55,49 @@
       </div>
     <!-- End Top Nav Bar -->
 
-    <!-- Header Video -->
-    <header>
-      <video autoplay loop>
-        <source src="img/clothing.mp4" type="video/mp4" />
-      </video>
-      <h1>Crescendo Co</h1>
-      <p>Rise above with style</p>
+    <!-- Header -->
+    <header class="universalHeader">
     </header>
-    <!-- End Video Header -->
+    <!-- End Header -->
 
     <!-- Middle Content -->
+    <h1 class="mainTitle">Checkout</h1>
 
-    <section class="styles">
-      <img src="img/stylesPic.jpg" alt="A pic of a girl trying on a hat">
-      <div>
-        <h1>Crescendo Styles</h1>
-        <p>Take your look to the next level. <br>
-          Design a wardrobe with the style that's unique to you.</p>
-        <span class="stylesButton">Find Out More</span>
+    <div class="container">
+      <div class="universalFont">
+        {% if order_complete %}
+        <p>Thanks for your business! Check your email for order details.</p> <a class="waves-effect waves-light btn" href="/">Continue Shopping</a>
+        {%else%}
+            {% if logged_in %}
+                <p>Here is your cart:</p>
+                <ul>
+                {% for products in session.cart %}
+                    <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
+                    <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
+                    <li>Quantity: {{session.cart[loop.index0][1]}}</li>
+                {% endfor %}
+                <h2>Cart Total: ${{ cart_total }}</h2>
+                <form action="/checkout" method="post">
+                  <select class="browser-default" name="ship_type">
+                    <option value="1">Free Shipping</option>
+                    <option value="2">Ground</option>
+                    <option value="3">2 Day</option>
+                    <option value="4">Overnight</option>
+                  </select>
+                  <br><br>
+                  <label for="card_name">Name on card:</label>
+                  <input type="text" name="card_name">
+                  <label for="card_number">Card Number:</label>
+                  <input type="text" name="card_number">
+                <button class="waves-effect waves-light btn" type="submit" name="button">Complete Order</button>
+              </form>
+              {% endif %}
+        </ul>
+        {%endif%}
+
       </div>
-    </section>
-
-    <section class="bottomStyles">
-      <h1>We know our fit.</h1>
-      <p>Crescendo started with a better fitting pair of pants. Today, we offer a full collection of menswear and womenswear, with a range of great fit options for all builds and preferences. It's our job to make sure you look good.</p>
-      <span class="bottomStylesButton">READ HOW IT ALL BEGAN</span>
-    </section>
-
-    <section class="shippingNinjaContainer">
-      <div class="shipping">
-        <h3>FREE SHIPPING</h3>
-        <p>Your order will be delivered right to your door at no extra charge. Ditto for returns. It doesn't get easier than that</p>
-        <a href="#">SEE DETAILS</a>
-      </div>
-      <div class="verticalLine"></div>
-      <div class="ninja">
-        <h3>SERVICE THE NINJA WAY</h3>
-        <p>If you have comments, questions, or issues, our customer service Ninjas are always on call. Need help? Call a Ninja.</p>
-        <a href="#">CONTACT US</a>
-      </div>
-    </section>
-
-<!-- End Middle Content -->
+    </div>
+    <!-- End Middle Content -->
 
 <!-- Footer  -->
     <footer>
@@ -128,7 +127,7 @@
         </ul>
       </span>
       </span>
-      <div class="footerBeFirst">
+      <span class="footerBeFirst">
         <h3>BE FIRST</h3>
         <p>Want exclusive offers and first access to products? Sign up for email alerts.</p>
         <form class="input-field">
@@ -144,7 +143,7 @@
            <i class="fa fa-facebook"></i>
          </span>
        </p>
-     </div>
+      </span>
     </footer>
 
     <!-- End Footer -->
