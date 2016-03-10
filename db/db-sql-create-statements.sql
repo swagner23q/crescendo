@@ -108,7 +108,7 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("Men", 4, "Bomber Jacket", "This is basically the coolest jacket there is. Throw on your Aviators and take to the sky.", 59.99, "/img/mensBomber.jpg"),
 ("Men", 4, "Jean Jacket", "Everyone needs a stylin' jean jacket!", 38.99, "/img/mensJeanJacket.jpg"),
 ("Men", 4, "Rain Jacket", "Keep dry, look good.", 83.99, "/img/mensRainJacket.jpg"),
-("Men", 4, "Insulated Down Jacket", "Puffy jackets are the best. It's like being gently hugged by the best sleeping bag in the world.", 99.99, "/img/menDownJAcket.jpg"),
+("Men", 4, "Insulated Down Jacket", "Puffy jackets are the best. It's like being gently hugged by the best sleeping bag in the world.", 99.99, "/img/mensDownJacket.jpg"),
 
 ("Men", 5, "Black Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/blackbeanie.jpg"),
 ("Men", 5, "Grey Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/greyBeanie.jpg"),
