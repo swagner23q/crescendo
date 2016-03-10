@@ -31,7 +31,7 @@
           <div class="productBoxContainer">
             {% for product in products %}
             <div class="productBox">
-              <a href="#"><img src="{{ product.getImg }}" alt="product picture" /></a>
+              <a href="/product/{{product.getId()}}"><img src="{{ product.getImg }}" alt="product picture" /></a>
               <p>{{ product.getName }}</p>
               <h4>{{ product.getPrice }}</h4>
             </div>

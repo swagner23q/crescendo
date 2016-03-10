@@ -12,7 +12,7 @@
     $app = new Silex\Application();
 
 
-    $app['debug'] = TRUE;
+
 
 
 
