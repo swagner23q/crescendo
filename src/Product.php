@@ -136,4 +136,19 @@
 				}
 			}
 			return $found_product;
-		
+
+			static function findByTypeAndGender($search_TypeId, $search_Gender)
+            {
+                $found_products = array();
+                $all_products = Product::getAll();
+                foreach($all_products as $product) {
+                    if ($search_TypeId == $product->getTypeId() && $search_Gender == $product->getGender()){
+   					 array_push($found_products, $product);
+                    }
+                }
+
+                return $found_products;
+            }
+   	}
+
+   ?>
