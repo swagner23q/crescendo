@@ -94,30 +94,30 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 -- Mens
-("M", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/mensBlackShirt.jpg"),
-("M", 1, "Blue Shirt", "This is a stylish shirt!", 19.99, "/img/mensBlueShirt.jpg"),
-("M", 1, "White Shirt", "This is a stylish shirt!", 19.99, "/img/mensWhiteShirt.jpg"),
-("M", 1, "Red Shirt", "This is a stylish shirt!", 19.99, "/img/mensRedShirt.jpg"),
+("M", 1, "Black Shirt", "Best short sleeve button-up. Period.", 19.99, "/img/mensBlackShirt.jpg"),
+("M", 1, "Blue Shirt", "Best short sleeve button-up. Period.", 19.99, "/img/mensBlueShirt.jpg"),
+("M", 1, "White Shirt", "Best short sleeve button-up. Period.", 19.99, "/img/mensWhiteShirt.jpg"),
+("M", 1, "Red Shirt", "Best short sleeve button-up. Period.", 19.99, "/img/mensRedShirt.jpg"),
 
-("M", 2, "Black Pants", "This is a stylish shirt!", 49.99, "/img/blackPants.jpg"),
-("M", 2, "Beige Pants", "This is a stylish shirt!", 49.99, "/img/pantBeige.jpg"),
-("M", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/pantOffWhite.jpg"),
-("M", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/mensredpants.jpg"),
+("M", 2, "Black Pants", "These pants have the best fit, guarenteed.", 49.99, "/img/blackPants.jpg"),
+("M", 2, "Beige Pants", "These pants have the best fit, guarenteed.", 49.99, "/img/pantBeige.jpg"),
+("M", 2, "White Pants", "These pants have the best fit, guarenteed.", 49.99, "/img/pantOffWhite.jpg"),
+("M", 2, "Red Pants", "These pants have the best fit, guarenteed.", 49.99, "/img/mensredpants.jpg"),
 
-("M", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/mensBlackDressShoes.jpg"),
-("M", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/mensBrownBoots.jpg"),
-("M", 3, "Black Sneakers", "This is a stylish shirt!", 27.99, "/img/blackSneakers.jpg"),
-("M", 3, "Blue Sneakers", "This is a stylish shirt!", 27.99, "/img/blueSneakers.jpg"),
+("M", 3, "Black Dress Shoes", "Stylin' shoes, dude.", 59.99, "/img/mensBlackDressShoes.jpg"),
+("M", 3, "Brown Boots", "Stylin' shoes, dude.", 69.99, "/img/mensBrownBoots.jpg"),
+("M", 3, "Black Sneakers", "Stylin' shoes, dude.", 27.99, "/img/blackSneakers.jpg"),
+("M", 3, "Blue Sneakers", "Stylin' shoes, dude.", 27.99, "/img/blueSneakers.jpg"),
 
-("M", 4, "Bomber Jacket", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
-("M", 4, "Jean Jacket", "This is a stylish shirt!", 38.99, "/img/blue_shirt.jpg"),
-("M", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
-("M", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
+("M", 4, "Bomber Jacket", "This is basically the coolest jacket there is. Throw on your Aviators and take to the sky.", 59.99, "/img/mensBomber.jpg"),
+("M", 4, "Jean Jacket", "Everyone needs a stylin' jean jacket!", 38.99, "/img/mensJeanJacket.jpg"),
+("M", 4, "Rain Jacket", "Keep dry, look good.", 83.99, "/img/mensRainJacket.jpg"),
+("M", 4, "Insulated Down Jacket", "Puffy jackets are the best. It's like being gently hugged by the best sleeping bag in the world.", 99.99, "/img/menDownJAcket.jpg"),
 
-("M", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blackbeanie.jpg"),
-("M", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/greyBeanie.jpg"),
-("M", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/redBeanie.jpg"),
-("M", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/logoBeanie.jpg"),
+("M", 5, "Black Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/blackbeanie.jpg"),
+("M", 5, "Grey Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/greyBeanie.jpg"),
+("M", 5, "Red Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/redBeanie.jpg"),
+("M", 5, "Logo Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/logoBeanie.jpg"),
 
 -- Womens
 ("F", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
@@ -140,10 +140,10 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("F", 4, "Rain Jacket", "This is a stylish shirt!", 83.99, "/img/blue_shirt.jpg"),
 ("F", 4, "Insulated Down Jacket", "This is a stylish shirt!", 99.99, "/img/blue_shirt.jpg"),
 
-("F", 5, "Black Beanie", "This is a stylish shirt!", 14.99, "/img/blackbeanie.jpg"),
-("F", 5, "Grey Beanie", "This is a stylish shirt!", 14.99, "/img/greyBeanie.jpg"),
-("F", 5, "Red Beanie", "This is a stylish shirt!", 14.99, "/img/redBeanie.jpg"),
-("F", 5, "Logo Beanie", "This is a stylish shirt!", 14.99, "/img/logoBeanie.jpg");
+("F", 5, "Black Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/blackbeanie.jpg"),
+("F", 5, "Grey Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/greyBeanie.jpg"),
+("F", 5, "Red Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/redBeanie.jpg"),
+("F", 5, "Logo Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/logoBeanie.jpg");
 
 /*
 
