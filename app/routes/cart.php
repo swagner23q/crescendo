@@ -1,10 +1,5 @@
 <?php
 
-    $app->get('/cart', function() use ($app)
-    {
-        return $app['twig']->render('cart.html.twig');
-    });
-
     $app->post('/cart/add_item', function() use ($app) {
       $cart = $_SESSION['cart'];
 
@@ -23,31 +18,40 @@
       return $app['twig']->render('product.html.twig', array('added' => TRUE, 'total_price' => $total_price));
     });
 
-    $app->get('/cart/show_items', function() use ($app) {
-        $cart = $_SESSION['cart'];
-        $total_price = Product::calculateTotalCartPrice($cart);
+    $app->get('/cart', function() use ($app) {
+        array_push($_SESSION['cart'], [1,3]);
+        array_push($_SESSION['cart'], [2,2]);
 
-        foreach($cart as $item)
+        $total_price = Product::calculateTotalCartPrice();
+
+        $all_products = [];
+        $products = [];
+
+        foreach($_SESSION['cart'] as $line_item)
         {
-            $product_id = $item[0];
-            $qty = $item[1];
 
+            $product_id = $line_item[0];
+            $qty = $line_item[1];
             $product = Product::find($product_id);
+            $products[] = $product;
+            $products[] = $qty;
 
-            $gender = $product->getGender();
-            $name = $product->getName();
-            $price = $product->getPrice();
+            $all_products[] = $products;
         }
-
-        return $app['twig']->render('cart.html.twig', array('quantity' => $qty,
-                'name' => $name,
-                'total_price' => $total_price));
+        var_dump($all_products);
+        return $app['twig']->render('cart.html.twig', array(
+                'total_price' => $total_price,
+                'all_products' => $all_products));
     });
 
 
 
-    $app->delete('/cart/delete_item', function() use ($app) {
-        $cart = $_SESSION['cart'];
 
+    $app->get('/cart/delete', function() use ($app) {
+        Product::cartDelete();
+
+        return $app['twig']->render('cart.html.twig', array(
+                'total_price' => $total_price,
+                'products' => $products));
 
     });

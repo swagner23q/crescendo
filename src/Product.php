@@ -162,6 +162,11 @@
 			return $_SESSION['cart'];
 		}
 
+		static function cartDelete()
+		{
+			$_SESSION['cart'] = array();
+		}
+
 		static function calculateCartItemPrice()
 		{
 

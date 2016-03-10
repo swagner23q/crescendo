@@ -3,24 +3,32 @@
         {% include '/includes/head.html.twig' %}
     </head>
     <body>
-        {% include '/includes/navbar.html.twig' %}
-
-        <!-- use the the session cart variable, loop over that array and show the qty ordered, the product name, and the product price
-
-        
-
-        Also show a cart total
-
-        have a proceed to checkout button
-
-        have a continue shopping button (back to the last "products" page that you had visited)-----do this is modal happens
-
-        otherwise render homepage -->
 
 
+        {% if session.cart is not empty %}
+        <p>Here is your cart:</p>
+        <ul>
+        {% for products in session.cart %}
+        {% set product = products[0] %}
+        {% set quantity = products[1] %}
+            <li>{{ product.getName }}</li>
+            <li>${{ product.getPrice }}</li>
+            <li>Quantity: {{ quantity }}</li>
+        {% endfor %}
+        </ul>
 
-        {% if error_message %}
-            <p>{{error_message}}</p>
+            <ul>
+
+            </ul>
+
+        <h2>Your total price is ${{ total_price }}</h2>
         {% endif %}
+        <p>
+            <a href="/">Home</a>
+        </p>
+        <p>
+            <a href="/cart/delete">Delete</a>
+        </p>
+
     </body>
 </html>
