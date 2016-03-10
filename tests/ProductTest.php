@@ -154,6 +154,28 @@
 
 	 	}
 
+		function testTypeName()
+		{
+			//Arrange
+			$gender = "M";
+			$type_id = 1;
+			$name = "Polo Button Down";
+			$description = "Light Blue button down shirt";
+			$price = 3.99;
+			$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product->save();
+
+
+			//Act
+			$result = Product::getTypeName($test_product->getTypeId());
+
+
+			//Arrange
+			$this->assertEquals("shirt", $result);
+
+	 }
+
 		function testCalculateCartItemPrice()
 
 		{
