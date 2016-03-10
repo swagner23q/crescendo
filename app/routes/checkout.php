@@ -33,5 +33,7 @@
 
     	$app['mailer']->send($message);
 
+        $_SESSION['cart'] = [];
+
         return $app['twig']->render('checkout.html.twig', array('checkout' => TRUE, 'logged_in' => $logged_in, 'cart_total' => $cart_total, 'order_complete' => TRUE));
     });
