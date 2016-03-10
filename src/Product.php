@@ -111,10 +111,10 @@
 	 	   foreach($returned_products as $product) {
 			   $gender = $product['gender'];
 			   $type_id = $product['type_id'];
-	 	       $name = $product['name'];
-	 	       $description = $product['description'];
+	 	     $name = $product['name'];
+	 	     $description = $product['description'];
 			   $price = $product['price'];
-	           $img = $product['img'];
+	       $img = $product['img'];
 			   $id = $product['id'];
 			   $new_product = new Product($gender, $type_id, $name, $description, $price, $img, $id);
 	 	       array_push($products, $new_product);
@@ -151,6 +151,18 @@
 
              return $found_products;
          }
+
+				 static function getTypeName($search_TypeId)
+							{
+								$query = $GLOBALS['DB']->query("SELECT type from product_types where id={$search_TypeId};");
+								$some_bullshit = $query->fetchAll(PDO::FETCH_ASSOC);
+								$returned_type = $some_bullshit[0]["type"];
+								return $returned_type;
+							}
+
+
+
+
 
 		function cartSave()
 		{
