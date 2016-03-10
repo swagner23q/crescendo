@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include '/includes/head.html.twig' %}
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/materialize.css">
+     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+     <script src="js/jquery-1.12.1.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+     <script type="text/javascript" src="js/scripts.js"></script>
+     <title>Crescendo Clothing Co</title>
     </head>
     <body>
         {% include '/includes/navbar.html.twig' %}
+        <header class="hipsterPants">
+        </header>
+
+
+
 
         {% for product in products %}
-            <img src='{{ product.getImg }}'>
             <p>{{ product.getName }}</p>
             <p>{{ product.getPrice }}</p>
             <img src="{{ product.getImg }}">
         {% endfor %}
+
+
+
+        <h1 class="mainTitle">Men's Pants</h1>
+
+        <div class="articleClothing">
+          <aside>
+            <h1>{{ product.getName }}</h1>
+            <p>{{ product.getDescription }}</p>
+            <span class="available">AVAILABLE IN UP TO 5 FITS: TAILORED, SLIM, ATHLETIC, STRAIGHT AND BOOT</span>
+            <br><br>
+            <img src="{{ product.getImg }}" alt="a picture of happy dudes in good pants" />
+          </aside>
+
+          <div class="productBoxContainer">
+            <div class="productBox">
+              <a href="#"><img src="img/pantRed.jpg" alt="a picture of red pants" /></a>
+              <p>{{ product.getName }}</p>
+              <h4>{{ product.getDescription }}</h4>
+              <h4>{{ product.getPrice }}</h4>
+
+            </div>
+            <div class="productBox">
+              <a href="#"><img src="{{ product.getImg }}" alt="a picture of red pants" /></a>
+              <p>{{ product.getName }}</p>
+              <h4>{{ product.getDescription }}</h4>
+              <h4>{{ product.getPrice }}</h4>
+            </div>
+            <div class="productBox">
+              <a href="#"><img src="{{ product.getImg }}" alt="a picture of red pants" /></a>
+              <p>{{ product.getName }}</p>
+              <h4>{{ product.getDescription }}</h4>
+              <h4>{{ product.getPrice }}</h4>
+            </div>
+            <div class="productBox">
+              <a href="#"><img src="{{ product.getImg }}" alt="a picture of red pants" /></a>
+              <p>{{ product.getName }}</p>
+              <h4>WASHED PANTS</h4>
+              <h4>{{ product.getPrice }}</h4>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
         {% include '/includes/footer.html.twig' %}
+
     </body>
 </html>
