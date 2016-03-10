@@ -260,6 +260,9 @@ header {
     @media (max-width: 450px) {
       .bottomStyles p {
         width: 50vw; } }
+  @media (max-width: 450px) {
+    .bottomStyles {
+      height: 55vh; } }
 
 .shippingNinjaContainer {
   padding: 5%;

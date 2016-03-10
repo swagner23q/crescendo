@@ -82,8 +82,10 @@ header {
 
     @media (max-width: 450px) {
       width: 50vw;
-
     }
+  }
+  @media (max-width: 450px) {
+    height: 55vh;
   }
 
 }
