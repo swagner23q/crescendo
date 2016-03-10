@@ -86,3 +86,19 @@
 	    {
 	      $this->img = $img;
 	    }
+		function save()
+		{
+			$GLOBALS['DB']->exec(
+	 	   	 "INSERT INTO products
+	 	   	 (gender, type_id, name, description, price, img)
+	 	   	 VALUES
+				('{$this->getGender()}',
+				{$this->getTypeId()},
+				'{$this->getName()}',
+				'{$this->getDescription()}',
+				'{$this->getPrice()}',
+				'{$this->getImg()}'
+				)"
+			);
+	 	   	$this->id = $GLOBALS['DB']->lastInsertId();
+		}
