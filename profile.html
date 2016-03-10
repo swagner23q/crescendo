@@ -67,9 +67,10 @@
     <div class="container">
       <h1 class="mainTitle">Profile</h1>
       <div class="universalFont">
-        {% include '/includes/navbar.html.twig' %}
-        {% include '/includes/header.html.twig' %}
-
+        <div class="batman">
+          <img src="img/batman.png">
+          <h2>Your Profile</h2>
+        </div>
 
         <h2>Your Current Information:</h2>
         <h3>First Name:</h3><p>{{ user.getFirstName }}</p>
