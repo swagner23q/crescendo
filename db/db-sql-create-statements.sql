@@ -104,10 +104,10 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("M", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/pantOffWhite.jpg"),
 ("M", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/mensredpants.jpg"),
 
-("M", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
-("M", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/blue_shirt.jpg"),
-("M", 3, "Black Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
-("M", 3, "Blue Sneakers", "This is a stylish shirt!", 27.99, "/img/blue_shirt.jpg"),
+("M", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/mensBlackDressShoes.jpg"),
+("M", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/mensBrownBoots.jpg"),
+("M", 3, "Black Sneakers", "This is a stylish shirt!", 27.99, "/img/blackSneakers.jpg"),
+("M", 3, "Blue Sneakers", "This is a stylish shirt!", 27.99, "/img/blueSneakers.jpg"),
 
 ("M", 4, "Bomber Jacket", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
 ("M", 4, "Jean Jacket", "This is a stylish shirt!", 38.99, "/img/blue_shirt.jpg"),
