@@ -115,13 +115,14 @@ footer {
     @media (max-width: 450px) {
       footer img {
         position: absolute;
-        height: 30vh;
+        height: 20%;
         padding-left: 12%;
         margin-top: 5%; } }
   footer .sevenL {
     width: 40%;
     align-items: flex-start;
-    padding-right: 4%; }
+    padding-right: 4%;
+    align-self: center; }
     footer .sevenL a {
       color: #7aa3a2; }
       footer .sevenL a:hover {
@@ -334,6 +335,11 @@ header {
       font-family: "Raleway";
       font-size: 0.85em;
       font-weight: bolder; }
+    @media (max-width: 450px) {
+      .articleClothing aside {
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%; } }
   .articleClothing .productBoxContainer {
     display: block;
     width: 100%; }
@@ -349,6 +355,13 @@ header {
       .articleClothing .productBoxContainer .productBox h4 {
         margin: 0;
         padding: 0; }
+      @media (max-width: 450px) {
+        .articleClothing .productBoxContainer .productBox {
+          height: 100%;
+          width: 75vw;
+          margin-top: 5%;
+          margin-right: 15%;
+          margin-left: 15%; } }
 
 .mainProductTitle {
   background-image: url("../img/productFashionHeader.jpg");

@@ -170,10 +170,17 @@ header {
       height: auto;
       width: 100%;
       margin-bottom: 0;
+
     }
     .available {
       @include fontBasics("Raleway", $font-size: .85em);
       font-weight: bolder;
+    }
+    @media (max-width: 450px) {
+      width: 70%;
+      margin-right: 15%;
+      margin-left: 15%;
+
     }
   }
   .productBoxContainer {
@@ -194,8 +201,16 @@ header {
         margin: 0;
         padding: 0;
       }
+      @media (max-width: 450px) {
+        height: 100%;
+        width: 75vw;
+        margin-top: 5%;
+        margin-right: 15%;
+        margin-left: 15%;
+      }
     }
   }
+
 }
 
 // Single Product Content
