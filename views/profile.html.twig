@@ -6,7 +6,13 @@
     <body>
         {% include '/includes/navbar.html.twig' %}
         {% include '/includes/header.html.twig' %}
-
+    <div class="container">
+      <h1 class="mainTitle">Profile</h1>
+      <div class="universalFont">
+        <div class="batman">
+          <img src="img/batman.png">
+          <h2>Your Profile</h2>
+        </div>
 
         <h2>Your Current Information:</h2>
         <h3>First Name:</h3><p>{{ user.getFirstName }}</p>
@@ -69,10 +75,10 @@
             <label for="bill_postal">Zip Code:</label>
             <input id="bill_postal" name="bill_postal" type="text" value= '{{ user.getBillPostal }}'><br><br>
 
-            <button class="" type="submit">Submit</button>
+            <button class="waves-effect waves-light btn" type="submit">Submit</button>
         </form>
-
-
+    </div>
+  </div>
         {% include '/includes/footer.html.twig' %}
     </body>
 </html>
