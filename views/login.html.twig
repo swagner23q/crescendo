@@ -9,7 +9,11 @@
 
         <div class="container">
           <div class="universalFont">
-            <form action="/logged_in" method="get">
+             {% if checkout %}
+             <form action="/checkout" method="get">
+             {% else %}
+             <form action="/logged_in" method="get">
+             {% endif %}
                 <label for="email">Email Adress</label>
                 <input type="text" name="email" value="">
 
