@@ -92,6 +92,34 @@
 			 $this->assertEquals([], $result);
 		 }
 
+		 function testFind()
+		{
+			//Arrange
+			$gender = "M";
+			$type_id = 1;
+			$name = "Polo Button Down";
+			$description = "Light Blue button down shirt";
+			$price = 10.99;
+			$img = "/fake/path/image1.jpg";
+			$test_product = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product->save();
+
+			$gender2 = "F";
+			$type_id2 = 2;
+			$name2= "Dockers Pleated Khackis";
+			$description2 = "Lame ass khaki pants with pleats";
+			$price = 3.99;
+			$img2 = "/fake/path/image2.jpg";
+			$test_product2 = new Product($gender, $type_id, $name, $description, $price, $img);
+			$test_product2->save();
+
+			//Act
+			$result = Product::find($test_product->getId());
+
+			//Arrange
+			$this->assertEquals($test_product, $result);
+		}
+
 
 
 	}
