@@ -108,11 +108,15 @@ header {
 }
 
 //Universal Header
-
 .universalHeader {
   @include backgroundImg("../img/mostlyMainHeader.jpg", $backRep: no-repeat, $backSize: cover);
   height: 60vh;
   width: 100%;
+}
+
+//Universal Container
+.container {
+  margin-bottom: 5%;
 }
 
 //Product Page Middle Content
@@ -198,10 +202,12 @@ header {
   float: right;
 }
 
-//Universal Container
-.container {
-  margin-bottom: 5%;
+// Checkout Page Content
+.checkout {
+  text-align: center;
+
 }
+
 
 // Footer
 footer {

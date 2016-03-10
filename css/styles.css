@@ -197,6 +197,9 @@ header {
   height: 60vh;
   width: 100%; }
 
+.container {
+  margin-bottom: 5%; }
+
 .hipsterPants {
   background-image: url("../img/fashion.jpg");
   background-repeat: no-repeat;
@@ -269,8 +272,8 @@ header {
   border: 2px solid #008080;
   float: right; }
 
-.container {
-  margin-bottom: 5%; }
+.checkout {
+  text-align: center; }
 
 footer {
   font-family: "Raleway";

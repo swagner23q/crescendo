@@ -7030,9 +7030,6 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     top: -14px;
     font-size: 0.8rem; }
 
-select {
-  display: none; }
-
 select.browser-default {
   display: block; }
 
