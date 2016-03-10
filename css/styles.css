@@ -379,6 +379,10 @@ header {
   height: 50%;
   border: 2px solid #008080;
   float: right; }
+  @media (max-width: 450px) {
+    .productInfoBox {
+      width: 95%;
+      margin: 2%; } }
 
 .checkout {
   text-align: center; }

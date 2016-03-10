@@ -229,6 +229,10 @@ header {
   height: 50%;
   border: 2px solid $teal;
   float: right;
+  @media (max-width: 450px) {
+    width: 95%;
+    margin: 2%;
+  }
 }
 
 // Checkout Page Content
