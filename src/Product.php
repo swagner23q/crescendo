@@ -102,3 +102,21 @@
 			);
 	 	   	$this->id = $GLOBALS['DB']->lastInsertId();
 		}
+
+		static function getAll()
+		{
+			$returned_products = $GLOBALS['DB']->query("SELECT * FROM products;");
+	 	   $products = array();
+	 	   foreach($returned_products as $product) {
+			   $gender = $product['gender'];
+			   $type_id = $product['type_id'];
+	 	       $name = $product['name'];
+	 	       $description = $product['description'];
+			   $price = $product['price'];
+	           $img = $product['img'];
+			   $id = $product['id'];
+			   $new_product = new Product($gender, $type_id, $name, $description, $price, $img, $id);
+	 	       array_push($products, $new_product);
+	 	   }
+	 	   return $products;
+		}
