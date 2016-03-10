@@ -294,7 +294,7 @@ header {
   width: 100%; }
 
 .container {
-  margin-bottom: 10%; }
+  margin: 10%; }
 
 .hipsterPants {
   background-image: url("../img/fashion.jpg");
@@ -360,8 +360,8 @@ header {
           height: 100%;
           width: 75vw;
           margin-top: 5%;
-          margin-right: 15%;
-          margin-left: 15%; } }
+          margin-right: 13%;
+          margin-left: 13%; } }
 
 .mainProductTitle {
   background-image: url("../img/productFashionHeader.jpg");
