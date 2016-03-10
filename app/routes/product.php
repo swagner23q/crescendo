@@ -1,6 +1,8 @@
 <?php
 
-    $app->get('/product', function()
+    $app->get('/product', function() use ($app)
     {
-        return 'Hello, World!';
+        $id = 4;
+        $product = Product::find($id);
+        return $app['twig']->render('product.html.twig',  array('product' => $product));
     });
