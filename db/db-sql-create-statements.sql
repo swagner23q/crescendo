@@ -120,15 +120,15 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("M", 5, "Logo Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/logoBeanie.jpg"),
 
 -- Womens
-("F", 1, "Black Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
-("F", 1, "Blue Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
-("F", 1, "White Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
-("F", 1, "Red Shirt", "This is a stylish shirt!", 19.99, "/img/blue_shirt.jpg"),
+("F", 1, "Black Shirt", "Soft and moisture wicking. A great choice for any adventure!", 19.99, "/img/womensBlackShirt.jpg"),
+("F", 1, "Blue Shirt", "Soft and moisture wicking. A great choice for any adventure!", 19.99, "/img/womensBlueShirt.jpg"),
+("F", 1, "Grey Shirt", "Soft and moisture wicking. A great choice for any adventure!", 19.99, "/img/womensGreyShirt.jpg"),
+("F", 1, "Red Shirt", "Soft and moisture wicking. A great choice for any adventure!", 19.99, "/img/womensRedShirt.jpg"),
 
-("F", 2, "Black Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
-("F", 2, "Blue Jeans", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
-("F", 2, "White Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
-("F", 2, "Red Pants", "This is a stylish shirt!", 49.99, "/img/blue_shirt.jpg"),
+("F", 2, "Black Pants", "Techinical, outdoor pants for the adventurous ladies.", 49.99, "/img/womensBlackPants.jpg"),
+("F", 2, "Blue Jeans", "Great everyday wear! Everyone needs some denim in their life.", 49.99, "/img/womensJeans.jpg"),
+("F", 2, "Yoga Pants", "Comfy, stretchy yoga pants.", 49.99, "/img/womensYoga.jpg"),
+("F", 2, "Beige Pants", "They're pants, they're beige, they're everything you've ever wanted.", 49.99, "/img/womensBeigePants.jpg"),
 
 ("F", 3, "Black Dress Shoes", "This is a stylish shirt!", 59.99, "/img/blue_shirt.jpg"),
 ("F", 3, "Brown Boots", "This is a stylish shirt!", 69.99, "/img/blue_shirt.jpg"),
