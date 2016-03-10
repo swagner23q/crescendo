@@ -11,7 +11,7 @@
         </header>
         <!-- End Header -->
 
-        <h1 class="mainTitle">{{product.getName}}</h1>
+        <h1 class="mainTitle">{{ product.getGender }}'s {{product.getName}}</h1>
 
         <div class="articleClothing">
           <aside>
@@ -25,7 +25,7 @@
           <div class="productInfoContainer">
             <div class="productInfoBox">
                <h1>Product Information</h1>
-               <h2>Price:${{ product.getPrice }}</h2>
+               <h2>Price: ${{ product.getPrice }}</h2>
                <p>Crescendo was built on, you won't find a better fit or more options anywhere else. {{ product.getDescription }}.</p>
 
                <form action='/cart/add_item' method='post'>
