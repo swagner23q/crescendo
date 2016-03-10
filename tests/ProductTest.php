@@ -170,8 +170,9 @@
 			//Act
 			$result = Product::getTypeName($test_product->getTypeId());
 
+
 			//Arrange
-			$this->assertEquals([$test_product], $result);
+			$this->assertEquals("shirt", $result);
 
 	 }
 
