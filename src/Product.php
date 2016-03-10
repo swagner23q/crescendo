@@ -157,7 +157,6 @@
 								$query = $GLOBALS['DB']->query("SELECT type from product_types where id={$search_TypeId};");
 								$some_bullshit = $query->fetchAll(PDO::FETCH_ASSOC);
 								$returned_type = $some_bullshit[0]["type"];
-								var_dump($returned_type);
 								return $returned_type;
 							}
 

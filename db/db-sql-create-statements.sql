@@ -140,7 +140,7 @@ INSERT INTO `products` (gender, type_id, name, description, price, img) VALUES
 ("Women", 5, "Grey Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/greyBeanie.jpg"),
 ("Women", 5, "Red Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/redBeanie.jpg"),
 ("Women", 5, "Logo Beanie", "Everyone loves a beanie. These are delightfully soft and durable.", 14.99, "/img/logoBeanie.jpg");
->>>>>>> master
+
 
 
 /*
