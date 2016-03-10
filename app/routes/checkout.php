@@ -13,7 +13,7 @@
             $cart_total = Product::calculateTotalCartPrice();
         }
 
-        return $app['twig']->render($variable_render, array('checkout' => TRUE, 'logged_in' => $logged_in, 'cart_total' => $cart_total));
+        return $app['twig']->render($variable_render, array('checkout' => TRUE, 'logged_in' => $logged_in, 'cart_total' => $cart_total, 'order_complete' => FALSE));
     });
 
     $app->post('/checkout', function() use ($app)
@@ -33,5 +33,5 @@
 
     	$app['mailer']->send($message);
 
-        return $app['twig']->render('checkout.html.twig', array('checkout' => TRUE, 'logged_in' => $logged_in, 'cart_total' => $cart_total));
+        return $app['twig']->render('checkout.html.twig', array('checkout' => TRUE, 'logged_in' => $logged_in, 'cart_total' => $cart_total, 'order_complete' => TRUE));
     });
