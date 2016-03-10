@@ -120,3 +120,8 @@
 	 	   }
 	 	   return $products;
 		}
+
+		static function deleteAll()
+		{
+			$GLOBALS['DB']->exec("DELETE FROM products;");
+		}
