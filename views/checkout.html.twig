@@ -2,11 +2,15 @@
 <html>
     {% include '/includes/head.html.twig' %}
     <body>
-        {% include '/includes/navbar.html.twig' %}
-        {% include '/includes/header.html.twig' %}
+    {% include '/includes/navbar.html.twig' %}
+    {% include '/includes/header.html.twig' %}
+
+        <h1 class="mainTitle">Checkout</h1>
+        <div class="container">
+          <div class="universalFont">
 
         {% if order_complete %}
-        <p>Thanks for your business! Check your email for order details.</p> <a href="/">Continue Shopping</a>
+        <p>Thanks for your business! Check your email for order details.</p> <a class="waves-effect waves-light btn" href="/">Continue Shopping</a>
         {%else%}
             {% if logged_in %}
                 <p>Here is your cart:</p>
@@ -28,11 +32,13 @@
                   <input type="text" name="card_name">
                   <label for="card_number">Card Number:</label>
                   <input type="text" name="card_number">
-                <button type="submit" name="button">Complete Order</button>
+                <button class="waves-effect waves-light btn" type="submit" name="button">Complete Order</button>
               </form>
               {% endif %}
         </ul>
         {%endif%}
+        </div>
+      </div>
         {% include '/includes/footer.html.twig' %}
     </body>
 </html>
