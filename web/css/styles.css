@@ -119,7 +119,7 @@ footer {
     @media (max-width: 450px) {
       footer img {
         position: absolute;
-        height: 20%;
+        height: 10%;
         padding-left: 12%;
         margin-top: 5%; } }
   footer .sevenL {
