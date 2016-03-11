@@ -25,15 +25,11 @@ CREATE TABLE `users` (
 `bill_postal` VARCHAR(255)
 );
 
-
-
-
 /*
 
                                             Orders table
 
 */
-
 
 CREATE TABLE `orders` (
   `id` SERIAL PRIMARY KEY,
@@ -41,8 +37,6 @@ CREATE TABLE `orders` (
   `ship_type` INT,
   `date` DATE
 );
-
-
 
 /*
 
@@ -56,7 +50,6 @@ CREATE TABLE `shipping_types` (
 
 INSERT INTO shipping_types (type) VALUES ("Free Shipping"), ("Ground"), ("2 Day"), ("Overnight");
 
-
 /*
 
                                             Product Types table
@@ -69,8 +62,6 @@ CREATE TABLE `product_types` (
 );
 
 INSERT INTO `product_types` (type) VALUES ("shirt"), ("pants"), ("shoes"), ("jacket"), ("beanies");
-
-
 
 /*
 
