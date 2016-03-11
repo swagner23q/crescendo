@@ -221,14 +221,12 @@
 			$test_order->checkout();
 			$result = $test_order->getOrderDetails();
 
-
 			//Assert
 			$this->assertEquals([['product_id' => $product_id, 'qty' => 1, 'name' => 'Polo Button Down' ]], $result);
 		}
 
 		function test_getOrderDetails()
 		{
-
 			//Arrange
 			$f_name = "Jason";
 			$l_name = "Awbrey";
@@ -291,7 +289,5 @@
 			$this->assertEquals([['product_id' => $product_id, 'qty' => 1, 'name' => 'Polo Button Down' ],['product_id' => $product_id2, 'qty' => 3, 'name' => 'Dockers Preated Khackis']], $result);
 
 		}
-
 	}
-
 ?>

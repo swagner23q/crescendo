@@ -1,7 +1,6 @@
 <?php
 
-    $app->get('/product/{id}', function($id) use ($app)
-    {
+    $app->get('/product/{id}', function($id) use ($app) {
         $product = Product::find($id);
         return $app['twig']->render('product.html.twig',  array('product' => $product, 'added' => False));
     });
