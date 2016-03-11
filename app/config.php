@@ -11,11 +11,6 @@
 
     $app = new Silex\Application();
 
-
-
-
-
-
     $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
 
     $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
@@ -34,7 +29,6 @@
     	    'encryption' => 'ssl',
     	    'auth_mode'  => 'login'
     	);
-
 
     use Symfony\Component\HttpFoundation\Request;
     Request::enableHttpMethodParameterOverride();

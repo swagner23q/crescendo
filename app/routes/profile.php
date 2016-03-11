@@ -1,7 +1,6 @@
 <?php
 
-$app->get('/profile', function() use ($app)
-{
+$app->get('/profile', function() use ($app) {
     $user = User::find($_SESSION['user']);
     return $app['twig']->render('profile.html.twig', array('user' => $user));
 });

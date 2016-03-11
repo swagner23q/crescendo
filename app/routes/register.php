@@ -1,12 +1,10 @@
 <?php
 
-    $app->get('/register', function() use ($app)
-    {
+    $app->get('/register', function() use ($app) {
         return $app['twig']->render('register.html.twig');
     });
 
-    $app->post('/register', function() use ($app)
-    {
+    $app->post('/register', function() use ($app) {
         $user = new User(
             $_POST['f_name'],
             $_POST['l_name'],
