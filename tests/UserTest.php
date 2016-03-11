@@ -452,7 +452,5 @@
 			//Assert
 			$this->assertEquals("Wrong password! Please try again.", $result);
 		}
-
 	}
-
 ?>
