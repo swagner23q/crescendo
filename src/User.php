@@ -353,7 +353,6 @@
 				$user_id = $order['user_id'];
 				$ship_type = $order['ship_type'];
 				$date = $order['date'];
-				// $line_items = NULL;
 				$id = $order['id'];
 				$new_order = new Order($user_id, $ship_type, $date,	$line_items = NULL, $id);
 				$orders[] = $new_order;
@@ -363,20 +362,20 @@
 
 		static function passwordVerify($email, $password)
 		{
-			   $user = User::findByEmail($email);
-			   if($user !== NULL)
-			   {
-				   if($user->getPassword() == $password)
-				   {
-					   return $user->getId();
-				   } else
-					   {
-						   	return "Wrong password! Please try again.";
-					   }
-			   } else
-				   {
-					   return "Sorry, we don't recognize that email.";
-				   }
+			$user = User::findByEmail($email);
+			if($user !== NULL)
+			{
+				if($user->getPassword() == $password)
+				{
+					return $user->getId();
+				} else
+					{
+						return "Wrong password! Please try again.";
+					}
+				} else
+				{
+					return "Sorry, we don't recognize that email.";
+				}
 		}
 	}
  ?>
