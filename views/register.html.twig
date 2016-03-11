@@ -1,63 +1,61 @@
 <!DOCTYPE html>
-<html>
+  <html>
     <head>
-        {% include '/includes/head.html.twig' %}
+    {% include '/includes/head.html.twig' %}
     </head>
     <body>
-        {% include '/includes/navbar.html.twig' %}
-        {% include '/includes/header.html.twig' %}
+      {% include '/includes/navbar.html.twig' %}
+      {% include '/includes/header.html.twig' %}
 
-
-        <h1 class="mainTitle">Registration</h1>
-
-        <div class="container">
-          <div class="universalFont">
+      <h1 class="mainTitle">Registration</h1>
+      <div class="container">
+      <div class="universalFont">
         {% if registered %}
-            <h3>Thank you for registering, {{ user.getFirstName }}!</h3>
-            <p>An email has been sent to {{user.getEmail}} with additional information.</p>
+          <h3>Thank you for registering, {{ user.getFirstName }}!</h3>
+          <p>An email has been sent to {{user.getEmail}} with additional information.</p>
         {% else %}
-          <form action="/register" method="post">
-              <h3>Personal Information</h3>
-              <label for="f_name">First Name:</label>
-              <input id="f_name" name="f_name" type="text" required><br><br>
-              <label for="l_name">Last Name:</label>
-              <input id="l_name" name="l_name" type="text" required><br><br>
-              <label for="email">Email:</label>
-              <input id="email" name="email" type="email" required><br><br>
-              <label for="phone">Phone #:</label>
-              <input id="phone" name="phone" type="text" required><br><br>
-              <label for="password">Password:</label>
-              <input id="password" name="password" type="password" required><br><br>
+      <form action="/register" method="post">
+        <h3>Personal Information</h3>
+        <label for="f_name">First Name:</label>
+        <input id="f_name" name="f_name" type="text" required><br><br>
+        <label for="l_name">Last Name:</label>
+        <input id="l_name" name="l_name" type="text" required><br><br>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required><br><br>
+        <label for="phone">Phone #:</label>
+        <input id="phone" name="phone" type="text" required><br><br>
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required><br><br>
 
-              <h3>Shipping Information</h3>
-              <label for="ship_street">Street:</label>
-              <input id="ship_street" name="ship_street" type="text"><br><br>
-              <label for="ship_apt">Apartment Number:</label>
-              <input id="ship_apt" name="ship_apt" type="text"><br><br>
-              <label for="ship_city">City:</label>
-              <input id="ship_city" name="ship_city" type="text"><br><br>
-              <label for="ship_state">State:</label>
-              <input id="ship_state" name="ship_state" type="text"><br><br>
-              <label for="ship_postal">Zip Code:</label>
-              <input id="ship_postal" name="ship_postal" type="text"><br><br>
+        <h3>Shipping Information</h3>
+        <label for="ship_street">Street:</label>
+        <input id="ship_street" name="ship_street" type="text"><br><br>
+        <label for="ship_apt">Apartment Number:</label>
+        <input id="ship_apt" name="ship_apt" type="text"><br><br>
+        <label for="ship_city">City:</label>
+        <input id="ship_city" name="ship_city" type="text"><br><br>
+        <label for="ship_state">State:</label>
+        <input id="ship_state" name="ship_state" type="text"><br><br>
+        <label for="ship_postal">Zip Code:</label>
+        <input id="ship_postal" name="ship_postal" type="text"><br><br>
 
-              <h3>Billing Information</h3>
-              <label for="bill_street">Street:</label>
-              <input id="bill_street" name="bill_street" type="text"><br><br>
-              <label for="bill_apt">Apartment Number:</label>
-              <input id="bill_apt" name="bill_apt" type="text"><br><br>
-              <label for="bill_city">City:</label>
-              <input id="bill_city" name="bill_city" type="text"><br><br>
-              <label for="bill_state">State:</label>
-              <input id="bill_state" name="bill_state" type="text"><br><br>
-              <label for="bill_postal">Zip Code:</label>
-              <input id="bill_postal" name="bill_postal" type="text"><br><br>
+        <h3>Billing Information</h3>
+        <label for="bill_street">Street:</label>
+        <input id="bill_street" name="bill_street" type="text"><br><br>
+        <label for="bill_apt">Apartment Number:</label>
+        <input id="bill_apt" name="bill_apt" type="text"><br><br>
+        <label for="bill_city">City:</label>
+        <input id="bill_city" name="bill_city" type="text"><br><br>
+        <label for="bill_state">State:</label>
+        <input id="bill_state" name="bill_state" type="text"><br><br>
+        <label for="bill_postal">Zip Code:</label>
+        <input id="bill_postal" name="bill_postal" type="text"><br><br>
 
-              <button class="waves-effect waves-light btn" type="submit">Submit</button>
-            </form>
+        <button class="waves-effect waves-light btn" type="submit">Submit</button>
+      </form>
         {% endif %}
-          </div>
-        </div>
-        {% include '/includes/footer.html.twig' %}
+      </div>
+      </div>
+       {% include '/includes/footer.html.twig' %}
     </body>
 </html>
