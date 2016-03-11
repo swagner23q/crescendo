@@ -11,7 +11,7 @@
 
     $app = new Silex\Application();
 
-    $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../views'));
+    $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/../web/views'));
 
     $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
         $twig->addGlobal('session', $_SESSION);
