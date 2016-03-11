@@ -1,47 +1,48 @@
 <!-- Side Nav Bar -->
-  <ul id="slide-out" class="side-nav">
-    <li><a href="/">Crescendo Clothing</a></li>
-    <span class="exitSideNav">X</span>
-    <li>Women</li>
-    <li><a href='/products/Women/2'>Pants</a></li>
-    <li><a href='/products/Women/1'>Shirts</a></li>
-    <li><a href='/products/Women/4'>Jackets</a></li>
-    <li><a href='/products/Women/3'>Shoes</a></li>
-    <li><a href='/products/Women/5'>Beanies</a></li>
-    <li>Men</li>
-    <li><a href='/products/Men/2'>Pants</a></li>
-    <li><a href='/products/Men/1'>Shirts</a></li>
-    <li><a href='/products/Men/4'>Jackets</a></li>
-    <li><a href='/products/Men/3'>Shoes</a></li>
-    <li><a href='/products/Men/5'>Beanies</a></li>
-    <li>About Us</li>
-    <li><a href="#">Careers</a></li>
-    <li><a href="#">SevenL</a></li>
-    <li><a href="#">Press</a></li>
-    <li><a href="#">Privacy</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
+    <ul id="slide-out" class="side-nav">
+        <li><a href="/">Crescendo Clothing</a></li>
+        <span class="exitSideNav">X</span>
+        <li>Women</li>
+        <li><a href='/products/Women/2'>Pants</a></li>
+        <li><a href='/products/Women/1'>Shirts</a></li>
+        <li><a href='/products/Women/4'>Jackets</a></li>
+        <li><a href='/products/Women/3'>Shoes</a></li>
+        <li><a href='/products/Women/5'>Beanies</a></li>
+        <li>Men</li>
+        <li><a href='/products/Men/2'>Pants</a></li>
+        <li><a href='/products/Men/1'>Shirts</a></li>
+        <li><a href='/products/Men/4'>Jackets</a></li>
+        <li><a href='/products/Men/3'>Shoes</a></li>
+        <li><a href='/products/Men/5'>Beanies</a></li>
+        <li>About Us</li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">SevenL</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+
   <!-- End Side Nav -->
 
   <!-- Top Nav Bar -->
-  <div class="nav">
-    <a href="#" data-activates="slide-out" class="button-collapse">
-      <i class="small mdi-navigation-menu"></i>
-    </a>
-    <span class="navBarContent">
-    <ul>
-      <li><a href="#" data-activates="slide-out" class="button-collapse">SHOP</a></li>
-      <li><a href="/">Crescendo</a></li>
+    <div class="nav">
+        <a href="#" data-activates="slide-out" class="button-collapse">
+        <i class="small mdi-navigation-menu"></i>
+        </a>
+        <span class="navBarContent">
+            <ul>
+                <li><a href="#" data-activates="slide-out" class="button-collapse">SHOP</a></li>
+                <li><a href="/">Crescendo</a></li>
 
-      {% if session.user %}
-      <li>Welcome! <a href='/profile'>My Profile</a> |<a href="/logged_out"> Log out</a>&nbsp; | </li>
-      <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
-      {% else %}
-      <li><a href="/log_in">Sign In</a>&nbsp; | </li>
-      <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
-      {% endif %}
+                {% if session.user %}
+                <li>Welcome! <a href='/profile'>My Profile</a> |<a href="/logged_out"> Log out</a>&nbsp; | </li>
+                <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
+                {% else %}
+                <li><a href="/log_in">Sign In</a>&nbsp; | </li>
+                <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
+                {% endif %}
 
-    </ul>
-    </span>
-  </div>
+            </ul>
+        </span>
+    </div>
 <!-- End Top Nav Bar -->

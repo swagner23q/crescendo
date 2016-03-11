@@ -7,33 +7,33 @@
         {% include '/includes/header.html.twig' %}
 
         <div class="container">
-          <h1 class="mainTitle">Your Cart</h1>
-          <div class="universalFont">
-            <div class="checkout">
-              {% if session.cart is not empty %}
-              <p>Here is your cart:</p>
-              <ul>
-              {% for products in session.cart %}
-                  <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
-                  <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
-                  <li>Quantity: {{session.cart[loop.index0][1]}}</li>
-              {% endfor %}
-              </ul>
-              <h2>Cart Total: ${{ total_price }}</h2>
-              {%else%}
-              <h3>No items! Get shopping!</h3>
-              {% endif %}
-              <p>
-                <a class="waves-effect waves-light btn" href="/">Keep Shopping</a>
-              </p>
-              <p>
-                <a class="waves-effect waves-light btn" href="/checkout">Go to Checkout</a>
-              </p>
-              <p>
-                  <a class="waves-effect waves-light btn" href="/cart/delete">Clear Cart</a>
-              </p>
+            <h1 class="mainTitle">Your Cart</h1>
+            <div class="universalFont">
+                <div class="checkout">
+                    {% if session.cart is not empty %}
+                    <p>Here is your cart:</p>
+                    <ul>
+                    {% for products in session.cart %}
+                        <li>{{findProduct(session.cart[loop.index0][0]).getName}}</li>
+                        <li>${{findProduct(session.cart[loop.index0][0]).getPrice}}</li>
+                        <li>Quantity: {{session.cart[loop.index0][1]}}</li>
+                    {% endfor %}
+                    </ul>
+                    <h2>Cart Total: ${{ total_price }}</h2>
+                    {%else%}
+                    <h3>No items! Get shopping!</h3>
+                    {% endif %}
+                    <p>
+                        <a class="waves-effect waves-light btn" href="/">Keep Shopping</a>
+                    </p>
+                    <p>
+                        <a class="waves-effect waves-light btn" href="/checkout">Go to Checkout</a>
+                    </p>
+                    <p>
+                        <a class="waves-effect waves-light btn" href="/cart/delete">Clear Cart</a>
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
         {% include '/includes/footer.html.twig' %}
     </body>
