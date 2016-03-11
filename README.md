@@ -22,18 +22,18 @@ _The task at hand was to create a project within a four day span working in a ne
 * _Clone the repo with the following command:_
 * _git clone https://github.com/fight-gravity/crescendo.git_
 * _From the root project directory install all dependancies via this command: composer install_
-* _Setup the database. For creating what is absolutely required see the database section below.
+* _Setup the database. For creating what is absolutely required see the database section below._
 * _Start a php server in the root/web directory: php -S localhost:8000 -t /path/to/crescendo/web_
 * _Point a browser at localhost:8000_
 * _Enjoy_
 
 ## Database Setup
 _A zip version of the required database has been included in this repository. It was created following the instructions found here:_ https://www.learnhowtoprogram.com/php/database-basics-with-php/exporting-mysql-databases-in-phpmyadmin
-* _Follow the instructions found at that site for importing the zipped copy of the DB with phpMyAdmin.
+* _Follow the instructions found at that site for importing the zipped copy of the DB with phpMyAdmin._
 * _DB creation statements are also included in the repository, they are found at root/db/db-sql-create-statements.sql_
 
 ## Note About Tests
-* _In order for all phpUnit tests to pass you'll need to make sure the product_types table is populated. No other data in the DB is required. Insert required data with this statement:
+* _In order for all phpUnit tests to pass you'll need to make sure the product_types table is populated. No other data in the DB is required. Insert required data with this statement:_
 * INSERT INTO `product_types` (type) VALUES ("shirt"), ("pants"), ("shoes"), ("jacket"), ("beanies");
 
 ## Known Bugs
